@@ -15,6 +15,26 @@ RNG = np.random.default_rng(42)
 CLIP = 1e-3
 REG = 0.1
 
+# Epoch node -> our entry. Bridged on Epoch's `model_version` column, NOT on the
+# display name: Epoch's names silently drop the base/instruct distinction that
+# our entry convention depends on. 14 of their 222 nodes mix base and instruct
+# observations under one name, and instruction tuning is worth a median +11 ECI
+# in our own fit, so a mismatch here is worth several points.
+#   Gemma 2 27B  -> Epoch's node is purely gemma-2-27b-it, so it maps to our IT
+#                   entry despite the unqualified display name.
+#   Gemma 2 9B   -> genuinely pooled, but instruct-dominant (4 of 6 obs:
+#                   GPQA/MATH/AIME/MMLU vs base PIQA/GSM8K), so likewise IT.
+BRIDGE = {
+    "Gemma 2B": "Gemma 2B [Pretrained (PT)]",
+    "Gemma 7B": "Gemma 7B [Pretrained (PT)]",
+    "Gemma 2 9B": "Gemma 2 9B IT [Instruction-tuned (IT)]",
+    "Gemma 2 27B": "Gemma 2 27B IT [Instruction-tuned (IT)]",
+    "Gemma 3 27B": "Gemma 3 27B IT [Instruction-tuned (IT)]",
+    "Gemma 4 31B IT": "Gemma 4 31B [IT, Thinking mode]",
+    "Qwen 3.6 35B-A3B": "Qwen3.6-35B-A3B [Thinking (default)]",
+    "Qwen 3.5 Flash (hosted 35B-A3B)": "Qwen3.5-35B-A3B [Thinking (default)]",
+}
+
 
 def sigmoid(x):
     return 1.0 / (1.0 + np.exp(-np.clip(x, -500, 500)))

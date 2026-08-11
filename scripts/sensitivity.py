@@ -24,20 +24,10 @@ import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import fitlib
-from fitlib import affine_from_pairs, fit_raw
+from fitlib import BRIDGE, affine_from_pairs, fit_raw
 
 OUT = Path(__file__).resolve().parent.parent / "docs" / "sensitivity.md"
 
-BRIDGE = {
-    "Gemma 2B": "Gemma 2B [Pretrained (PT)]",
-    "Gemma 7B": "Gemma 7B [Pretrained (PT)]",
-    "Gemma 2 9B": "Gemma 2 9B [Pretrained (PT)]",
-    "Gemma 2 27B": "Gemma 2 27B [Pretrained (PT)]",
-    "Gemma 3 27B": "Gemma 3 27B IT [Instruction-tuned (IT)]",
-    "Gemma 4 31B IT": "Gemma 4 31B [IT, Thinking mode]",
-    "Qwen 3.6 35B-A3B": "Qwen3.6-35B-A3B [Thinking (default)]",
-    "Qwen 3.5 Flash (hosted 35B-A3B)": "Qwen3.5-35B-A3B [Thinking (default)]",
-}
 
 ours = pd.read_csv("obs_ours.csv")
 pub = pd.read_csv("eci_published.csv").set_index("model")["eci"].to_dict()

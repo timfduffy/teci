@@ -22,7 +22,7 @@ import pandas as pd
 from scipy.optimize import least_squares, minimize_scalar
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from fitlib import CLIP, affine_from_pairs, bootstrap_caps, fit_raw, sigmoid
+from fitlib import BRIDGE, CLIP, affine_from_pairs, bootstrap_caps, fit_raw, sigmoid
 
 # ---------------------------------------------------------------- load data
 ours = pd.read_csv("obs_ours.csv")
@@ -30,16 +30,6 @@ pub = pd.read_csv("eci_published.csv").set_index("model")["eci"].to_dict()
 frozen = pd.read_csv("edi_frozen.csv").set_index("benchmark")
 epoch_sub = pd.read_csv("eci_benchmarks.csv")
 
-BRIDGE = {
-    "Gemma 2B": "Gemma 2B [Pretrained (PT)]",
-    "Gemma 7B": "Gemma 7B [Pretrained (PT)]",
-    "Gemma 2 9B": "Gemma 2 9B [Pretrained (PT)]",
-    "Gemma 2 27B": "Gemma 2 27B [Pretrained (PT)]",
-    "Gemma 3 27B": "Gemma 3 27B IT [Instruction-tuned (IT)]",
-    "Gemma 4 31B IT": "Gemma 4 31B [IT, Thinking mode]",
-    "Qwen 3.6 35B-A3B": "Qwen3.6-35B-A3B [Thinking (default)]",
-    "Qwen 3.5 Flash (hosted 35B-A3B)": "Qwen3.5-35B-A3B [Thinking (default)]",
-}
 BRIDGE_INV = {v: k for k, v in BRIDGE.items()}
 
 # ================================================================ METHOD A
