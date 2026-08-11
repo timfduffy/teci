@@ -1,0 +1,1169 @@
+entry,benchmark,scope,performance,family,generation,params,release
+Gemma 1.1 2B IT [Instruction-tuned (IT)],MATH level 5,epoch,0.0181,Gemma,Gemma 1,2.0,2024-04
+Gemma 1.1 2B IT [Instruction-tuned (IT)],OLLv2: BBH,own,0.058600000000000006,Gemma,Gemma 1,2.0,2024-04
+Gemma 1.1 2B IT [Instruction-tuned (IT)],OLLv2: GPQA,own,0.025699999999999997,Gemma,Gemma 1,2.0,2024-04
+Gemma 1.1 2B IT [Instruction-tuned (IT)],OLLv2: IFEval,own,0.30670000000000003,Gemma,Gemma 1,2.0,2024-04
+Gemma 1.1 2B IT [Instruction-tuned (IT)],OLLv2: MMLU-PRO,own,0.0537,Gemma,Gemma 1,2.0,2024-04
+Gemma 1.1 2B IT [Instruction-tuned (IT)],OLLv2: MUSR,own,0.0202,Gemma,Gemma 1,2.0,2024-04
+Gemma 1.1 7B IT [Instruction-tuned (IT)],ARC AI2,epoch,0.4676,Gemma,Gemma 1,7.0,2024-04
+Gemma 1.1 7B IT [Instruction-tuned (IT)],GSM8K,epoch,0.4299,Gemma,Gemma 1,7.0,2024-04
+Gemma 1.1 7B IT [Instruction-tuned (IT)],HellaSwag,epoch,0.6818666666666666,Gemma,Gemma 1,7.0,2024-04
+Gemma 1.1 7B IT [Instruction-tuned (IT)],MATH level 5,epoch,0.049100000000000005,Gemma,Gemma 1,7.0,2024-04
+Gemma 1.1 7B IT [Instruction-tuned (IT)],MMLU,epoch,0.47893333333333327,Gemma,Gemma 1,7.0,2024-04
+Gemma 1.1 7B IT [Instruction-tuned (IT)],OLLv1: TruthfulQA,own,0.5074000000000001,Gemma,Gemma 1,7.0,2024-04
+Gemma 1.1 7B IT [Instruction-tuned (IT)],OLLv2: BBH,own,0.1593,Gemma,Gemma 1,7.0,2024-04
+Gemma 1.1 7B IT [Instruction-tuned (IT)],OLLv2: GPQA,own,0.0582,Gemma,Gemma 1,7.0,2024-04
+Gemma 1.1 7B IT [Instruction-tuned (IT)],OLLv2: IFEval,own,0.5039,Gemma,Gemma 1,7.0,2024-04
+Gemma 1.1 7B IT [Instruction-tuned (IT)],OLLv2: MMLU-PRO,own,0.17600000000000002,Gemma,Gemma 1,7.0,2024-04
+Gemma 1.1 7B IT [Instruction-tuned (IT)],OLLv2: MUSR,own,0.1151,Gemma,Gemma 1,7.0,2024-04
+Gemma 1.1 7B IT [Instruction-tuned (IT)],Winogrande,epoch,0.39379999999999993,Gemma,Gemma 1,7.0,2024-04
+Gemma 2 27B IT [Instruction-tuned (IT)],LiveBench-0831,own,0.3958,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B IT [Instruction-tuned (IT)],LiveBench-20240624,own,0.4122,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B IT [Instruction-tuned (IT)],LiveBench-20241125,own,0.3818,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B IT [Instruction-tuned (IT)],MATH level 5,epoch,0.23870000000000002,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B IT [Instruction-tuned (IT)],OLLv2: BBH,own,0.4927,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B IT [Instruction-tuned (IT)],OLLv2: GPQA,own,0.16670000000000001,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B IT [Instruction-tuned (IT)],OLLv2: IFEval,own,0.7978000000000001,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B IT [Instruction-tuned (IT)],OLLv2: MMLU-PRO,own,0.3835,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B IT [Instruction-tuned (IT)],OLLv2: MUSR,own,0.0911,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],ARC AI2,epoch,0.6186666666666668,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],GSM8K,epoch,0.74,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],Gemma::AGIEval,own,0.4013333333333334,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],Gemma::ARC-e,own,0.8479999999999999,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],Gemma::BIG-Bench (BB),own,0.7490000000000001,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],Gemma::BoolQ,own,0.696,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],Gemma::DROP,own,0.722,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],Gemma::HumanEval (PT/IT 0-shot),own,0.518,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],Gemma::MATH,own,0.423,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],Gemma::MBPP,own,0.626,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],Gemma::Natural Questions,own,0.345,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],Gemma::SocialIQA,own,0.30550000000000005,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],HellaSwag,epoch,0.8186666666666668,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],MATH level 5,epoch,0.16620000000000001,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],MMLU,epoch,0.6693333333333333,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],OLLv2: BBH,own,0.3739,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],OLLv2: GPQA,own,0.13419999999999999,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],OLLv2: IFEval,own,0.2475,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.37450000000000006,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],OLLv2: MUSR,own,0.1392,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],PIQA,epoch,0.6640000000000001,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],TriviaQA,epoch,0.8370000000000001,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 27B [Pretrained (PT)],Winogrande,epoch,0.6740000000000002,Gemma,Gemma 2,27.0,2024-06
+Gemma 2 2B IT [Instruction-tuned (IT)],MATH level 5,epoch,0.0008,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B IT [Instruction-tuned (IT)],OLLv2: BBH,own,0.17980000000000002,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B IT [Instruction-tuned (IT)],OLLv2: GPQA,own,0.032400000000000005,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B IT [Instruction-tuned (IT)],OLLv2: IFEval,own,0.5668,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B IT [Instruction-tuned (IT)],OLLv2: MMLU-PRO,own,0.1722,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B IT [Instruction-tuned (IT)],OLLv2: MUSR,own,0.0708,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],ARC AI2,epoch,0.40533333333333327,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],GSM8K,epoch,0.239,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],Gemma::AGIEval,own,0.07466666666666666,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],Gemma::ARC-e,own,0.7346666666666666,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],Gemma::BIG-Bench (BB),own,0.419,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],Gemma::BoolQ,own,0.44999999999999996,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],Gemma::DROP,own,0.52,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],Gemma::HumanEval (PT/IT 0-shot),own,0.177,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],Gemma::MATH,own,0.15,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],Gemma::MBPP,own,0.29600000000000004,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],Gemma::Natural Questions,own,0.16699999999999998,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],Gemma::SocialIQA,own,0.2785,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],HellaSwag,epoch,0.64,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],MATH level 5,epoch,0.0287,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],MMLU,epoch,0.3506666666666667,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],OLLv2: BBH,own,0.1176,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],OLLv2: GPQA,own,0.0168,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],OLLv2: IFEval,own,0.1993,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.1311,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],OLLv2: MUSR,own,0.1143,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],PIQA,epoch,0.556,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],TriviaQA,epoch,0.594,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 2B [Pretrained (PT)],Winogrande,epoch,0.41800000000000015,Gemma,Gemma 2,2.0,2024-07
+Gemma 2 9B IT [Instruction-tuned (IT)],LiveBench-0831,own,0.306,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B IT [Instruction-tuned (IT)],LiveBench-20240624,own,0.3157,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B IT [Instruction-tuned (IT)],LiveBench-20241125,own,0.2866,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B IT [Instruction-tuned (IT)],MATH level 5,epoch,0.1949,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B IT [Instruction-tuned (IT)],OLLv2: BBH,own,0.4214,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B IT [Instruction-tuned (IT)],OLLv2: GPQA,own,0.1477,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B IT [Instruction-tuned (IT)],OLLv2: IFEval,own,0.7436,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B IT [Instruction-tuned (IT)],OLLv2: MMLU-PRO,own,0.3195,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B IT [Instruction-tuned (IT)],OLLv2: MUSR,own,0.0974,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],ARC AI2,epoch,0.5786666666666668,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],GSM8K,epoch,0.6859999999999999,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],Gemma::AGIEval,own,0.3706666666666667,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],Gemma::ARC-e,own,0.84,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],Gemma::BIG-Bench (BB),own,0.682,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],Gemma::BoolQ,own,0.6840000000000002,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],Gemma::DROP,own,0.6940000000000001,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],Gemma::HumanEval (PT/IT 0-shot),own,0.402,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],Gemma::MATH,own,0.366,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],Gemma::MBPP,own,0.524,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],Gemma::Natural Questions,own,0.292,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],Gemma::SocialIQA,own,0.30100000000000005,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],HellaSwag,epoch,0.7586666666666667,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],MATH level 5,epoch,0.1344,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],MMLU,epoch,0.6173333333333333,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],OLLv2: BBH,own,0.341,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],OLLv2: GPQA,own,0.1051,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],OLLv2: IFEval,own,0.204,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.3448,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],OLLv2: MUSR,own,0.14300000000000002,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],PIQA,epoch,0.6340000000000001,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],TriviaQA,epoch,0.7659999999999999,Gemma,Gemma 2,9.0,2024-06
+Gemma 2 9B [Pretrained (PT)],Winogrande,epoch,0.6119999999999999,Gemma,Gemma 2,9.0,2024-06
+Gemma 2B IT [Instruction-tuned (IT)],ARC AI2,epoch,0.2525333333333333,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B IT [Instruction-tuned (IT)],GSM8K,epoch,0.0546,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B IT [Instruction-tuned (IT)],Gemma::Human-pref win rate vs Mistral-7B-Instruct-v0.2,own,0.601,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B IT [Instruction-tuned (IT)],HellaSwag,epoch,0.5026666666666667,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B IT [Instruction-tuned (IT)],MATH level 5,epoch,0.0204,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B IT [Instruction-tuned (IT)],MMLU,epoch,0.16866666666666666,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B IT [Instruction-tuned (IT)],OLLv1: TruthfulQA,own,0.4582,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B IT [Instruction-tuned (IT)],OLLv2: BBH,own,0.0521,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B IT [Instruction-tuned (IT)],OLLv2: GPQA,own,0.038,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B IT [Instruction-tuned (IT)],OLLv2: IFEval,own,0.26899999999999996,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B IT [Instruction-tuned (IT)],OLLv2: MMLU-PRO,own,0.0392,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B IT [Instruction-tuned (IT)],OLLv2: MUSR,own,0.030299999999999997,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B IT [Instruction-tuned (IT)],Winogrande,epoch,0.2185999999999999,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],ARC AI2,epoch,0.31173333333333336,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],GSM8K,epoch,0.177,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],Gemma::ARC-e,own,0.6426666666666666,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],Gemma::BIG-Bench (BB),own,0.35200000000000004,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],Gemma::BoolQ,own,0.3880000000000001,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],Gemma::CommonsenseQA,own,0.56625,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],Gemma::HumanEval (PT/IT 0-shot),own,0.22,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],Gemma::MATH,own,0.11800000000000001,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],Gemma::MBPP,own,0.292,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],Gemma::Natural Questions,own,0.125,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],Gemma::SocialIQA,own,0.24550000000000008,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],HellaSwag,epoch,0.6236,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],MATH level 5,epoch,0.0302,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],MMLU,epoch,0.23066666666666666,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],OLLv1: TruthfulQA,own,0.3308,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],OLLv2: BBH,own,0.0825,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],OLLv2: GPQA,own,0.0067,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],OLLv2: IFEval,own,0.20379999999999998,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.0406,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],OLLv2: MUSR,own,0.0756,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],OpenBookQA,epoch,0.304,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],PIQA,epoch,0.546,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],TriviaQA,epoch,0.532,Gemma,Gemma 1,2.0,2024-02
+Gemma 2B [Pretrained (PT)],Winogrande,epoch,0.32599999999999985,Gemma,Gemma 1,2.0,2024-02
+Gemma 3 12B IT [Instruction-tuned (IT)],BBH,epoch,0.8093333333333333,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B IT [Instruction-tuned (IT)],GPQA diamond,epoch,0.21199999999999997,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B IT [Instruction-tuned (IT)],GSM8K,epoch,0.9440000000000001,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B IT [Instruction-tuned (IT)],Gemma::Bird-SQL (dev),own,0.479,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B IT [Instruction-tuned (IT)],Gemma::ChartQA,own,0.757,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B IT [Instruction-tuned (IT)],Gemma::DocVQA,own,0.871,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B IT [Instruction-tuned (IT)],Gemma::FACTS Grounding,own,0.758,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B IT [Instruction-tuned (IT)],Gemma::Global-MMLU-Lite,own,0.5933333333333333,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B IT [Instruction-tuned (IT)],Gemma::HiddenMath,own,0.545,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B IT [Instruction-tuned (IT)],Gemma::HumanEval (PT/IT 0-shot),own,0.8540000000000001,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B IT [Instruction-tuned (IT)],Gemma::LCB (G3),own,0.24600000000000002,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B IT [Instruction-tuned (IT)],Gemma::MATH,own,0.838,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B IT [Instruction-tuned (IT)],Gemma::MMLU-Pro (IT),own,0.5622222222222222,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B IT [Instruction-tuned (IT)],Gemma::MMMU (val),own,0.4613333333333333,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B IT [Instruction-tuned (IT)],Gemma::SimpleQA,own,0.063,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B IT [Instruction-tuned (IT)],Gemma::VQAv2,own,0.716,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B IT [Instruction-tuned (IT)],LiveBench-20250402,own,0.4125,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],ARC AI2,epoch,0.5853333333333334,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],BBH,epoch,0.6346666666666666,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],GSM8K,epoch,0.71,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],Gemma::AGIEval,own,0.43199999999999994,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],Gemma::ARC-e,own,0.844,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],Gemma::BoolQ,own,0.5759999999999998,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],Gemma::DROP,own,0.722,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],Gemma::ECLeKTic,own,0.172,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],Gemma::FloRes,own,0.46,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],Gemma::GPQA,own,0.254,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],Gemma::Global-MMLU-Lite,own,0.5920000000000001,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],Gemma::HumanEval (PT/IT 0-shot),own,0.457,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],Gemma::IndicGenBench,own,0.617,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],Gemma::MATH,own,0.433,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],Gemma::MBPP,own,0.604,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],Gemma::MGSM,own,0.643,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],Gemma::MMLU-Pro (IT),own,0.3922222222222222,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],Gemma::Natural Questions,own,0.314,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],Gemma::SocialIQA,own,0.30100000000000005,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],Gemma::WMT24++,own,0.539,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],Gemma::XQuAD,own,0.745,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],HellaSwag,epoch,0.7893333333333334,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],MMLU,epoch,0.66,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],PIQA,epoch,0.6359999999999999,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],TriviaQA,epoch,0.782,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 12B [Pretrained (PT)],Winogrande,epoch,0.486,Gemma,Gemma 3,12.0,2025-03
+Gemma 3 1B IT [Instruction-tuned (IT)],BBH,epoch,0.18800000000000003,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B IT [Instruction-tuned (IT)],GSM8K,epoch,0.628,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B IT [Instruction-tuned (IT)],Gemma::Bird-SQL (dev),own,0.064,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B IT [Instruction-tuned (IT)],Gemma::FACTS Grounding,own,0.364,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B IT [Instruction-tuned (IT)],Gemma::Global-MMLU-Lite,own,0.1226666666666667,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B IT [Instruction-tuned (IT)],Gemma::HiddenMath,own,0.158,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B IT [Instruction-tuned (IT)],Gemma::HumanEval (PT/IT 0-shot),own,0.415,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B IT [Instruction-tuned (IT)],Gemma::LCB (G3),own,0.019,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B IT [Instruction-tuned (IT)],Gemma::MATH,own,0.48,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B IT [Instruction-tuned (IT)],Gemma::MMLU-Pro (IT),own,0.052222222222222205,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B IT [Instruction-tuned (IT)],Gemma::SimpleQA,own,0.022000000000000002,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B [Pretrained (PT)],ARC AI2,epoch,0.17866666666666667,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B [Pretrained (PT)],BBH,epoch,0.0453333333333333,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B [Pretrained (PT)],Gemma::ARC-e,own,0.64,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B [Pretrained (PT)],Gemma::BoolQ,own,0.264,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B [Pretrained (PT)],Gemma::DROP,own,0.424,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B [Pretrained (PT)],Gemma::ECLeKTic,own,0.046900000000000004,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B [Pretrained (PT)],Gemma::FloRes,own,0.295,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B [Pretrained (PT)],Gemma::IndicGenBench,own,0.414,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B [Pretrained (PT)],Gemma::MGSM,own,0.0204,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B [Pretrained (PT)],Gemma::Natural Questions,own,0.09480000000000001,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B [Pretrained (PT)],Gemma::SocialIQA,own,0.23349999999999999,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B [Pretrained (PT)],Gemma::WMT24++,own,0.36700000000000005,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B [Pretrained (PT)],Gemma::XQuAD,own,0.439,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B [Pretrained (PT)],HellaSwag,epoch,0.49733333333333335,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B [Pretrained (PT)],PIQA,epoch,0.476,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B [Pretrained (PT)],TriviaQA,epoch,0.39799999999999996,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 1B [Pretrained (PT)],Winogrande,epoch,0.16400000000000015,Gemma,Gemma 3,1.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],BBH,epoch,0.8346666666666666,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],GPQA diamond,epoch,0.23199999999999998,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],GSM8K,epoch,0.9590000000000001,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],Gemma::AIME'26,own,0.20800000000000002,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],Gemma::BigBench Extra Hard,own,0.193,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],Gemma::Bird-SQL (dev),own,0.544,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],Gemma::ChartQA,own,0.78,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],Gemma::DocVQA,own,0.866,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],Gemma::FACTS Grounding,own,0.7490000000000001,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],Gemma::Global-MMLU-Lite,own,0.6679999999999998,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],Gemma::HiddenMath,own,0.603,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],Gemma::HumanEval (PT/IT 0-shot),own,0.878,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],Gemma::LCB (G3),own,0.297,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],Gemma::LCB v6 (G4),own,0.29100000000000004,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],Gemma::MATH,own,0.89,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],Gemma::MATH-Vision,own,0.46,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],Gemma::MMLU-Pro (IT),own,0.6399999999999999,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],Gemma::MMMLU (multilingual MMLU),own,0.7070000000000001,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],Gemma::MMMU (val),own,0.532,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],Gemma::MMMU-Pro,own,0.4411111111111111,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],Gemma::MRCR v2,own,0.135,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],Gemma::SimpleQA,own,0.1,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],Gemma::Tau2-bench,own,0.162,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],Gemma::VQAv2,own,0.71,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],LiveBench-20241125,own,0.4999,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],LiveBench-20250402,own,0.46630000000000005,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B IT [Instruction-tuned (IT)],LiveBench-20250425,own,0.4844,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],ARC AI2,epoch,0.608,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],BBH,epoch,0.7026666666666667,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],GSM8K,epoch,0.826,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],Gemma::AGIEval,own,0.5493333333333333,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],Gemma::ARC-e,own,0.8533333333333334,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],Gemma::BoolQ,own,0.6480000000000001,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],Gemma::DROP,own,0.772,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],Gemma::ECLeKTic,own,0.244,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],Gemma::FloRes,own,0.488,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],Gemma::GPQA,own,0.243,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],Gemma::Global-MMLU-Lite,own,0.676,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],Gemma::HumanEval (PT/IT 0-shot),own,0.488,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],Gemma::IndicGenBench,own,0.634,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],Gemma::MATH,own,0.5,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],Gemma::MBPP,own,0.6559999999999999,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],Gemma::MGSM,own,0.743,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],Gemma::MMLU-Pro (IT),own,0.4688888888888889,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],Gemma::Natural Questions,own,0.361,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],Gemma::SocialIQA,own,0.3234999999999999,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],Gemma::WMT24++,own,0.557,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],Gemma::XQuAD,own,0.768,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],HellaSwag,epoch,0.8079999999999999,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],MMLU,epoch,0.7146666666666666,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],PIQA,epoch,0.6659999999999999,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],TriviaQA,epoch,0.855,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 27B [Pretrained (PT)],Winogrande,epoch,0.5759999999999998,Gemma,Gemma 3,27.0,2025-03
+Gemma 3 4B IT [Instruction-tuned (IT)],BBH,epoch,0.6293333333333333,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B IT [Instruction-tuned (IT)],GPQA diamond,epoch,0.07733333333333332,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B IT [Instruction-tuned (IT)],GSM8K,epoch,0.892,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B IT [Instruction-tuned (IT)],Gemma::Bird-SQL (dev),own,0.363,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B IT [Instruction-tuned (IT)],Gemma::ChartQA,own,0.688,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B IT [Instruction-tuned (IT)],Gemma::DocVQA,own,0.758,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B IT [Instruction-tuned (IT)],Gemma::FACTS Grounding,own,0.701,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B IT [Instruction-tuned (IT)],Gemma::Global-MMLU-Lite,own,0.39333333333333337,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B IT [Instruction-tuned (IT)],Gemma::HiddenMath,own,0.43,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B IT [Instruction-tuned (IT)],Gemma::HumanEval (PT/IT 0-shot),own,0.713,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B IT [Instruction-tuned (IT)],Gemma::LCB (G3),own,0.126,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B IT [Instruction-tuned (IT)],Gemma::MATH,own,0.7559999999999999,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B IT [Instruction-tuned (IT)],Gemma::MMLU-Pro (IT),own,0.3733333333333333,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B IT [Instruction-tuned (IT)],Gemma::MMMU (val),own,0.3173333333333333,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B IT [Instruction-tuned (IT)],Gemma::SimpleQA,own,0.04,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B IT [Instruction-tuned (IT)],Gemma::VQAv2,own,0.624,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B IT [Instruction-tuned (IT)],LiveBench-20250402,own,0.3013,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],ARC AI2,epoch,0.4160000000000001,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],BBH,epoch,0.3453333333333333,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],GSM8K,epoch,0.384,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],Gemma::AGIEval,own,0.22800000000000006,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],Gemma::ARC-e,own,0.7653333333333334,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],Gemma::BoolQ,own,0.44599999999999995,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],Gemma::DROP,own,0.601,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],Gemma::ECLeKTic,own,0.11,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],Gemma::FloRes,own,0.392,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],Gemma::GPQA,own,0.15,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],Gemma::Global-MMLU-Lite,own,0.4266666666666666,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],Gemma::HumanEval (PT/IT 0-shot),own,0.36,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],Gemma::IndicGenBench,own,0.5720000000000001,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],Gemma::MATH,own,0.242,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],Gemma::MBPP,own,0.46,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],Gemma::MGSM,own,0.34700000000000003,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],Gemma::MMLU-Pro (IT),own,0.2133333333333333,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],Gemma::Natural Questions,own,0.2,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],Gemma::SocialIQA,own,0.2785,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],Gemma::WMT24++,own,0.484,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],Gemma::XQuAD,own,0.68,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],HellaSwag,epoch,0.6960000000000001,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],MMLU,epoch,0.4613333333333333,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],PIQA,epoch,0.5919999999999999,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],TriviaQA,epoch,0.6579999999999999,Gemma,Gemma 3,4.0,2025-03
+Gemma 3 4B [Pretrained (PT)],Winogrande,epoch,0.29400000000000004,Gemma,Gemma 3,4.0,2025-03
+Gemma 3n E2B IT [Instruction-tuned (IT)],Gemma::AIME'25,own,0.067,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E2B IT [Instruction-tuned (IT)],Gemma::ECLeKTic,own,0.025,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E2B IT [Instruction-tuned (IT)],Gemma::Global-MMLU-Lite,own,0.4533333333333333,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E2B IT [Instruction-tuned (IT)],Gemma::HiddenMath,own,0.27699999999999997,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E2B IT [Instruction-tuned (IT)],Gemma::HumanEval (PT/IT 0-shot),own,0.665,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E2B IT [Instruction-tuned (IT)],Gemma::LCB v5 (3n),own,0.18600000000000003,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E2B IT [Instruction-tuned (IT)],Gemma::MBPP,own,0.5660000000000001,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E2B IT [Instruction-tuned (IT)],Gemma::MGSM,own,0.531,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E2B IT [Instruction-tuned (IT)],Gemma::MMLU-Pro (IT),own,0.33888888888888896,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E2B IT [Instruction-tuned (IT)],Gemma::WMT24++,own,0.42700000000000005,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E2B IT [Instruction-tuned (IT)],MMLU,epoch,0.46799999999999997,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E2B [Pretrained (PT)],ARC AI2,epoch,0.35600000000000004,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E2B [Pretrained (PT)],BBH,epoch,0.25733333333333325,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E2B [Pretrained (PT)],Gemma::ARC-e,own,0.6773333333333333,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E2B [Pretrained (PT)],Gemma::BoolQ,own,0.528,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E2B [Pretrained (PT)],Gemma::DROP,own,0.539,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E2B [Pretrained (PT)],Gemma::Natural Questions,own,0.155,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E2B [Pretrained (PT)],Gemma::SocialIQA,own,0.23199999999999998,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E2B [Pretrained (PT)],HellaSwag,epoch,0.6293333333333333,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E2B [Pretrained (PT)],PIQA,epoch,0.5780000000000001,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E2B [Pretrained (PT)],TriviaQA,epoch,0.608,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E2B [Pretrained (PT)],Winogrande,epoch,0.33599999999999985,Gemma,Gemma 3n,2.0,2025-06
+Gemma 3n E4B IT [Instruction-tuned (IT)],Gemma::AIME'25,own,0.11599999999999999,Gemma,Gemma 3n,4.0,2025-06
+Gemma 3n E4B IT [Instruction-tuned (IT)],Gemma::ECLeKTic,own,0.019,Gemma,Gemma 3n,4.0,2025-06
+Gemma 3n E4B IT [Instruction-tuned (IT)],Gemma::Global-MMLU-Lite,own,0.5266666666666667,Gemma,Gemma 3n,4.0,2025-06
+Gemma 3n E4B IT [Instruction-tuned (IT)],Gemma::HiddenMath,own,0.377,Gemma,Gemma 3n,4.0,2025-06
+Gemma 3n E4B IT [Instruction-tuned (IT)],Gemma::HumanEval (PT/IT 0-shot),own,0.75,Gemma,Gemma 3n,4.0,2025-06
+Gemma 3n E4B IT [Instruction-tuned (IT)],Gemma::LCB v5 (3n),own,0.257,Gemma,Gemma 3n,4.0,2025-06
+Gemma 3n E4B IT [Instruction-tuned (IT)],Gemma::MBPP,own,0.636,Gemma,Gemma 3n,4.0,2025-06
+Gemma 3n E4B IT [Instruction-tuned (IT)],Gemma::MGSM,own,0.607,Gemma,Gemma 3n,4.0,2025-06
+Gemma 3n E4B IT [Instruction-tuned (IT)],Gemma::MMLU-Pro (IT),own,0.45111111111111113,Gemma,Gemma 3n,4.0,2025-06
+Gemma 3n E4B IT [Instruction-tuned (IT)],Gemma::WMT24++,own,0.501,Gemma,Gemma 3n,4.0,2025-06
+Gemma 3n E4B IT [Instruction-tuned (IT)],MMLU,epoch,0.532,Gemma,Gemma 3n,4.0,2025-06
+Gemma 3n E4B [Pretrained (PT)],ARC AI2,epoch,0.488,Gemma,Gemma 3n,4.0,2025-06
+Gemma 3n E4B [Pretrained (PT)],BBH,epoch,0.37200000000000005,Gemma,Gemma 3n,4.0,2025-06
+Gemma 3n E4B [Pretrained (PT)],Gemma::ARC-e,own,0.7546666666666666,Gemma,Gemma 3n,4.0,2025-06
+Gemma 3n E4B [Pretrained (PT)],Gemma::BoolQ,own,0.6319999999999999,Gemma,Gemma 3n,4.0,2025-06
+Gemma 3n E4B [Pretrained (PT)],Gemma::DROP,own,0.608,Gemma,Gemma 3n,4.0,2025-06
+Gemma 3n E4B [Pretrained (PT)],Gemma::Natural Questions,own,0.209,Gemma,Gemma 3n,4.0,2025-06
+Gemma 3n E4B [Pretrained (PT)],Gemma::SocialIQA,own,0.25,Gemma,Gemma 3n,4.0,2025-06
+Gemma 3n E4B [Pretrained (PT)],HellaSwag,epoch,0.7146666666666666,Gemma,Gemma 3n,4.0,2025-06
+Gemma 3n E4B [Pretrained (PT)],PIQA,epoch,0.6200000000000001,Gemma,Gemma 3n,4.0,2025-06
+Gemma 3n E4B [Pretrained (PT)],TriviaQA,epoch,0.7020000000000001,Gemma,Gemma 3n,4.0,2025-06
+Gemma 3n E4B [Pretrained (PT)],Winogrande,epoch,0.43400000000000016,Gemma,Gemma 3n,4.0,2025-06
+"Gemma 4 12B [IT, Thinking mode]",GPQA diamond,epoch,0.7173333333333333,Gemma,Gemma 4,11.95,2026-06
+"Gemma 4 12B [IT, Thinking mode]",Gemma::AIME'26,own,0.775,Gemma,Gemma 4,11.95,2026-06
+"Gemma 4 12B [IT, Thinking mode]",Gemma::BigBench Extra Hard,own,0.53,Gemma,Gemma 4,11.95,2026-06
+"Gemma 4 12B [IT, Thinking mode]",Gemma::LCB v6 (G4),own,0.72,Gemma,Gemma 4,11.95,2026-06
+"Gemma 4 12B [IT, Thinking mode]",Gemma::MATH-Vision,own,0.797,Gemma,Gemma 4,11.95,2026-06
+"Gemma 4 12B [IT, Thinking mode]",Gemma::MMLU-Pro (IT),own,0.7466666666666667,Gemma,Gemma 4,11.95,2026-06
+"Gemma 4 12B [IT, Thinking mode]",Gemma::MMMLU (multilingual MMLU),own,0.8340000000000001,Gemma,Gemma 4,11.95,2026-06
+"Gemma 4 12B [IT, Thinking mode]",Gemma::MMMU-Pro,own,0.6566666666666666,Gemma,Gemma 4,11.95,2026-06
+"Gemma 4 12B [IT, Thinking mode]",Gemma::MRCR v2,own,0.434,Gemma,Gemma 4,11.95,2026-06
+"Gemma 4 12B [IT, Thinking mode]",Gemma::MedXPertQA MM,own,0.35875,Gemma,Gemma 4,11.95,2026-06
+"Gemma 4 12B [IT, Thinking mode]",Gemma::Tau2-bench,own,0.69,Gemma,Gemma 4,11.95,2026-06
+"Gemma 4 12B [IT, Thinking mode]",HLE,epoch,0.052000000000000005,Gemma,Gemma 4,11.95,2026-06
+"Gemma 4 26B A4B [IT, Thinking mode]",GPQA diamond,epoch,0.7639999999999999,Gemma,Gemma 4,25.2,2026-03
+"Gemma 4 26B A4B [IT, Thinking mode]",Gemma::AIME'26,own,0.883,Gemma,Gemma 4,25.2,2026-03
+"Gemma 4 26B A4B [IT, Thinking mode]",Gemma::BigBench Extra Hard,own,0.648,Gemma,Gemma 4,25.2,2026-03
+"Gemma 4 26B A4B [IT, Thinking mode]",Gemma::LCB v6 (G4),own,0.7709999999999999,Gemma,Gemma 4,25.2,2026-03
+"Gemma 4 26B A4B [IT, Thinking mode]",Gemma::MATH-Vision,own,0.8240000000000001,Gemma,Gemma 4,25.2,2026-03
+"Gemma 4 26B A4B [IT, Thinking mode]",Gemma::MMLU-Pro (IT),own,0.8066666666666666,Gemma,Gemma 4,25.2,2026-03
+"Gemma 4 26B A4B [IT, Thinking mode]",Gemma::MMMLU (multilingual MMLU),own,0.863,Gemma,Gemma 4,25.2,2026-03
+"Gemma 4 26B A4B [IT, Thinking mode]",Gemma::MMMU-Pro,own,0.7088888888888889,Gemma,Gemma 4,25.2,2026-03
+"Gemma 4 26B A4B [IT, Thinking mode]",Gemma::MRCR v2,own,0.441,Gemma,Gemma 4,25.2,2026-03
+"Gemma 4 26B A4B [IT, Thinking mode]",Gemma::MedXPertQA MM,own,0.4762499999999999,Gemma,Gemma 4,25.2,2026-03
+"Gemma 4 26B A4B [IT, Thinking mode]",Gemma::Tau2-bench,own,0.682,Gemma,Gemma 4,25.2,2026-03
+"Gemma 4 26B A4B [IT, Thinking mode]",Gemma::Tau2-bench Retail,own,0.855,Gemma,Gemma 4,25.2,2026-03
+"Gemma 4 26B A4B [IT, Thinking mode]",HLE,epoch,0.172,Gemma,Gemma 4,25.2,2026-03
+"Gemma 4 31B [IT, Thinking mode]",GPQA diamond,epoch,0.7906666666666666,Gemma,Gemma 4,30.7,2026-03
+"Gemma 4 31B [IT, Thinking mode]",Gemma::AIME'26,own,0.892,Gemma,Gemma 4,30.7,2026-03
+"Gemma 4 31B [IT, Thinking mode]",Gemma::BigBench Extra Hard,own,0.7440000000000001,Gemma,Gemma 4,30.7,2026-03
+"Gemma 4 31B [IT, Thinking mode]",Gemma::LCB v6 (G4),own,0.8,Gemma,Gemma 4,30.7,2026-03
+"Gemma 4 31B [IT, Thinking mode]",Gemma::MATH-Vision,own,0.856,Gemma,Gemma 4,30.7,2026-03
+"Gemma 4 31B [IT, Thinking mode]",Gemma::MMLU-Pro (IT),own,0.8355555555555555,Gemma,Gemma 4,30.7,2026-03
+"Gemma 4 31B [IT, Thinking mode]",Gemma::MMMLU (multilingual MMLU),own,0.884,Gemma,Gemma 4,30.7,2026-03
+"Gemma 4 31B [IT, Thinking mode]",Gemma::MMMU-Pro,own,0.7433333333333334,Gemma,Gemma 4,30.7,2026-03
+"Gemma 4 31B [IT, Thinking mode]",Gemma::MRCR v2,own,0.664,Gemma,Gemma 4,30.7,2026-03
+"Gemma 4 31B [IT, Thinking mode]",Gemma::MedXPertQA MM,own,0.51625,Gemma,Gemma 4,30.7,2026-03
+"Gemma 4 31B [IT, Thinking mode]",Gemma::Tau2-bench,own,0.769,Gemma,Gemma 4,30.7,2026-03
+"Gemma 4 31B [IT, Thinking mode]",Gemma::Tau2-bench Retail,own,0.8640000000000001,Gemma,Gemma 4,30.7,2026-03
+"Gemma 4 31B [IT, Thinking mode]",HLE,epoch,0.265,Gemma,Gemma 4,30.7,2026-03
+"Gemma 4 31B [IT, Thinking mode]",LiveBench-20260108,own,0.6162,Gemma,Gemma 4,30.7,2026-03
+"Gemma 4 E2B [IT, Thinking mode]",GPQA diamond,epoch,0.24533333333333332,Gemma,Gemma 4,2.3,2026-03
+"Gemma 4 E2B [IT, Thinking mode]",Gemma::AIME'26,own,0.375,Gemma,Gemma 4,2.3,2026-03
+"Gemma 4 E2B [IT, Thinking mode]",Gemma::BigBench Extra Hard,own,0.21899999999999997,Gemma,Gemma 4,2.3,2026-03
+"Gemma 4 E2B [IT, Thinking mode]",Gemma::LCB v6 (G4),own,0.44,Gemma,Gemma 4,2.3,2026-03
+"Gemma 4 E2B [IT, Thinking mode]",Gemma::MATH-Vision,own,0.524,Gemma,Gemma 4,2.3,2026-03
+"Gemma 4 E2B [IT, Thinking mode]",Gemma::MMLU-Pro (IT),own,0.5555555555555556,Gemma,Gemma 4,2.3,2026-03
+"Gemma 4 E2B [IT, Thinking mode]",Gemma::MMMLU (multilingual MMLU),own,0.674,Gemma,Gemma 4,2.3,2026-03
+"Gemma 4 E2B [IT, Thinking mode]",Gemma::MMMU-Pro,own,0.37999999999999995,Gemma,Gemma 4,2.3,2026-03
+"Gemma 4 E2B [IT, Thinking mode]",Gemma::MRCR v2,own,0.191,Gemma,Gemma 4,2.3,2026-03
+"Gemma 4 E2B [IT, Thinking mode]",Gemma::MedXPertQA MM,own,0.04374999999999997,Gemma,Gemma 4,2.3,2026-03
+"Gemma 4 E2B [IT, Thinking mode]",Gemma::Tau2-bench,own,0.245,Gemma,Gemma 4,2.3,2026-03
+"Gemma 4 E2B [IT, Thinking mode]",Gemma::Tau2-bench Retail,own,0.294,Gemma,Gemma 4,2.3,2026-03
+"Gemma 4 E4B [IT, Thinking mode]",GPQA diamond,epoch,0.44799999999999995,Gemma,Gemma 4,4.5,2026-03
+"Gemma 4 E4B [IT, Thinking mode]",Gemma::AIME'26,own,0.425,Gemma,Gemma 4,4.5,2026-03
+"Gemma 4 E4B [IT, Thinking mode]",Gemma::BigBench Extra Hard,own,0.331,Gemma,Gemma 4,4.5,2026-03
+"Gemma 4 E4B [IT, Thinking mode]",Gemma::LCB v6 (G4),own,0.52,Gemma,Gemma 4,4.5,2026-03
+"Gemma 4 E4B [IT, Thinking mode]",Gemma::MATH-Vision,own,0.595,Gemma,Gemma 4,4.5,2026-03
+"Gemma 4 E4B [IT, Thinking mode]",Gemma::MMLU-Pro (IT),own,0.66,Gemma,Gemma 4,4.5,2026-03
+"Gemma 4 E4B [IT, Thinking mode]",Gemma::MMMLU (multilingual MMLU),own,0.7659999999999999,Gemma,Gemma 4,4.5,2026-03
+"Gemma 4 E4B [IT, Thinking mode]",Gemma::MMMU-Pro,own,0.4733333333333334,Gemma,Gemma 4,4.5,2026-03
+"Gemma 4 E4B [IT, Thinking mode]",Gemma::MRCR v2,own,0.254,Gemma,Gemma 4,4.5,2026-03
+"Gemma 4 E4B [IT, Thinking mode]",Gemma::MedXPertQA MM,own,0.10874999999999996,Gemma,Gemma 4,4.5,2026-03
+"Gemma 4 E4B [IT, Thinking mode]",Gemma::Tau2-bench,own,0.42200000000000004,Gemma,Gemma 4,4.5,2026-03
+"Gemma 4 E4B [IT, Thinking mode]",Gemma::Tau2-bench Retail,own,0.575,Gemma,Gemma 4,4.5,2026-03
+Gemma 7B IT [Instruction-tuned (IT)],ARC AI2,epoch,0.35266666666666674,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B IT [Instruction-tuned (IT)],GSM8K,epoch,0.2919,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B IT [Instruction-tuned (IT)],Gemma::Human-pref win rate vs Mistral-7B-Instruct-v0.2,own,0.635,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B IT [Instruction-tuned (IT)],HellaSwag,epoch,0.6261333333333332,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B IT [Instruction-tuned (IT)],MATH level 5,epoch,0.029500000000000002,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B IT [Instruction-tuned (IT)],MMLU,epoch,0.3802666666666667,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B IT [Instruction-tuned (IT)],OLLv1: TruthfulQA,own,0.4729,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B IT [Instruction-tuned (IT)],OLLv2: BBH,own,0.11939999999999999,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B IT [Instruction-tuned (IT)],OLLv2: GPQA,own,0.045899999999999996,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B IT [Instruction-tuned (IT)],OLLv2: IFEval,own,0.3868,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B IT [Instruction-tuned (IT)],OLLv2: MMLU-PRO,own,0.07719999999999999,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B IT [Instruction-tuned (IT)],OLLv2: MUSR,own,0.1253,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B IT [Instruction-tuned (IT)],Winogrande,epoch,0.35919999999999996,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],ARC AI2,epoch,0.4812,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],GSM8K,epoch,0.5277000000000001,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],Gemma::AGIEval,own,0.2226666666666667,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],Gemma::ARC-e,own,0.7533333333333333,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],Gemma::BIG-Bench (BB),own,0.551,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],Gemma::BoolQ,own,0.6640000000000001,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],Gemma::CommonsenseQA,own,0.6412499999999999,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],Gemma::HumanEval (PT/IT 0-shot),own,0.32299999999999995,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],Gemma::MATH,own,0.243,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],Gemma::MBPP,own,0.444,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],Gemma::Natural Questions,own,0.23,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],Gemma::SocialIQA,own,0.277,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],HellaSwag,epoch,0.7662666666666667,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],MATH level 5,epoch,0.07400000000000001,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],MMLU,epoch,0.5470666666666667,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],OLLv1: TruthfulQA,own,0.44909999999999994,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],OLLv2: BBH,own,0.2112,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],OLLv2: GPQA,own,0.0492,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],OLLv2: IFEval,own,0.2659,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.2164,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],OLLv2: MUSR,own,0.10980000000000001,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],OpenBookQA,epoch,0.3706666666666667,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],PIQA,epoch,0.6240000000000001,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],TriviaQA,epoch,0.634,Gemma,Gemma 1,7.0,2024-02
+Gemma 7B [Pretrained (PT)],Winogrande,epoch,0.569,Gemma,Gemma 1,7.0,2024-02
+Qwen-1.8B-Chat [Instruct/chat],GSM8K,epoch,0.32299999999999995,Qwen,Qwen (v1),1.8,2023-11
+Qwen-1.8B-Chat [Instruct/chat],MMLU,epoch,0.2706666666666666,Qwen,Qwen (v1),1.8,2023-11
+Qwen-1.8B-Chat [Instruct/chat],Qwen::C-Eval,own,0.41466666666666674,Qwen,Qwen (v1),1.8,2023-11
+Qwen-1.8B-Chat [Instruct/chat],Qwen::CMMLU,own,0.36133333333333334,Qwen,Qwen (v1),1.8,2023-11
+Qwen-1.8B-Chat [Instruct/chat],Qwen::HumanEval,own,0.152,Qwen,Qwen (v1),1.8,2023-11
+Qwen-1.8B-Chat [Instruct/chat],Qwen::MATH,own,0.023,Qwen,Qwen (v1),1.8,2023-11
+Qwen-1.8B-Chat [Instruct/chat],Qwen::MBPP,own,0.142,Qwen,Qwen (v1),1.8,2023-11
+Qwen-14B-Chat [Instruct/chat],BBH,epoch,0.3786666666666667,Qwen,Qwen (v1),14.0,2023-09
+Qwen-14B-Chat [Instruct/chat],GSM8K,epoch,0.613,Qwen,Qwen (v1),14.0,2023-09
+Qwen-14B-Chat [Instruct/chat],MMLU,epoch,0.5506666666666665,Qwen,Qwen (v1),14.0,2023-09
+Qwen-14B-Chat [Instruct/chat],Qwen::C-Eval,own,0.628,Qwen,Qwen (v1),14.0,2023-09
+Qwen-14B-Chat [Instruct/chat],Qwen::CMMLU,own,0.6133333333333333,Qwen,Qwen (v1),14.0,2023-09
+Qwen-14B-Chat [Instruct/chat],Qwen::HumanEval,own,0.32299999999999995,Qwen,Qwen (v1),14.0,2023-09
+Qwen-14B-Chat [Instruct/chat],Qwen::MATH,own,0.248,Qwen,Qwen (v1),14.0,2023-09
+Qwen-14B-Chat [Instruct/chat],Qwen::MBPP,own,0.408,Qwen,Qwen (v1),14.0,2023-09
+Qwen-7B-Chat [Instruct/chat],BBH,epoch,0.26666666666666666,Qwen,Qwen (v1),7.0,2023-08
+Qwen-7B-Chat [Instruct/chat],GSM8K,epoch,0.517,Qwen,Qwen (v1),7.0,2023-08
+Qwen-7B-Chat [Instruct/chat],MMLU,epoch,0.44266666666666676,Qwen,Qwen (v1),7.0,2023-08
+Qwen-7B-Chat [Instruct/chat],Qwen::C-Eval,own,0.5133333333333333,Qwen,Qwen (v1),7.0,2023-08
+Qwen-7B-Chat [Instruct/chat],Qwen::CMMLU,own,0.496,Qwen,Qwen (v1),7.0,2023-08
+Qwen-7B-Chat [Instruct/chat],Qwen::HumanEval,own,0.299,Qwen,Qwen (v1),7.0,2023-08
+Qwen-7B-Chat [Instruct/chat],Qwen::MATH,own,0.11599999999999999,Qwen,Qwen (v1),7.0,2023-08
+Qwen-7B-Chat [Instruct/chat],Qwen::MBPP,own,0.316,Qwen,Qwen (v1),7.0,2023-08
+Qwen1.5-0.5B-Chat [Instruct/chat],ARC AI2,epoch,0.074,Qwen,Qwen1.5,0.5,2024-02
+Qwen1.5-0.5B-Chat [Instruct/chat],GSM8K,epoch,0.0766,Qwen,Qwen1.5,0.5,2024-02
+Qwen1.5-0.5B-Chat [Instruct/chat],HellaSwag,epoch,0.25426666666666664,Qwen,Qwen1.5,0.5,2024-02
+Qwen1.5-0.5B-Chat [Instruct/chat],MATH level 5,epoch,0.0068000000000000005,Qwen,Qwen1.5,0.5,2024-02
+Qwen1.5-0.5B-Chat [Instruct/chat],MMLU,epoch,0.1176,Qwen,Qwen1.5,0.5,2024-02
+Qwen1.5-0.5B-Chat [Instruct/chat],OLLv1: TruthfulQA,own,0.42950000000000005,Qwen,Qwen1.5,0.5,2024-02
+Qwen1.5-0.5B-Chat [Instruct/chat],OLLv2: BBH,own,0.0432,Qwen,Qwen1.5,0.5,2024-02
+Qwen1.5-0.5B-Chat [Instruct/chat],OLLv2: GPQA,own,0.025699999999999997,Qwen,Qwen1.5,0.5,2024-02
+Qwen1.5-0.5B-Chat [Instruct/chat],OLLv2: IFEval,own,0.1807,Qwen,Qwen1.5,0.5,2024-02
+Qwen1.5-0.5B-Chat [Instruct/chat],OLLv2: MMLU-PRO,own,0.0236,Qwen,Qwen1.5,0.5,2024-02
+Qwen1.5-0.5B-Chat [Instruct/chat],OLLv2: MUSR,own,0.060599999999999994,Qwen,Qwen1.5,0.5,2024-02
+Qwen1.5-0.5B-Chat [Instruct/chat],Winogrande,epoch,0.09240000000000004,Qwen,Qwen1.5,0.5,2024-02
+Qwen1.5-1.8B [Base (no official chat academic scores)],GSM8K,epoch,0.384,Qwen,Qwen1.5,1.8,2024-02
+Qwen1.5-1.8B [Base (no official chat academic scores)],MMLU,epoch,0.29066666666666663,Qwen,Qwen1.5,1.8,2024-02
+Qwen1.5-1.8B [Base (no official chat academic scores)],Qwen::C-Eval,own,0.4626666666666666,Qwen,Qwen1.5,1.8,2024-02
+Qwen1.5-1.8B [Base (no official chat academic scores)],Qwen::CMMLU,own,0.4373333333333333,Qwen,Qwen1.5,1.8,2024-02
+Qwen1.5-1.8B [Base (no official chat academic scores)],Qwen::HumanEval,own,0.201,Qwen,Qwen1.5,1.8,2024-02
+Qwen1.5-1.8B [Base (no official chat academic scores)],Qwen::MATH,own,0.10099999999999999,Qwen,Qwen1.5,1.8,2024-02
+Qwen1.5-1.8B [Base (no official chat academic scores)],Qwen::MBPP,own,0.18,Qwen,Qwen1.5,1.8,2024-02
+Qwen1.5-1.8B-Chat [Instruct/chat],ARC AI2,epoch,0.18320000000000003,Qwen,Qwen1.5,1.8,2024-02
+Qwen1.5-1.8B-Chat [Instruct/chat],GSM8K,epoch,0.19030000000000002,Qwen,Qwen1.5,1.8,2024-02
+Qwen1.5-1.8B-Chat [Instruct/chat],HellaSwag,epoch,0.4669333333333334,Qwen,Qwen1.5,1.8,2024-02
+Qwen1.5-1.8B-Chat [Instruct/chat],MATH level 5,epoch,0.0196,Qwen,Qwen1.5,1.8,2024-02
+Qwen1.5-1.8B-Chat [Instruct/chat],MMLU,epoch,0.27826666666666666,Qwen,Qwen1.5,1.8,2024-02
+Qwen1.5-1.8B-Chat [Instruct/chat],OLLv1: TruthfulQA,own,0.40619999999999995,Qwen,Qwen1.5,1.8,2024-02
+Qwen1.5-1.8B-Chat [Instruct/chat],OLLv2: BBH,own,0.0591,Qwen,Qwen1.5,1.8,2024-02
+Qwen1.5-1.8B-Chat [Instruct/chat],OLLv2: GPQA,own,0.0638,Qwen,Qwen1.5,1.8,2024-02
+Qwen1.5-1.8B-Chat [Instruct/chat],OLLv2: IFEval,own,0.20190000000000002,Qwen,Qwen1.5,1.8,2024-02
+Qwen1.5-1.8B-Chat [Instruct/chat],OLLv2: MMLU-PRO,own,0.08929999999999999,Qwen,Qwen1.5,1.8,2024-02
+Qwen1.5-1.8B-Chat [Instruct/chat],OLLv2: MUSR,own,0.12179999999999999,Qwen,Qwen1.5,1.8,2024-02
+Qwen1.5-1.8B-Chat [Instruct/chat],Winogrande,epoch,0.19340000000000002,Qwen,Qwen1.5,1.8,2024-02
+Qwen1.5-14B [Base (no official chat academic scores)],BBH,epoch,0.3826666666666667,Qwen,Qwen1.5,14.0,2024-02
+Qwen1.5-14B [Base (no official chat academic scores)],GSM8K,epoch,0.701,Qwen,Qwen1.5,14.0,2024-02
+Qwen1.5-14B [Base (no official chat academic scores)],MMLU,epoch,0.568,Qwen,Qwen1.5,14.0,2024-02
+Qwen1.5-14B [Base (no official chat academic scores)],Qwen::C-Eval,own,0.7160000000000001,Qwen,Qwen1.5,14.0,2024-02
+Qwen1.5-14B [Base (no official chat academic scores)],Qwen::CMMLU,own,0.7013333333333333,Qwen,Qwen1.5,14.0,2024-02
+Qwen1.5-14B [Base (no official chat academic scores)],Qwen::HumanEval,own,0.37799999999999995,Qwen,Qwen1.5,14.0,2024-02
+Qwen1.5-14B [Base (no official chat academic scores)],Qwen::MATH,own,0.292,Qwen,Qwen1.5,14.0,2024-02
+Qwen1.5-14B [Base (no official chat academic scores)],Qwen::MBPP,own,0.44,Qwen,Qwen1.5,14.0,2024-02
+Qwen1.5-14B-Chat [Instruct/chat],ARC AI2,epoch,0.4493333333333334,Qwen,Qwen1.5,14.0,2024-02
+Qwen1.5-14B-Chat [Instruct/chat],GSM8K,epoch,0.3063,Qwen,Qwen1.5,14.0,2024-02
+Qwen1.5-14B-Chat [Instruct/chat],HellaSwag,epoch,0.7636,Qwen,Qwen1.5,14.0,2024-02
+Qwen1.5-14B-Chat [Instruct/chat],MATH level 5,epoch,0.15259999999999999,Qwen,Qwen1.5,14.0,2024-02
+Qwen1.5-14B-Chat [Instruct/chat],MMLU,epoch,0.5809333333333333,Qwen,Qwen1.5,14.0,2024-02
+Qwen1.5-14B-Chat [Instruct/chat],OLLv1: TruthfulQA,own,0.6036,Qwen,Qwen1.5,14.0,2024-02
+Qwen1.5-14B-Chat [Instruct/chat],OLLv2: BBH,own,0.3276,Qwen,Qwen1.5,14.0,2024-02
+Qwen1.5-14B-Chat [Instruct/chat],OLLv2: GPQA,own,0.0268,Qwen,Qwen1.5,14.0,2024-02
+Qwen1.5-14B-Chat [Instruct/chat],OLLv2: IFEval,own,0.4768,Qwen,Qwen1.5,14.0,2024-02
+Qwen1.5-14B-Chat [Instruct/chat],OLLv2: MMLU-PRO,own,0.2909,Qwen,Qwen1.5,14.0,2024-02
+Qwen1.5-14B-Chat [Instruct/chat],OLLv2: MUSR,own,0.1393,Qwen,Qwen1.5,14.0,2024-02
+Qwen1.5-14B-Chat [Instruct/chat],Qwen::AlpacaEval 2.0,own,0.19699999999999998,Qwen,Qwen1.5,14.0,2024-02
+Qwen1.5-14B-Chat [Instruct/chat],Winogrande,epoch,0.4618,Qwen,Qwen1.5,14.0,2024-02
+Qwen1.5-32B [Base (no official chat academic scores)],BBH,epoch,0.5573333333333332,Qwen,Qwen1.5,32.0,2024-04
+Qwen1.5-32B [Base (no official chat academic scores)],GSM8K,epoch,0.774,Qwen,Qwen1.5,32.0,2024-04
+Qwen1.5-32B [Base (no official chat academic scores)],MMLU,epoch,0.6453333333333334,Qwen,Qwen1.5,32.0,2024-04
+Qwen1.5-32B [Base (no official chat academic scores)],Qwen::C-Eval,own,0.7799999999999999,Qwen,Qwen1.5,32.0,2024-04
+Qwen1.5-32B [Base (no official chat academic scores)],Qwen::CMMLU,own,0.7639999999999999,Qwen,Qwen1.5,32.0,2024-04
+Qwen1.5-32B [Base (no official chat academic scores)],Qwen::HumanEval,own,0.37200000000000005,Qwen,Qwen1.5,32.0,2024-04
+Qwen1.5-32B [Base (no official chat academic scores)],Qwen::MATH,own,0.361,Qwen,Qwen1.5,32.0,2024-04
+Qwen1.5-32B [Base (no official chat academic scores)],Qwen::MBPP,own,0.494,Qwen,Qwen1.5,32.0,2024-04
+Qwen1.5-32B-Chat [Instruct/chat],ARC AI2,epoch,0.5472000000000001,Qwen,Qwen1.5,32.0,2024-02
+Qwen1.5-32B-Chat [Instruct/chat],HellaSwag,epoch,0.8065333333333333,Qwen,Qwen1.5,32.0,2024-02
+Qwen1.5-32B-Chat [Instruct/chat],MATH level 5,epoch,0.1956,Qwen,Qwen1.5,32.0,2024-02
+Qwen1.5-32B-Chat [Instruct/chat],MMLU,epoch,0.6665333333333332,Qwen,Qwen1.5,32.0,2024-02
+Qwen1.5-32B-Chat [Instruct/chat],OLLv1: TruthfulQA,own,0.6695,Qwen,Qwen1.5,32.0,2024-02
+Qwen1.5-32B-Chat [Instruct/chat],OLLv2: BBH,own,0.44549999999999995,Qwen,Qwen1.5,32.0,2024-02
+Qwen1.5-32B-Chat [Instruct/chat],OLLv2: GPQA,own,0.07490000000000001,Qwen,Qwen1.5,32.0,2024-02
+Qwen1.5-32B-Chat [Instruct/chat],OLLv2: IFEval,own,0.5532,Qwen,Qwen1.5,32.0,2024-02
+Qwen1.5-32B-Chat [Instruct/chat],OLLv2: MMLU-PRO,own,0.38409999999999994,Qwen,Qwen1.5,32.0,2024-02
+Qwen1.5-32B-Chat [Instruct/chat],OLLv2: MUSR,own,0.102,Qwen,Qwen1.5,32.0,2024-02
+Qwen1.5-32B-Chat [Instruct/chat],Qwen::AlpacaEval 2.0,own,0.2749,Qwen,Qwen1.5,32.0,2024-04
+Qwen1.5-32B-Chat [Instruct/chat],Winogrande,epoch,0.5438000000000001,Qwen,Qwen1.5,32.0,2024-02
+Qwen1.5-4B [Base (no official chat academic scores)],BBH,epoch,0.10000000000000002,Qwen,Qwen1.5,4.0,2024-02
+Qwen1.5-4B [Base (no official chat academic scores)],GSM8K,epoch,0.57,Qwen,Qwen1.5,4.0,2024-02
+Qwen1.5-4B [Base (no official chat academic scores)],MMLU,epoch,0.41466666666666674,Qwen,Qwen1.5,4.0,2024-02
+Qwen1.5-4B [Base (no official chat academic scores)],Qwen::C-Eval,own,0.568,Qwen,Qwen1.5,4.0,2024-02
+Qwen1.5-4B [Base (no official chat academic scores)],Qwen::CMMLU,own,0.556,Qwen,Qwen1.5,4.0,2024-02
+Qwen1.5-4B [Base (no official chat academic scores)],Qwen::HumanEval,own,0.256,Qwen,Qwen1.5,4.0,2024-02
+Qwen1.5-4B [Base (no official chat academic scores)],Qwen::MATH,own,0.1,Qwen,Qwen1.5,4.0,2024-02
+Qwen1.5-4B [Base (no official chat academic scores)],Qwen::MBPP,own,0.292,Qwen,Qwen1.5,4.0,2024-02
+Qwen1.5-4B-Chat [Instruct/chat],ARC AI2,epoch,0.24346666666666664,Qwen,Qwen1.5,4.0,2024-02
+Qwen1.5-4B-Chat [Instruct/chat],HellaSwag,epoch,0.5964,Qwen,Qwen1.5,4.0,2024-02
+Qwen1.5-4B-Chat [Instruct/chat],MATH level 5,epoch,0.0279,Qwen,Qwen1.5,4.0,2024-02
+Qwen1.5-4B-Chat [Instruct/chat],MMLU,epoch,0.4073333333333333,Qwen,Qwen1.5,4.0,2024-02
+Qwen1.5-4B-Chat [Instruct/chat],OLLv1: TruthfulQA,own,0.44789999999999996,Qwen,Qwen1.5,4.0,2024-02
+Qwen1.5-4B-Chat [Instruct/chat],OLLv2: BBH,own,0.163,Qwen,Qwen1.5,4.0,2024-02
+Qwen1.5-4B-Chat [Instruct/chat],OLLv2: GPQA,own,0.022400000000000003,Qwen,Qwen1.5,4.0,2024-02
+Qwen1.5-4B-Chat [Instruct/chat],OLLv2: IFEval,own,0.3157,Qwen,Qwen1.5,4.0,2024-02
+Qwen1.5-4B-Chat [Instruct/chat],OLLv2: MMLU-PRO,own,0.1551,Qwen,Qwen1.5,4.0,2024-02
+Qwen1.5-4B-Chat [Instruct/chat],OLLv2: MUSR,own,0.0736,Qwen,Qwen1.5,4.0,2024-02
+Qwen1.5-4B-Chat [Instruct/chat],Winogrande,epoch,0.2991999999999999,Qwen,Qwen1.5,4.0,2024-02
+Qwen1.5-7B [Base (no official chat academic scores)],BBH,epoch,0.2026666666666667,Qwen,Qwen1.5,7.0,2024-02
+Qwen1.5-7B [Base (no official chat academic scores)],GSM8K,epoch,0.625,Qwen,Qwen1.5,7.0,2024-02
+Qwen1.5-7B [Base (no official chat academic scores)],MMLU,epoch,0.48,Qwen,Qwen1.5,7.0,2024-02
+Qwen1.5-7B [Base (no official chat academic scores)],Qwen::C-Eval,own,0.6546666666666666,Qwen,Qwen1.5,7.0,2024-02
+Qwen1.5-7B [Base (no official chat academic scores)],Qwen::CMMLU,own,0.6413333333333333,Qwen,Qwen1.5,7.0,2024-02
+Qwen1.5-7B [Base (no official chat academic scores)],Qwen::HumanEval,own,0.36,Qwen,Qwen1.5,7.0,2024-02
+Qwen1.5-7B [Base (no official chat academic scores)],Qwen::MATH,own,0.203,Qwen,Qwen1.5,7.0,2024-02
+Qwen1.5-7B [Base (no official chat academic scores)],Qwen::MBPP,own,0.374,Qwen,Qwen1.5,7.0,2024-02
+Qwen1.5-7B-Chat [Instruct/chat],ARC AI2,epoch,0.4118666666666666,Qwen,Qwen1.5,7.0,2024-02
+Qwen1.5-7B-Chat [Instruct/chat],GSM8K,epoch,0.1319,Qwen,Qwen1.5,7.0,2024-02
+Qwen1.5-7B-Chat [Instruct/chat],HellaSwag,epoch,0.7141333333333334,Qwen,Qwen1.5,7.0,2024-02
+Qwen1.5-7B-Chat [Instruct/chat],MATH level 5,epoch,0.06269999999999999,Qwen,Qwen1.5,7.0,2024-02
+Qwen1.5-7B-Chat [Instruct/chat],MMLU,epoch,0.48933333333333334,Qwen,Qwen1.5,7.0,2024-02
+Qwen1.5-7B-Chat [Instruct/chat],OLLv1: TruthfulQA,own,0.5365,Qwen,Qwen1.5,7.0,2024-02
+Qwen1.5-7B-Chat [Instruct/chat],OLLv2: BBH,own,0.2238,Qwen,Qwen1.5,7.0,2024-02
+Qwen1.5-7B-Chat [Instruct/chat],OLLv2: GPQA,own,0.0705,Qwen,Qwen1.5,7.0,2024-02
+Qwen1.5-7B-Chat [Instruct/chat],OLLv2: IFEval,own,0.4371,Qwen,Qwen1.5,7.0,2024-02
+Qwen1.5-7B-Chat [Instruct/chat],OLLv2: MMLU-PRO,own,0.2168,Qwen,Qwen1.5,7.0,2024-02
+Qwen1.5-7B-Chat [Instruct/chat],OLLv2: MUSR,own,0.0464,Qwen,Qwen1.5,7.0,2024-02
+Qwen1.5-7B-Chat [Instruct/chat],Qwen::AlpacaEval 2.0,own,0.132,Qwen,Qwen1.5,7.0,2024-02
+Qwen1.5-7B-Chat [Instruct/chat],Winogrande,epoch,0.35599999999999987,Qwen,Qwen1.5,7.0,2024-02
+Qwen2-0.5B-Instruct [Instruct/chat],GSM8K,epoch,0.401,Qwen,Qwen2,0.5,2024-06
+Qwen2-0.5B-Instruct [Instruct/chat],MATH level 5,epoch,0.0287,Qwen,Qwen2,0.5,2024-06
+Qwen2-0.5B-Instruct [Instruct/chat],MMLU,epoch,0.17200000000000001,Qwen,Qwen2,0.5,2024-06
+Qwen2-0.5B-Instruct [Instruct/chat],OLLv2: BBH,own,0.0588,Qwen,Qwen2,0.5,2024-06
+Qwen2-0.5B-Instruct [Instruct/chat],OLLv2: GPQA,own,0.0,Qwen,Qwen2,0.5,2024-06
+Qwen2-0.5B-Instruct [Instruct/chat],OLLv2: IFEval,own,0.22469999999999998,Qwen,Qwen2,0.5,2024-06
+Qwen2-0.5B-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.059000000000000004,Qwen,Qwen2,0.5,2024-06
+Qwen2-0.5B-Instruct [Instruct/chat],OLLv2: MUSR,own,0.0241,Qwen,Qwen2,0.5,2024-06
+Qwen2-0.5B-Instruct [Instruct/chat],Qwen::C-Eval,own,0.26933333333333337,Qwen,Qwen2,0.5,2024-06
+Qwen2-0.5B-Instruct [Instruct/chat],Qwen::HumanEval,own,0.171,Qwen,Qwen2,0.5,2024-06
+Qwen2-0.5B-Instruct [Instruct/chat],Qwen::IFEval,own,0.2,Qwen,Qwen2,0.5,2024-06
+Qwen2-1.5B-Instruct [Instruct/chat],GSM8K,epoch,0.616,Qwen,Qwen2,1.5,2024-06
+Qwen2-1.5B-Instruct [Instruct/chat],MATH level 5,epoch,0.0718,Qwen,Qwen2,1.5,2024-06
+Qwen2-1.5B-Instruct [Instruct/chat],MMLU,epoch,0.36533333333333334,Qwen,Qwen2,1.5,2024-06
+Qwen2-1.5B-Instruct [Instruct/chat],OLLv2: BBH,own,0.13699999999999998,Qwen,Qwen2,1.5,2024-06
+Qwen2-1.5B-Instruct [Instruct/chat],OLLv2: GPQA,own,0.015700000000000002,Qwen,Qwen2,1.5,2024-06
+Qwen2-1.5B-Instruct [Instruct/chat],OLLv2: IFEval,own,0.3371,Qwen,Qwen2,1.5,2024-06
+Qwen2-1.5B-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.1668,Qwen,Qwen2,1.5,2024-06
+Qwen2-1.5B-Instruct [Instruct/chat],OLLv2: MUSR,own,0.12029999999999999,Qwen,Qwen2,1.5,2024-06
+Qwen2-1.5B-Instruct [Instruct/chat],Qwen::C-Eval,own,0.5173333333333333,Qwen,Qwen2,1.5,2024-06
+Qwen2-1.5B-Instruct [Instruct/chat],Qwen::HumanEval,own,0.37799999999999995,Qwen,Qwen2,1.5,2024-06
+Qwen2-1.5B-Instruct [Instruct/chat],Qwen::IFEval,own,0.29,Qwen,Qwen2,1.5,2024-06
+Qwen2-7B-Instruct [Instruct/chat],GPQA diamond,epoch,0.0040000000000000036,Qwen,Qwen2,7.0,2024-06
+Qwen2-7B-Instruct [Instruct/chat],GSM8K,epoch,0.823,Qwen,Qwen2,7.0,2024-06
+Qwen2-7B-Instruct [Instruct/chat],MATH level 5,epoch,0.2764,Qwen,Qwen2,7.0,2024-06
+Qwen2-7B-Instruct [Instruct/chat],MMLU,epoch,0.6066666666666666,Qwen,Qwen2,7.0,2024-06
+Qwen2-7B-Instruct [Instruct/chat],OLLv2: BBH,own,0.37810000000000005,Qwen,Qwen2,7.0,2024-06
+Qwen2-7B-Instruct [Instruct/chat],OLLv2: GPQA,own,0.0638,Qwen,Qwen2,7.0,2024-06
+Qwen2-7B-Instruct [Instruct/chat],OLLv2: IFEval,own,0.5679,Qwen,Qwen2,7.0,2024-06
+Qwen2-7B-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.3164,Qwen,Qwen2,7.0,2024-06
+Qwen2-7B-Instruct [Instruct/chat],OLLv2: MUSR,own,0.0737,Qwen,Qwen2,7.0,2024-06
+Qwen2-7B-Instruct [Instruct/chat],Qwen::C-Eval,own,0.6960000000000001,Qwen,Qwen2,7.0,2024-06
+Qwen2-7B-Instruct [Instruct/chat],Qwen::EvalPlus,own,0.703,Qwen,Qwen2,7.0,2024-06
+Qwen2-7B-Instruct [Instruct/chat],Qwen::HumanEval,own,0.799,Qwen,Qwen2,7.0,2024-06
+Qwen2-7B-Instruct [Instruct/chat],Qwen::LCB (Qwen2),own,0.266,Qwen,Qwen2,7.0,2024-06
+Qwen2-7B-Instruct [Instruct/chat],Qwen::MATH,own,0.496,Qwen,Qwen2,7.0,2024-06
+Qwen2-7B-Instruct [Instruct/chat],Qwen::MBPP,own,0.672,Qwen,Qwen2,7.0,2024-06
+Qwen2-7B-Instruct [Instruct/chat],Qwen::MMLU-Pro,own,0.37888888888888883,Qwen,Qwen2,7.0,2024-06
+Qwen2-7B-Instruct [Instruct/chat],Qwen::MultiPL-E,own,0.591,Qwen,Qwen2,7.0,2024-06
+Qwen2-7B-Instruct [Instruct/chat],Qwen::TheoremQA,own,0.253,Qwen,Qwen2,7.0,2024-06
+Qwen2.5-0.5B-Instruct [Instruct/chat],GPQA diamond,epoch,0.06399999999999999,Qwen,Qwen2.5,0.5,2024-09
+Qwen2.5-0.5B-Instruct [Instruct/chat],GSM8K,epoch,0.496,Qwen,Qwen2.5,0.5,2024-09
+Qwen2.5-0.5B-Instruct [Instruct/chat],LiveBench-0831,own,0.126,Qwen,Qwen2.5,0.5,2024-09
+Qwen2.5-0.5B-Instruct [Instruct/chat],OLLv2: BBH,own,0.0843,Qwen,Qwen2.5,0.5,2024-09
+Qwen2.5-0.5B-Instruct [Instruct/chat],OLLv2: GPQA,own,0.0101,Qwen,Qwen2.5,0.5,2024-09
+Qwen2.5-0.5B-Instruct [Instruct/chat],OLLv2: IFEval,own,0.3071,Qwen,Qwen2.5,0.5,2024-09
+Qwen2.5-0.5B-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.0775,Qwen,Qwen2.5,0.5,2024-09
+Qwen2.5-0.5B-Instruct [Instruct/chat],OLLv2: MUSR,own,0.009399999999999999,Qwen,Qwen2.5,0.5,2024-09
+Qwen2.5-0.5B-Instruct [Instruct/chat],Qwen::HumanEval,own,0.354,Qwen,Qwen2.5,0.5,2024-09
+Qwen2.5-0.5B-Instruct [Instruct/chat],Qwen::IFEval,own,0.27899999999999997,Qwen,Qwen2.5,0.5,2024-09
+Qwen2.5-0.5B-Instruct [Instruct/chat],Qwen::LCB 2305-2409,own,0.051,Qwen,Qwen2.5,0.5,2024-09
+Qwen2.5-0.5B-Instruct [Instruct/chat],Qwen::MATH,own,0.344,Qwen,Qwen2.5,0.5,2024-09
+Qwen2.5-0.5B-Instruct [Instruct/chat],Qwen::MBPP,own,0.496,Qwen,Qwen2.5,0.5,2024-09
+Qwen2.5-0.5B-Instruct [Instruct/chat],Qwen::MMLU-Pro,own,0.05555555555555554,Qwen,Qwen2.5,0.5,2024-09
+Qwen2.5-0.5B-Instruct [Instruct/chat],Qwen::MultiPL-E,own,0.285,Qwen,Qwen2.5,0.5,2024-09
+Qwen2.5-1.5B-Instruct [Instruct/chat],GPQA diamond,epoch,0.06399999999999999,Qwen,Qwen2.5,1.5,2024-09
+Qwen2.5-1.5B-Instruct [Instruct/chat],GSM8K,epoch,0.732,Qwen,Qwen2.5,1.5,2024-09
+Qwen2.5-1.5B-Instruct [Instruct/chat],LiveBench-0831,own,0.188,Qwen,Qwen2.5,1.5,2024-09
+Qwen2.5-1.5B-Instruct [Instruct/chat],MATH level 5,epoch,0.2205,Qwen,Qwen2.5,1.5,2024-09
+Qwen2.5-1.5B-Instruct [Instruct/chat],OLLv2: BBH,own,0.1981,Qwen,Qwen2.5,1.5,2024-09
+Qwen2.5-1.5B-Instruct [Instruct/chat],OLLv2: GPQA,own,0.0078000000000000005,Qwen,Qwen2.5,1.5,2024-09
+Qwen2.5-1.5B-Instruct [Instruct/chat],OLLv2: IFEval,own,0.4476,Qwen,Qwen2.5,1.5,2024-09
+Qwen2.5-1.5B-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.1999,Qwen,Qwen2.5,1.5,2024-09
+Qwen2.5-1.5B-Instruct [Instruct/chat],OLLv2: MUSR,own,0.0319,Qwen,Qwen2.5,1.5,2024-09
+Qwen2.5-1.5B-Instruct [Instruct/chat],Qwen::HumanEval,own,0.616,Qwen,Qwen2.5,1.5,2024-09
+Qwen2.5-1.5B-Instruct [Instruct/chat],Qwen::IFEval,own,0.425,Qwen,Qwen2.5,1.5,2024-09
+Qwen2.5-1.5B-Instruct [Instruct/chat],Qwen::LCB 2305-2409,own,0.14800000000000002,Qwen,Qwen2.5,1.5,2024-09
+Qwen2.5-1.5B-Instruct [Instruct/chat],Qwen::MATH,own,0.552,Qwen,Qwen2.5,1.5,2024-09
+Qwen2.5-1.5B-Instruct [Instruct/chat],Qwen::MBPP,own,0.632,Qwen,Qwen2.5,1.5,2024-09
+Qwen2.5-1.5B-Instruct [Instruct/chat],Qwen::MMLU-Pro,own,0.24888888888888888,Qwen,Qwen2.5,1.5,2024-09
+Qwen2.5-1.5B-Instruct [Instruct/chat],Qwen::MMLU-Redux,own,0.3426666666666667,Qwen,Qwen2.5,1.5,2024-09
+Qwen2.5-1.5B-Instruct [Instruct/chat],Qwen::MultiPL-E,own,0.504,Qwen,Qwen2.5,1.5,2024-09
+Qwen2.5-14B-Instruct [Instruct/chat],GPQA diamond,epoch,0.2733333333333334,Qwen,Qwen2.5,14.0,2024-09
+Qwen2.5-14B-Instruct [Instruct/chat],GSM8K,epoch,0.948,Qwen,Qwen2.5,14.0,2024-09
+Qwen2.5-14B-Instruct [Instruct/chat],LiveBench-0831,own,0.444,Qwen,Qwen2.5,14.0,2024-09
+Qwen2.5-14B-Instruct [Instruct/chat],MATH level 5,epoch,0.5476,Qwen,Qwen2.5,14.0,2024-09
+Qwen2.5-14B-Instruct [Instruct/chat],OLLv2: BBH,own,0.4836,Qwen,Qwen2.5,14.0,2024-09
+Qwen2.5-14B-Instruct [Instruct/chat],OLLv2: GPQA,own,0.0962,Qwen,Qwen2.5,14.0,2024-09
+Qwen2.5-14B-Instruct [Instruct/chat],OLLv2: IFEval,own,0.8158,Qwen,Qwen2.5,14.0,2024-09
+Qwen2.5-14B-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.4338,Qwen,Qwen2.5,14.0,2024-09
+Qwen2.5-14B-Instruct [Instruct/chat],OLLv2: MUSR,own,0.1016,Qwen,Qwen2.5,14.0,2024-09
+Qwen2.5-14B-Instruct [Instruct/chat],Qwen::Arena-Hard,own,0.6829999999999999,Qwen,Qwen2.5,14.0,2024-09
+Qwen2.5-14B-Instruct [Instruct/chat],Qwen::HumanEval,own,0.835,Qwen,Qwen2.5,14.0,2024-09
+Qwen2.5-14B-Instruct [Instruct/chat],Qwen::IFEval,own,0.81,Qwen,Qwen2.5,14.0,2024-09
+Qwen2.5-14B-Instruct [Instruct/chat],Qwen::LCB 2305-2409,own,0.426,Qwen,Qwen2.5,14.0,2024-09
+Qwen2.5-14B-Instruct [Instruct/chat],Qwen::MATH,own,0.8,Qwen,Qwen2.5,14.0,2024-09
+Qwen2.5-14B-Instruct [Instruct/chat],Qwen::MBPP,own,0.82,Qwen,Qwen2.5,14.0,2024-09
+Qwen2.5-14B-Instruct [Instruct/chat],Qwen::MMLU-Pro,own,0.5966666666666667,Qwen,Qwen2.5,14.0,2024-09
+Qwen2.5-14B-Instruct [Instruct/chat],Qwen::MMLU-Redux,own,0.7333333333333334,Qwen,Qwen2.5,14.0,2024-09
+Qwen2.5-14B-Instruct [Instruct/chat],Qwen::MultiPL-E,own,0.728,Qwen,Qwen2.5,14.0,2024-09
+Qwen2.5-32B-Instruct [Instruct/chat],GPQA diamond,epoch,0.32666666666666666,Qwen,Qwen2.5,32.0,2024-09
+Qwen2.5-32B-Instruct [Instruct/chat],GSM8K,epoch,0.9590000000000001,Qwen,Qwen2.5,32.0,2024-09
+Qwen2.5-32B-Instruct [Instruct/chat],LiveBench-0831,own,0.507,Qwen,Qwen2.5,32.0,2024-09
+Qwen2.5-32B-Instruct [Instruct/chat],MATH level 5,epoch,0.6254,Qwen,Qwen2.5,32.0,2024-09
+Qwen2.5-32B-Instruct [Instruct/chat],OLLv2: BBH,own,0.5649000000000001,Qwen,Qwen2.5,32.0,2024-09
+Qwen2.5-32B-Instruct [Instruct/chat],OLLv2: GPQA,own,0.1174,Qwen,Qwen2.5,32.0,2024-09
+Qwen2.5-32B-Instruct [Instruct/chat],OLLv2: IFEval,own,0.8345999999999999,Qwen,Qwen2.5,32.0,2024-09
+Qwen2.5-32B-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.5185,Qwen,Qwen2.5,32.0,2024-09
+Qwen2.5-32B-Instruct [Instruct/chat],OLLv2: MUSR,own,0.135,Qwen,Qwen2.5,32.0,2024-09
+Qwen2.5-32B-Instruct [Instruct/chat],Qwen::Arena-Hard,own,0.745,Qwen,Qwen2.5,32.0,2024-09
+Qwen2.5-32B-Instruct [Instruct/chat],Qwen::HumanEval,own,0.884,Qwen,Qwen2.5,32.0,2024-09
+Qwen2.5-32B-Instruct [Instruct/chat],Qwen::IFEval,own,0.795,Qwen,Qwen2.5,32.0,2024-09
+Qwen2.5-32B-Instruct [Instruct/chat],Qwen::LCB 2305-2409,own,0.512,Qwen,Qwen2.5,32.0,2024-09
+Qwen2.5-32B-Instruct [Instruct/chat],Qwen::MATH,own,0.831,Qwen,Qwen2.5,32.0,2024-09
+Qwen2.5-32B-Instruct [Instruct/chat],Qwen::MBPP,own,0.84,Qwen,Qwen2.5,32.0,2024-09
+Qwen2.5-32B-Instruct [Instruct/chat],Qwen::MMLU-Pro,own,0.6555555555555556,Qwen,Qwen2.5,32.0,2024-09
+Qwen2.5-32B-Instruct [Instruct/chat],Qwen::MMLU-Redux,own,0.7853333333333334,Qwen,Qwen2.5,32.0,2024-09
+Qwen2.5-32B-Instruct [Instruct/chat],Qwen::MultiPL-E,own,0.754,Qwen,Qwen2.5,32.0,2024-09
+Qwen2.5-3B-Instruct [Instruct/chat],GPQA diamond,epoch,0.07066666666666666,Qwen,Qwen2.5,3.0,2024-09
+Qwen2.5-3B-Instruct [Instruct/chat],GSM8K,epoch,0.867,Qwen,Qwen2.5,3.0,2024-09
+Qwen2.5-3B-Instruct [Instruct/chat],LiveBench-0831,own,0.268,Qwen,Qwen2.5,3.0,2024-09
+Qwen2.5-3B-Instruct [Instruct/chat],MATH level 5,epoch,0.3678,Qwen,Qwen2.5,3.0,2024-09
+Qwen2.5-3B-Instruct [Instruct/chat],OLLv2: BBH,own,0.258,Qwen,Qwen2.5,3.0,2024-09
+Qwen2.5-3B-Instruct [Instruct/chat],OLLv2: GPQA,own,0.0302,Qwen,Qwen2.5,3.0,2024-09
+Qwen2.5-3B-Instruct [Instruct/chat],OLLv2: IFEval,own,0.6475,Qwen,Qwen2.5,3.0,2024-09
+Qwen2.5-3B-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.2505,Qwen,Qwen2.5,3.0,2024-09
+Qwen2.5-3B-Instruct [Instruct/chat],OLLv2: MUSR,own,0.0757,Qwen,Qwen2.5,3.0,2024-09
+Qwen2.5-3B-Instruct [Instruct/chat],Qwen::HumanEval,own,0.7440000000000001,Qwen,Qwen2.5,3.0,2024-09
+Qwen2.5-3B-Instruct [Instruct/chat],Qwen::IFEval,own,0.5820000000000001,Qwen,Qwen2.5,3.0,2024-09
+Qwen2.5-3B-Instruct [Instruct/chat],Qwen::LCB 2305-2409,own,0.19899999999999998,Qwen,Qwen2.5,3.0,2024-09
+Qwen2.5-3B-Instruct [Instruct/chat],Qwen::MATH,own,0.659,Qwen,Qwen2.5,3.0,2024-09
+Qwen2.5-3B-Instruct [Instruct/chat],Qwen::MBPP,own,0.727,Qwen,Qwen2.5,3.0,2024-09
+Qwen2.5-3B-Instruct [Instruct/chat],Qwen::MMLU-Pro,own,0.3744444444444445,Qwen,Qwen2.5,3.0,2024-09
+Qwen2.5-3B-Instruct [Instruct/chat],Qwen::MMLU-Redux,own,0.5253333333333333,Qwen,Qwen2.5,3.0,2024-09
+Qwen2.5-3B-Instruct [Instruct/chat],Qwen::MultiPL-E,own,0.602,Qwen,Qwen2.5,3.0,2024-09
+Qwen2.5-7B-Instruct [Instruct/chat],GPQA diamond,epoch,0.152,Qwen,Qwen2.5,7.0,2024-09
+Qwen2.5-7B-Instruct [Instruct/chat],GSM8K,epoch,0.9159999999999999,Qwen,Qwen2.5,7.0,2024-09
+Qwen2.5-7B-Instruct [Instruct/chat],LiveBench-0831,own,0.359,Qwen,Qwen2.5,7.0,2024-09
+Qwen2.5-7B-Instruct [Instruct/chat],LiveBench-20241125,own,0.349,Qwen,Qwen2.5,7.0,2024-09
+Qwen2.5-7B-Instruct [Instruct/chat],LiveBench-20250402,own,0.2922,Qwen,Qwen2.5,7.0,2024-09
+Qwen2.5-7B-Instruct [Instruct/chat],LiveBench-20250425,own,0.34369999999999995,Qwen,Qwen2.5,7.0,2024-09
+Qwen2.5-7B-Instruct [Instruct/chat],MATH level 5,epoch,0.5,Qwen,Qwen2.5,7.0,2024-09
+Qwen2.5-7B-Instruct [Instruct/chat],OLLv2: BBH,own,0.3489,Qwen,Qwen2.5,7.0,2024-09
+Qwen2.5-7B-Instruct [Instruct/chat],OLLv2: GPQA,own,0.0548,Qwen,Qwen2.5,7.0,2024-09
+Qwen2.5-7B-Instruct [Instruct/chat],OLLv2: IFEval,own,0.7585,Qwen,Qwen2.5,7.0,2024-09
+Qwen2.5-7B-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.3652,Qwen,Qwen2.5,7.0,2024-09
+Qwen2.5-7B-Instruct [Instruct/chat],OLLv2: MUSR,own,0.08449999999999999,Qwen,Qwen2.5,7.0,2024-09
+Qwen2.5-7B-Instruct [Instruct/chat],Qwen::Arena-Hard,own,0.52,Qwen,Qwen2.5,7.0,2024-09
+Qwen2.5-7B-Instruct [Instruct/chat],Qwen::HumanEval,own,0.848,Qwen,Qwen2.5,7.0,2024-09
+Qwen2.5-7B-Instruct [Instruct/chat],Qwen::IFEval,own,0.7120000000000001,Qwen,Qwen2.5,7.0,2024-09
+Qwen2.5-7B-Instruct [Instruct/chat],Qwen::LCB 2305-2409,own,0.287,Qwen,Qwen2.5,7.0,2024-09
+Qwen2.5-7B-Instruct [Instruct/chat],Qwen::MATH,own,0.755,Qwen,Qwen2.5,7.0,2024-09
+Qwen2.5-7B-Instruct [Instruct/chat],Qwen::MBPP,own,0.792,Qwen,Qwen2.5,7.0,2024-09
+Qwen2.5-7B-Instruct [Instruct/chat],Qwen::MMLU-Pro,own,0.5144444444444444,Qwen,Qwen2.5,7.0,2024-09
+Qwen2.5-7B-Instruct [Instruct/chat],Qwen::MMLU-Redux,own,0.672,Qwen,Qwen2.5,7.0,2024-09
+Qwen2.5-7B-Instruct [Instruct/chat],Qwen::MultiPL-E,own,0.7040000000000001,Qwen,Qwen2.5,7.0,2024-09
+Qwen3-0.6B [Non-thinking mode],LiveBench-20241125,own,0.218,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Non-thinking mode],Qwen::AIME'24,own,0.034,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Non-thinking mode],Qwen::AIME'25,own,0.026000000000000002,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Non-thinking mode],Qwen::Arena-Hard,own,0.065,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Non-thinking mode],Qwen::BFCL v3,own,0.441,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Non-thinking mode],Qwen::C-Eval,own,0.23466666666666666,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Non-thinking mode],Qwen::IFEval,own,0.545,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Non-thinking mode],Qwen::LCB v5,own,0.036000000000000004,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Non-thinking mode],Qwen::MATH-500,own,0.552,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Non-thinking mode],Qwen::MMLU-Redux,own,0.26133333333333336,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Non-thinking mode],Qwen::Multi-IF,own,0.33299999999999996,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Thinking mode],GPQA diamond,epoch,0.03866666666666663,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Thinking mode],LiveBench-20241125,own,0.303,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Thinking mode],Qwen::AIME'24,own,0.107,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Thinking mode],Qwen::AIME'25,own,0.151,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Thinking mode],Qwen::Arena-Hard,own,0.085,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Thinking mode],Qwen::BFCL v3,own,0.46399999999999997,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Thinking mode],Qwen::C-Eval,own,0.33866666666666667,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Thinking mode],Qwen::IFEval,own,0.5920000000000001,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Thinking mode],Qwen::LCB v5,own,0.12300000000000001,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Thinking mode],Qwen::MATH-500,own,0.7759999999999999,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Thinking mode],Qwen::MMLU-Redux,own,0.4080000000000001,Qwen,Qwen3,0.6,2025-04
+Qwen3-0.6B [Thinking mode],Qwen::Multi-IF,own,0.361,Qwen,Qwen3,0.6,2025-04
+Qwen3-1.7B [Non-thinking mode],GPQA diamond,epoch,0.04800000000000004,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Non-thinking mode],LiveBench-20241125,own,0.35600000000000004,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Non-thinking mode],Qwen::AIME'24,own,0.134,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Non-thinking mode],Qwen::AIME'25,own,0.098,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Non-thinking mode],Qwen::Arena-Hard,own,0.369,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Non-thinking mode],Qwen::BFCL v3,own,0.522,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Non-thinking mode],Qwen::C-Eval,own,0.48,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Non-thinking mode],Qwen::IFEval,own,0.682,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Non-thinking mode],Qwen::LCB v5,own,0.11599999999999999,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Non-thinking mode],Qwen::MATH-500,own,0.73,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Non-thinking mode],Qwen::MMLU-Redux,own,0.5253333333333333,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Non-thinking mode],Qwen::Multi-IF,own,0.447,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],GPQA diamond,epoch,0.20133333333333336,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],LiveBench-20241125,own,0.511,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::AIME'24,own,0.483,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::AIME'25,own,0.368,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::Arena-Hard,own,0.431,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::BFCL v3,own,0.5660000000000001,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::C-Eval,own,0.5746666666666665,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::IFEval,own,0.725,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::LCB v5,own,0.332,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::MATH-500,own,0.934,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::MMLU-Redux,own,0.6520000000000001,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::Multi-IF,own,0.512,Qwen,Qwen3,1.7,2025-04
+Qwen3-14B [Non-thinking mode],GPQA diamond,epoch,0.39733333333333326,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Non-thinking mode],LiveBench-20241125,own,0.596,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Non-thinking mode],Qwen::AIME'24,own,0.317,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Non-thinking mode],Qwen::AIME'25,own,0.233,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Non-thinking mode],Qwen::Arena-Hard,own,0.863,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Non-thinking mode],Qwen::BFCL v3,own,0.615,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Non-thinking mode],Qwen::C-Eval,own,0.7466666666666667,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Non-thinking mode],Qwen::CodeForces percentile,own,0.586,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Non-thinking mode],Qwen::IFEval,own,0.848,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Non-thinking mode],Qwen::LCB v5,own,0.29,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Non-thinking mode],Qwen::MATH-500,own,0.9,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Non-thinking mode],Qwen::MMLU-Redux,own,0.7599999999999999,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Non-thinking mode],Qwen::Multi-IF,own,0.7290000000000001,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Thinking mode],GPQA diamond,epoch,0.52,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Thinking mode],LiveBench-20241125,own,0.713,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Thinking mode],LiveBench-20250425,own,0.6817,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Thinking mode],Qwen::AIME'24,own,0.7929999999999999,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Thinking mode],Qwen::AIME'25,own,0.7040000000000001,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Thinking mode],Qwen::Arena-Hard,own,0.917,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Thinking mode],Qwen::BFCL v3,own,0.7040000000000001,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Thinking mode],Qwen::C-Eval,own,0.816,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Thinking mode],Qwen::CodeForces percentile,own,0.953,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Thinking mode],Qwen::IFEval,own,0.8540000000000001,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Thinking mode],Qwen::LCB v5,own,0.635,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Thinking mode],Qwen::MATH-500,own,0.968,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Thinking mode],Qwen::MMLU-Redux,own,0.8479999999999999,Qwen,Qwen3,14.0,2025-04
+Qwen3-14B [Thinking mode],Qwen::Multi-IF,own,0.748,Qwen,Qwen3,14.0,2025-04
+Qwen3-30B-A3B [Non-thinking mode],GPQA diamond,epoch,0.39733333333333326,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Non-thinking mode],LiveBench-20241125,own,0.594,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Non-thinking mode],Qwen::AIME'24,own,0.32799999999999996,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Non-thinking mode],Qwen::AIME'25,own,0.21600000000000003,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Non-thinking mode],Qwen::Arena-Hard,own,0.88,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Non-thinking mode],Qwen::BFCL v3,own,0.586,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Non-thinking mode],Qwen::C-Eval,own,0.7720000000000001,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Non-thinking mode],Qwen::CodeForces percentile,own,0.6409999999999999,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Non-thinking mode],Qwen::IFEval,own,0.8370000000000001,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Non-thinking mode],Qwen::LCB v5,own,0.298,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Non-thinking mode],Qwen::MATH-500,own,0.898,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Non-thinking mode],Qwen::MMLU-Redux,own,0.7879999999999999,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Non-thinking mode],Qwen::Multi-IF,own,0.708,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Thinking mode],GPQA diamond,epoch,0.5439999999999999,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Thinking mode],LiveBench-20241125,own,0.743,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Thinking mode],LiveBench-20250425,own,0.6692,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Thinking mode],LiveBench-20250530,own,0.578,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Thinking mode],LiveBench-20251125,own,0.45439999999999997,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Thinking mode],LiveBench-20260108,own,0.3901,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Thinking mode],Qwen::AIME'24,own,0.804,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Thinking mode],Qwen::AIME'25,own,0.7090000000000001,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Thinking mode],Qwen::Arena-Hard,own,0.91,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Thinking mode],Qwen::BFCL v3,own,0.691,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Thinking mode],Qwen::C-Eval,own,0.8213333333333334,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Thinking mode],Qwen::CodeForces percentile,own,0.977,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Thinking mode],Qwen::IFEval,own,0.865,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Thinking mode],Qwen::LCB v5,own,0.626,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Thinking mode],Qwen::MATH-500,own,0.98,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Thinking mode],Qwen::MMLU-Redux,own,0.86,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B [Thinking mode],Qwen::Multi-IF,own,0.722,Qwen,Qwen3,30.0,2025-04
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Aider polyglot,epoch,0.35600000000000004,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],GPQA diamond,epoch,0.6053333333333334,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],LiveBench-20241125,own,0.69,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::AIME'25,own,0.613,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::Arena-Hard v2,own,0.69,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::BFCL v3,own,0.6509999999999999,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::Creative Writing v3,own,0.86,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::HMMT Feb'25,own,0.43,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::IFEval,own,0.847,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::INCLUDE,own,0.6253333333333334,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::LCB v6 (2507),own,0.43200000000000005,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::MMLU-Pro,own,0.76,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::MMLU-ProX,own,0.6888888888888889,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::MMLU-Redux,own,0.8573333333333334,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::Multi-IF,own,0.679,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::MultiPL-E,own,0.838,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::PolyMATH,own,0.431,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::SuperGPQA,own,0.3786666666666667,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::TAU1-Airline,own,0.4,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::TAU1-Retail,own,0.591,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::TAU2-Airline,own,0.38,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::TAU2-Retail,own,0.57,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::TAU2-Telecom,own,0.12300000000000001,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::WritingBench,own,0.855,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Instruct-2507 [Instruct (non-thinking)],Qwen::ZebraLogic,own,0.9,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],GPQA diamond,epoch,0.6453333333333334,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],LiveBench-20241125,own,0.768,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],Qwen::AIME'25,own,0.85,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],Qwen::Arena-Hard v2,own,0.56,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],Qwen::BFCL v3,own,0.7240000000000001,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],Qwen::Creative Writing v3,own,0.8440000000000001,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],Qwen::HMMT Feb'25,own,0.7140000000000001,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],Qwen::IFEval,own,0.889,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],Qwen::INCLUDE,own,0.6586666666666668,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],Qwen::LCB v6 (2507),own,0.66,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],Qwen::MMLU-Pro,own,0.7877777777777778,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],Qwen::MMLU-ProX,own,0.7377777777777778,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],Qwen::MMLU-Redux,own,0.8853333333333334,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],Qwen::Multi-IF,own,0.764,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],Qwen::OJBench,own,0.251,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],Qwen::PolyMATH,own,0.526,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],Qwen::SuperGPQA,own,0.42399999999999993,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],Qwen::TAU1-Airline,own,0.48,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],Qwen::TAU1-Retail,own,0.6779999999999999,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],Qwen::TAU2-Airline,own,0.58,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],Qwen::TAU2-Retail,own,0.588,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],Qwen::TAU2-Telecom,own,0.263,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-30B-A3B-Thinking-2507 [Thinking],Qwen::WritingBench,own,0.85,Qwen,Qwen3-2507,30.0,2025-07
+Qwen3-32B [Non-thinking mode],GPQA diamond,epoch,0.3946666666666667,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Non-thinking mode],LiveBench-20241125,own,0.598,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Non-thinking mode],Qwen::AIME'24,own,0.31,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Non-thinking mode],Qwen::AIME'25,own,0.20199999999999999,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Non-thinking mode],Qwen::Arena-Hard,own,0.9279999999999999,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Non-thinking mode],Qwen::BFCL v3,own,0.63,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Non-thinking mode],Qwen::C-Eval,own,0.7773333333333333,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Non-thinking mode],Qwen::CodeForces percentile,own,0.71,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Non-thinking mode],Qwen::IFEval,own,0.8320000000000001,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Non-thinking mode],Qwen::LCB v5,own,0.313,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Non-thinking mode],Qwen::MATH-500,own,0.8859999999999999,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Non-thinking mode],Qwen::MMLU-Redux,own,0.8093333333333333,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Non-thinking mode],Qwen::Multi-IF,own,0.7070000000000001,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Thinking mode],GPQA diamond,epoch,0.5786666666666668,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Thinking mode],LiveBench-20241125,own,0.7490000000000001,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Thinking mode],LiveBench-20250425,own,0.7265999999999999,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Thinking mode],LiveBench-20250530,own,0.6278,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Thinking mode],LiveBench-20251125,own,0.49560000000000004,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Thinking mode],LiveBench-20260108,own,0.43560000000000004,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Thinking mode],Qwen::AIME'24,own,0.8140000000000001,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Thinking mode],Qwen::AIME'25,own,0.7290000000000001,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Thinking mode],Qwen::Arena-Hard,own,0.938,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Thinking mode],Qwen::BFCL v3,own,0.703,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Thinking mode],Qwen::C-Eval,own,0.8306666666666667,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Thinking mode],Qwen::CodeForces percentile,own,0.977,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Thinking mode],Qwen::IFEval,own,0.85,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Thinking mode],Qwen::LCB v5,own,0.657,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Thinking mode],Qwen::MATH-500,own,0.972,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Thinking mode],Qwen::MMLU-Redux,own,0.8786666666666667,Qwen,Qwen3,32.0,2025-04
+Qwen3-32B [Thinking mode],Qwen::Multi-IF,own,0.73,Qwen,Qwen3,32.0,2025-04
+Qwen3-4B [Non-thinking mode],GPQA diamond,epoch,0.2226666666666667,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Non-thinking mode],LiveBench-20241125,own,0.484,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Non-thinking mode],Qwen::AIME'24,own,0.25,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Non-thinking mode],Qwen::AIME'25,own,0.191,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Non-thinking mode],Qwen::Arena-Hard,own,0.662,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Non-thinking mode],Qwen::BFCL v3,own,0.5760000000000001,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Non-thinking mode],Qwen::C-Eval,own,0.6293333333333333,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Non-thinking mode],Qwen::CodeForces percentile,own,0.337,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Non-thinking mode],Qwen::IFEval,own,0.812,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Non-thinking mode],Qwen::LCB v5,own,0.213,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Non-thinking mode],Qwen::MATH-500,own,0.848,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Non-thinking mode],Qwen::MMLU-Redux,own,0.6973333333333334,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Non-thinking mode],Qwen::Multi-IF,own,0.613,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Thinking mode],GPQA diamond,epoch,0.4119999999999999,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Thinking mode],LiveBench-20241125,own,0.636,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Thinking mode],Qwen::AIME'24,own,0.738,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Thinking mode],Qwen::AIME'25,own,0.6559999999999999,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Thinking mode],Qwen::Arena-Hard,own,0.7659999999999999,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Thinking mode],Qwen::BFCL v3,own,0.659,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Thinking mode],Qwen::C-Eval,own,0.7000000000000001,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Thinking mode],Qwen::CodeForces percentile,own,0.9279999999999999,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Thinking mode],Qwen::IFEval,own,0.8190000000000001,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Thinking mode],Qwen::LCB v5,own,0.542,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Thinking mode],Qwen::MATH-500,own,0.97,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Thinking mode],Qwen::MMLU-Redux,own,0.7826666666666667,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B [Thinking mode],Qwen::Multi-IF,own,0.6629999999999999,Qwen,Qwen3,4.0,2025-04
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Aider polyglot,epoch,0.129,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],GPQA diamond,epoch,0.49333333333333335,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],LiveBench-20241125,own,0.63,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::AIME'25,own,0.474,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::Arena-Hard v2,own,0.434,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::BFCL v3,own,0.619,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::Creative Writing v3,own,0.835,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::HMMT Feb'25,own,0.31,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::IFEval,own,0.8340000000000001,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::INCLUDE,own,0.46799999999999997,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::LCB v6 (2507),own,0.35100000000000003,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::MMLU-Pro,own,0.6622222222222222,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::MMLU-ProX,own,0.5733333333333334,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::MMLU-Redux,own,0.7893333333333334,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::Multi-IF,own,0.69,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::MultiPL-E,own,0.768,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::PolyMATH,own,0.311,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::SuperGPQA,own,0.2373333333333333,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::TAU1-Airline,own,0.32,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::TAU1-Retail,own,0.48700000000000004,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::TAU2-Airline,own,0.24,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::TAU2-Retail,own,0.40399999999999997,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::TAU2-Telecom,own,0.132,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::WritingBench,own,0.8340000000000001,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::ZebraLogic,own,0.802,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],GPQA diamond,epoch,0.5439999999999999,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],LiveBench-20241125,own,0.718,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::AIME'25,own,0.813,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::Arena-Hard v2,own,0.349,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::BFCL v3,own,0.7120000000000001,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::Creative Writing v3,own,0.7559999999999999,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::HMMT Feb'25,own,0.555,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::IFEval,own,0.8740000000000001,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::INCLUDE,own,0.5253333333333333,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::LCB v6 (2507),own,0.552,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::MMLU-Pro,own,0.7111111111111111,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::MMLU-ProX,own,0.6022222222222222,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::MMLU-Redux,own,0.8146666666666667,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::Multi-IF,own,0.773,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::OJBench,own,0.179,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::PolyMATH,own,0.462,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::SuperGPQA,own,0.304,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::TAU1-Airline,own,0.48,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::TAU1-Retail,own,0.6609999999999999,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::TAU2-Airline,own,0.58,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::TAU2-Retail,own,0.535,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::TAU2-Telecom,own,0.272,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::WritingBench,own,0.833,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-8B [Non-thinking mode],GPQA diamond,epoch,0.19066666666666662,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Non-thinking mode],LiveBench-20241125,own,0.535,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Non-thinking mode],Qwen::AIME'24,own,0.29100000000000004,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Non-thinking mode],Qwen::AIME'25,own,0.209,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Non-thinking mode],Qwen::Arena-Hard,own,0.7959999999999999,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Non-thinking mode],Qwen::BFCL v3,own,0.602,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Non-thinking mode],Qwen::C-Eval,own,0.7053333333333334,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Non-thinking mode],Qwen::CodeForces percentile,own,0.524,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Non-thinking mode],Qwen::IFEval,own,0.83,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Non-thinking mode],Qwen::LCB v5,own,0.228,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Non-thinking mode],Qwen::MATH-500,own,0.8740000000000001,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Non-thinking mode],Qwen::MMLU-Redux,own,0.7266666666666667,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Non-thinking mode],Qwen::Multi-IF,own,0.6920000000000001,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Thinking mode],GPQA diamond,epoch,0.49333333333333335,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Thinking mode],LiveBench-20241125,own,0.6709999999999999,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Thinking mode],Qwen::AIME'24,own,0.76,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Thinking mode],Qwen::AIME'25,own,0.6729999999999999,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Thinking mode],Qwen::Arena-Hard,own,0.858,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Thinking mode],Qwen::BFCL v3,own,0.6809999999999999,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Thinking mode],Qwen::C-Eval,own,0.7786666666666667,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Thinking mode],Qwen::CodeForces percentile,own,0.956,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Thinking mode],Qwen::IFEval,own,0.85,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Thinking mode],Qwen::LCB v5,own,0.575,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Thinking mode],Qwen::MATH-500,own,0.9740000000000001,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Thinking mode],Qwen::MMLU-Redux,own,0.8333333333333334,Qwen,Qwen3,8.0,2025-04
+Qwen3-8B [Thinking mode],Qwen::Multi-IF,own,0.7120000000000001,Qwen,Qwen3,8.0,2025-04
+Qwen3.5-0.8B [Non-thinking rows],Qwen::C-Eval,own,0.28533333333333327,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Non-thinking rows],Qwen::IFEval,own,0.521,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Non-thinking rows],Qwen::MMLU-Pro,own,0.21888888888888886,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Non-thinking rows],Qwen::MMLU-Redux,own,0.3133333333333333,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Non-thinking rows],Qwen::MMMLU,own,0.12133333333333336,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Thinking (default)],Qwen::AA-LCR,own,0.047,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Thinking (default)],Qwen::BFCL v4,own,0.253,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Thinking (default)],Qwen::C-Eval,own,0.34,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Thinking (default)],Qwen::Global PIQA,own,0.18799999999999994,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Thinking (default)],Qwen::IFBench,own,0.21,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Thinking (default)],Qwen::IFEval,own,0.44,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Thinking (default)],Qwen::INCLUDE,own,0.20800000000000005,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Thinking (default)],Qwen::LongBench v2,own,0.01466666666666668,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Thinking (default)],Qwen::MAXIFE,own,0.392,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Thinking (default)],Qwen::MMLU-Pro,own,0.3588888888888888,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Thinking (default)],Qwen::MMLU-ProX,own,0.2733333333333334,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Thinking (default)],Qwen::MMLU-Redux,own,0.45999999999999996,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Thinking (default)],Qwen::MMMLU,own,0.25733333333333325,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Thinking (default)],Qwen::MultiChallenge,own,0.18899999999999997,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Thinking (default)],Qwen::NOVA-63,own,0.424,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Thinking (default)],Qwen::PolyMATH,own,0.08199999999999999,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Thinking (default)],Qwen::TAU2-Bench,own,0.11599999999999999,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Thinking (default)],Qwen::WMT24++,own,0.272,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-27B [Thinking (default)],GPQA diamond,epoch,0.8066666666666666,Qwen,Qwen3.5,27.0,2026-02
+Qwen3.5-27B [Thinking (default)],Qwen::AIME'26,own,0.9259999999999999,Qwen,Qwen3.5,27.0,2026-02
+Qwen3.5-27B [Thinking (default)],Qwen::C-Eval,own,0.8733333333333334,Qwen,Qwen3.5,27.0,2026-02
+Qwen3.5-27B [Thinking (default)],Qwen::HMMT Feb'25,own,0.92,Qwen,Qwen3.5,27.0,2026-02
+Qwen3.5-27B [Thinking (default)],Qwen::IFEval,own,0.95,Qwen,Qwen3.5,27.0,2026-02
+Qwen3.5-27B [Thinking (default)],Qwen::LCB v6 (late),own,0.807,Qwen,Qwen3.5,27.0,2026-02
+Qwen3.5-27B [Thinking (default)],Qwen::MMLU-Pro,own,0.8455555555555555,Qwen,Qwen3.5,27.0,2026-02
+Qwen3.5-27B [Thinking (default)],Qwen::MMLU-Redux,own,0.9093333333333334,Qwen,Qwen3.5,27.0,2026-02
+Qwen3.5-27B [Thinking (default)],Qwen::MMMU-Pro,own,0.7222222222222222,Qwen,Qwen3.5,27.0,2026-02
+Qwen3.5-27B [Thinking (default)],Qwen::MMStar,own,0.7466666666666667,Qwen,Qwen3.5,27.0,2026-02
+Qwen3.5-27B [Thinking (default)],Qwen::MathVision,own,0.86,Qwen,Qwen3.5,27.0,2026-02
+Qwen3.5-27B [Thinking (default)],Qwen::SWE-bench Verified,own,0.7240000000000001,Qwen,Qwen3.5,27.0,2026-02
+Qwen3.5-27B [Thinking (default)],Qwen::ScreenSpot Pro,own,0.703,Qwen,Qwen3.5,27.0,2026-02
+Qwen3.5-27B [Thinking (default)],Qwen::SuperGPQA,own,0.5413333333333332,Qwen,Qwen3.5,27.0,2026-02
+Qwen3.5-27B [Thinking (default)],Qwen::VideoMME,own,0.8266666666666667,Qwen,Qwen3.5,27.0,2026-02
+Qwen3.5-2B [Non-thinking rows],Qwen::C-Eval,own,0.536,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Non-thinking rows],Qwen::IFEval,own,0.612,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Non-thinking rows],Qwen::MMLU-Pro,own,0.5033333333333333,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Non-thinking rows],Qwen::MMLU-Redux,own,0.5893333333333334,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Non-thinking rows],Qwen::MMMLU,own,0.4253333333333333,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Non-thinking rows],Qwen::SuperGPQA,own,0.072,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],GPQA diamond,epoch,0.3546666666666667,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::AA-LCR,own,0.256,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::BFCL v4,own,0.436,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::C-Eval,own,0.6426666666666666,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::Global PIQA,own,0.3859999999999999,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::HMMT Feb'25,own,0.22899999999999998,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::HMMT Nov'25,own,0.196,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::IFBench,own,0.413,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::IFEval,own,0.7859999999999999,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::INCLUDE,own,0.40533333333333327,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::LongBench v2,own,0.18266666666666667,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::MAXIFE,own,0.606,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::MMLU-Pro,own,0.6277777777777779,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::MMLU-ProX,own,0.47000000000000003,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::MMLU-Redux,own,0.7279999999999999,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::MMMLU,own,0.508,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::MultiChallenge,own,0.337,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::NOVA-63,own,0.46399999999999997,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::PolyMATH,own,0.261,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::SuperGPQA,own,0.16666666666666666,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::TAU2-Bench,own,0.488,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::WMT24++,own,0.45799999999999996,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-35B-A3B [Thinking (default)],GPQA diamond,epoch,0.7893333333333334,Qwen,Qwen3.5,35.0,2026-02
+Qwen3.5-35B-A3B [Thinking (default)],Qwen::AIME'26,own,0.91,Qwen,Qwen3.5,35.0,2026-02
+Qwen3.5-35B-A3B [Thinking (default)],Qwen::C-Eval,own,0.8693333333333334,Qwen,Qwen3.5,35.0,2026-02
+Qwen3.5-35B-A3B [Thinking (default)],Qwen::HMMT Feb'25,own,0.89,Qwen,Qwen3.5,35.0,2026-02
+Qwen3.5-35B-A3B [Thinking (default)],Qwen::LCB v6 (late),own,0.746,Qwen,Qwen3.5,35.0,2026-02
+Qwen3.5-35B-A3B [Thinking (default)],Qwen::MMLU-Pro,own,0.8366666666666667,Qwen,Qwen3.5,35.0,2026-02
+Qwen3.5-35B-A3B [Thinking (default)],Qwen::MMLU-Redux,own,0.9106666666666666,Qwen,Qwen3.5,35.0,2026-02
+Qwen3.5-35B-A3B [Thinking (default)],Qwen::MMMU,own,0.7520000000000001,Qwen,Qwen3.5,35.0,2026-02
+Qwen3.5-35B-A3B [Thinking (default)],Qwen::MMMU-Pro,own,0.7233333333333333,Qwen,Qwen3.5,35.0,2026-02
+Qwen3.5-35B-A3B [Thinking (default)],Qwen::SWE-bench Verified,own,0.7,Qwen,Qwen3.5,35.0,2026-02
+Qwen3.5-35B-A3B [Thinking (default)],Qwen::SuperGPQA,own,0.512,Qwen,Qwen3.5,35.0,2026-02
+Qwen3.5-4B [Thinking (default)],GPQA diamond,epoch,0.6826666666666666,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::AA-LCR,own,0.57,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::BFCL v4,own,0.503,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::C-Eval,own,0.8013333333333333,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::HMMT Feb'25,own,0.74,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::HMMT Nov'25,own,0.768,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::IFBench,own,0.5920000000000001,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::IFEval,own,0.898,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::INCLUDE,own,0.6133333333333333,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::LCB v6 (late),own,0.5579999999999999,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::LongBench v2,own,0.3333333333333333,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::MMLU-Pro,own,0.7677777777777777,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::MMLU-ProX,own,0.6833333333333333,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::MMLU-Redux,own,0.8506666666666667,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::MultiChallenge,own,0.49,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::OJBench,own,0.24100000000000002,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::PolyMATH,own,0.511,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::SuperGPQA,own,0.37200000000000005,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::TAU2-Bench,own,0.799,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-9B [Thinking (default)],GPQA diamond,epoch,0.7560000000000001,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::AA-LCR,own,0.63,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::BFCL v4,own,0.6609999999999999,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::C-Eval,own,0.8426666666666667,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::HMMT Feb'25,own,0.8320000000000001,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::HMMT Nov'25,own,0.8290000000000001,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::IFBench,own,0.645,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::IFEval,own,0.915,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::INCLUDE,own,0.6746666666666665,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::LCB v6 (late),own,0.6559999999999999,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::LongBench v2,own,0.40266666666666673,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::MMLU-Pro,own,0.8055555555555555,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::MMLU-ProX,own,0.7366666666666667,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::MMLU-Redux,own,0.8813333333333332,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::MultiChallenge,own,0.545,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::OJBench,own,0.292,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::PolyMATH,own,0.573,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::SuperGPQA,own,0.44266666666666676,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::TAU2-Bench,own,0.7909999999999999,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.6-27B [Thinking (default)],GPQA diamond,epoch,0.8373333333333334,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],HLE,epoch,0.24,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],LiveBench-20260108,own,0.6556000000000001,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::AIME'26,own,0.941,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::C-Eval,own,0.8853333333333334,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::HMMT Feb'25,own,0.938,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::HMMT Feb'26,own,0.843,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::HMMT Nov'25,own,0.907,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::IMOAnswerBench,own,0.8079999999999999,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::LCB v6 (late),own,0.8390000000000001,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::MMLU-Pro,own,0.8466666666666667,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::MMLU-Redux,own,0.9133333333333334,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::SWE-bench Pro,own,0.535,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::SWE-bench Verified,own,0.772,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::SuperGPQA,own,0.5466666666666667,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::Terminal-Bench 2.0,own,0.593,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-35B-A3B [Thinking (default)],GPQA diamond,epoch,0.8133333333333334,Qwen,Qwen3.6,35.0,2026-04
+Qwen3.6-35B-A3B [Thinking (default)],HLE,epoch,0.214,Qwen,Qwen3.6,35.0,2026-04
+Qwen3.6-35B-A3B [Thinking (default)],Qwen::AIME'26,own,0.927,Qwen,Qwen3.6,35.0,2026-04
+Qwen3.6-35B-A3B [Thinking (default)],Qwen::C-Eval,own,0.8666666666666667,Qwen,Qwen3.6,35.0,2026-04
+Qwen3.6-35B-A3B [Thinking (default)],Qwen::HMMT Feb'25,own,0.907,Qwen,Qwen3.6,35.0,2026-04
+Qwen3.6-35B-A3B [Thinking (default)],Qwen::HMMT Feb'26,own,0.836,Qwen,Qwen3.6,35.0,2026-04
+Qwen3.6-35B-A3B [Thinking (default)],Qwen::HMMT Nov'25,own,0.8909999999999999,Qwen,Qwen3.6,35.0,2026-04
+Qwen3.6-35B-A3B [Thinking (default)],Qwen::IMOAnswerBench,own,0.789,Qwen,Qwen3.6,35.0,2026-04
+Qwen3.6-35B-A3B [Thinking (default)],Qwen::LCB v6 (late),own,0.804,Qwen,Qwen3.6,35.0,2026-04
+Qwen3.6-35B-A3B [Thinking (default)],Qwen::MMLU-Pro,own,0.8355555555555555,Qwen,Qwen3.6,35.0,2026-04
+Qwen3.6-35B-A3B [Thinking (default)],Qwen::MMLU-Redux,own,0.9106666666666666,Qwen,Qwen3.6,35.0,2026-04
+Qwen3.6-35B-A3B [Thinking (default)],Qwen::SWE-bench Verified,own,0.7340000000000001,Qwen,Qwen3.6,35.0,2026-04
+Qwen3.6-35B-A3B [Thinking (default)],Qwen::SuperGPQA,own,0.5293333333333333,Qwen,Qwen3.6,35.0,2026-04
+Qwen3.6-35B-A3B [Thinking (default)],Qwen::Terminal-Bench 2.0,own,0.515,Qwen,Qwen3.6,35.0,2026-04
