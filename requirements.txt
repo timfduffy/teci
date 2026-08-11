@@ -1,0 +1,16 @@
+# Pinned so the fit reproduces. Python 3.12.
+#
+# numpy is held below 2.3 because scipy 1.14.1 declares numpy<2.3.0; the
+# original session ran numpy 2.4.4 against it, which warned on every import
+# and is an unsupported combination. scipy is kept at the version that
+# produced the committed results, so only numpy moves.
+#
+# Setup:
+#   python -m venv .venv
+#   .venv/Scripts/pip install -r requirements.txt      # Windows
+#   .venv/bin/pip install -r requirements.txt          # POSIX
+numpy==2.2.6
+scipy==1.14.1
+pandas==2.2.3
+matplotlib==3.9.2
+openpyxl==3.1.5
