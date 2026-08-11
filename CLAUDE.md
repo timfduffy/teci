@@ -30,14 +30,20 @@ own location and can be run from anywhere.
    uploads ≤35B) to the xlsx. Re-runnable; replaces the sheet in place.
 2. `scripts/audit_connectivity.py` — model×benchmark connectivity audit
    (components, generation bridges, merge assumptions). Output: docs/connectivity_audit.md.
-   **Only covers Qwen and Gemma** — the family list and generation order are
-   hardcoded, so the OLL cross-family entries are absent from its report.
+   Covers all six families, plus a cross-family section: which instruments are
+   shared between families and how each added family joins the Qwen/Gemma core.
+   Adding a family means adding it to `GEN_ORDER`.
 2b. `scripts/sensitivity.py` — refits method A with each flagged merge reversed.
    Output: docs/sensitivity.md.
 3. `scripts/prep_obs.py` — xlsx → `data/obs_ours.csv` (entry, instrument,
    baseline-corrected performance in [0,1]).
 4. `scripts/fit_methods.py` — fits methods A/B/C → `data/results_methods.csv`.
-5. `scripts/mk_charts.py`, `scripts/mk_chart_qwen.py` — charts (dataviz-styled PNGs).
+5. `scripts/mk_charts.py`, `scripts/mk_chart_qwen.py` — Qwen/Gemma charts.
+   `scripts/mk_chart_families.py` — cross-family charts (per-family small
+   multiples; the size-gap estimate under each sample/tier definition) plus
+   `docs/tier_trends.md`, the table-view twin. All dataviz-styled PNGs; size
+   tier is an ordered category so it uses the ordinal blue ramp, not
+   categorical hues.
 
 ## Conventions (load-bearing — keep consistent)
 

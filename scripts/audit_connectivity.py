@@ -15,7 +15,8 @@ from collections import defaultdict
 XLSX = "./qwen_gemma_benchmarks.xlsx"
 
 frames = []
-for sheet in ("Qwen scores", "Gemma scores", "OLL scores"):
+for sheet in ("Qwen scores", "Gemma scores", "OLL scores", "LiveBench scores",
+              "OLL cross-family"):
     frames.append(pd.read_excel(XLSX, sheet_name=sheet))
 df = pd.concat(frames, ignore_index=True)
 df["Eval config / notes"] = df["Eval config / notes"].fillna("")
@@ -115,11 +116,32 @@ merge("Gemma", [("LiveCodeBench","0-shot")], "LCB (Gemma3 IT, window unstated)",
 merge("Gemma", [("LiveCodeBench","v5")], "LCB v5 (3n)", "high", "Kept separate.")
 merge("Gemma", [("LiveCodeBench","v6")], "LCB v6 (Gemma4)", "high", "Kept separate.")
 
+# OLL and LiveBench are one harness run across families, so those instruments are
+# GLOBAL (no family prefix) -- which is what makes the cross-family entries
+# connect at all. Vendor instruments stay family-scoped. Mirrors prep_obs.py.
+GLOBAL_PREFIXES = ("OLLv1:", "OLLv2:", "LiveBench")
+
+
 def instrument(row, regime):
     fam, b, c = row["Family"], row["Benchmark"], row["Eval config / notes"]
     if regime == "curated" and (fam, b, c) in M:
         return fam + "::" + M[(fam, b, c)]
-    return fam + "::" + b + ("|" + c if c else "")
+    key = b + ("|" + c if c else "")
+    if b.startswith(GLOBAL_PREFIXES):
+        if regime == "curated" and "; " in c:
+            # OLL cross-family rows carry the run precision in the config. The
+            # leaderboard ran one harness, so bfloat16 and float16 are the same
+            # instrument and prep_obs.py's duplicates->max rule picks one. Kept
+            # separate under strict because precision has changed a score at
+            # least once (Qwen2.5-0.5B MATH Lvl 5: 0.00 bf16 vs 10.35 fp16).
+            key = b + "|" + c.split("; ")[0]
+        return key
+    return fam + "::" + key
+
+
+NOTES.append(("cross-family", "OLLv2:* (precision)", "flag",
+              "bfloat16 and float16 runs of the same model merged as one "
+              "instrument; precision has changed an OLL score at least once."))
 
 # Same weights + same inference mode = same entry: the Gemma-4-card re-evaluation
 # of Gemma 3 27B IT (non-thinking, like all Gemma 3 IT scores) is the SAME node.
@@ -152,13 +174,24 @@ def components(edges):
 GEN_ORDER = {
     "Qwen": ["Qwen (v1)", "Qwen1.5", "Qwen2", "Qwen2.5", "Qwen3", "Qwen3-2507", "Qwen3.5", "Qwen3.6"],
     "Gemma": ["Gemma 1", "Gemma 2", "Gemma 3", "Gemma 3n", "Gemma 4"],
+    # families added from the Open LLM Leaderboard by add_oll_models.py
+    "Llama": ["Llama 2", "Llama 3", "Llama 3.1", "Llama 3.2"],
+    "Phi": ["Phi-1", "Phi-1.5", "Phi-2", "Phi-3", "Phi-3.5", "Phi-4"],
+    "SmolLM": ["SmolLM", "SmolLM2"],
+    "OLMo": ["OLMo", "OLMo 2", "OLMoE"],
 }
+CORE = ("Qwen", "Gemma")
+FAMILIES = [f for f in GEN_ORDER if f in set(df.Family)]
 
 report = []
 out = report.append
-out("# Connectivity audit — Qwen/Gemma official-score matrix\n")
+out("# Connectivity audit — model × benchmark matrix\n")
+out("Qwen and Gemma carry full vendor benchmark suites; Llama, Phi, SmolLM and")
+out("OLMo were added from the Open LLM Leaderboard and ride the shared OLLv2")
+out("instruments only, so their per-family sections are thin by construction —")
+out("what matters for them is the cross-family section at the end.\n")
 
-for fam in ("Qwen", "Gemma"):
+for fam in FAMILIES:
     sub = df[(df.Family == fam) & (df.scale == "usable")].copy()
     out(f"\n## {fam}\n")
     n_entries = sub.entry.nunique()
@@ -194,11 +227,48 @@ for fam in ("Qwen", "Gemma"):
     if fam == "Gemma":
         pairs.append(("Gemma 3", "Gemma 4"))
     for a, b in pairs:
-        shared = inst_by_gen[a] & inst_by_gen[b]
-        names = sorted(s.split("::")[1] for s in shared)
+        shared = inst_by_gen.get(a, set()) & inst_by_gen.get(b, set())
+        names = sorted(s.split("::")[-1] for s in shared)
         out(f"- {a} <-> {b}: {len(shared)} shared -> {', '.join(names) if names else 'NONE'}")
     # key non-adjacent bridge: Qwen2.5 <-> Qwen3 era boundary already adjacent; for Gemma also check 3<->4
     out("")
+
+# ----------------------------------------------------------------------------
+# Cross-family connectivity: does the whole matrix hang together as one graph,
+# and which instruments actually carry the joins between families?
+# ----------------------------------------------------------------------------
+out("\n## Cross-family connectivity (all families, curated)\n")
+allsub = df[df.scale == "usable"].copy()
+allsub["inst"] = allsub.apply(lambda r: instrument(r, "curated"), axis=1)
+comps = sorted(components(list(allsub[["entry", "inst"]].itertuples(index=False, name=None))),
+               key=len, reverse=True)
+out(f"- entries: {allsub.entry.nunique()}, instruments: {allsub.inst.nunique()}, "
+    f"connected components: {len(comps)}")
+out(f"- main component: {len(comps[0])} entries")
+for c in comps[1:]:
+    out(f"- ISOLATED component ({len(c)}): {', '.join(c)}")
+counts = allsub.groupby("entry").inst.nunique()
+weak = counts[counts < 4]
+out(f"- entries below Epoch's 4-instrument rule: {len(weak) if len(weak) else 'none'}"
+    + (": " + ", ".join(weak.index) if len(weak) else ""))
+
+out("\n### Instruments shared between families")
+fams_by_inst = allsub.groupby("inst").Family.unique()
+shared_inst = {i: sorted(f) for i, f in fams_by_inst.items() if len(f) > 1}
+out(f"- {len(shared_inst)} of {allsub.inst.nunique()} instruments are seen by more than one family\n")
+for i, fams in sorted(shared_inst.items(), key=lambda kv: (-len(kv[1]), kv[0])):
+    n = allsub[allsub.inst == i].entry.nunique()
+    out(f"- `{i}` — {len(fams)} families ({', '.join(fams)}), {n} entries")
+
+out("\n### How each added family joins the Qwen/Gemma core")
+core_inst = set(allsub[allsub.Family.isin(CORE)].inst)
+for fam in [f for f in FAMILIES if f not in CORE]:
+    fi = set(allsub[allsub.Family == fam].inst)
+    join = sorted(fi & core_inst)
+    out(f"- **{fam}**: {allsub[allsub.Family == fam].entry.nunique()} entries, "
+        f"{len(join)} of its {len(fi)} instruments shared with Qwen/Gemma"
+        + (f" -> {', '.join(join)}" if join else " -> NONE (would be isolated)"))
+out("")
 
 out("\n## Curated merge decisions (every assumption, with confidence)\n")
 for fam, canon, conf, note in NOTES:
@@ -212,6 +282,6 @@ for cls in ("transform", "exclude"):
     out(f"- {cls}: {', '.join(items)}")
 
 text = "\n".join(report)
-with open("./connectivity_audit.md", "w") as f:
+with open("./connectivity_audit.md", "w", encoding="utf-8") as f:
     f.write(text)
 print(text)
