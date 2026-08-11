@@ -1,0 +1,6 @@
+# Normalize text to LF in the repository so that regenerating a CSV on Windows
+# (Python writes CRLF) does not show up as a whole-file diff.
+* text=auto
+
+*.xlsx binary
+*.png binary

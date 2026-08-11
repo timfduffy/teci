@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fit ECI-style capability scores for our Qwen/Gemma entries via three methods.
 
-A: joint refit  — our obs + reconstructed Epoch subset (31 models), bridge nodes
+A: joint refit  — our obs + full Epoch matrix (222 models), bridge nodes
                   merged; rescaled to ECI units by regressing the pure-Epoch
                   models' fitted capabilities on their published ECI.
 B: frozen graft — Epoch's published EDI/slope held fixed (ECI units); our
@@ -114,7 +114,7 @@ def bootstrap_caps(obs, anchor_benchmark, x_hat, n=100):
 ours = pd.read_csv("obs_ours.csv")
 pub = pd.read_csv("eci_published.csv").set_index("model")["eci"].to_dict()
 frozen = pd.read_csv("edi_frozen.csv").set_index("benchmark")
-epoch_sub = pd.read_csv("eci_benchmarks_reconstructed.csv")
+epoch_sub = pd.read_csv("eci_benchmarks.csv")
 
 BRIDGE = {
     "Gemma 2B": "Gemma 2B [Pretrained (PT)]",
