@@ -2,7 +2,10 @@
 
 Tim's project tracking whether benchmark progress differs across model sizes
 (core question: is the 0.5–2B tier plateauing relative to ~30B?), by placing
-small Qwen and Gemma models on the Epoch Capabilities Index (ECI) scale.
+small models on the Epoch Capabilities Index (ECI) scale. Qwen and Gemma are
+the backbone (80 entries, full vendor benchmark suites); SmolLM, OLMo, Llama
+and Phi were added later from the Open LLM Leaderboard (43 entries) to keep the
+low end from being calibrated by Qwen and Gemma alone.
 Intended for eventual publication (at least a Twitter post).
 
 ## Pipeline (run in this order)
@@ -22,8 +25,15 @@ own location and can be run from anywhere.
    card re-eval, Qwen3.5 thinking rows) were appended by follow-up scripts in
    the original session — the shipped xlsx is the source of truth; do NOT
    regenerate it from build_benchmarks.py alone or those additions are lost.
+1b. `scripts/add_oll_models.py` — appends the "OLL cross-family" sheet
+   (SmolLM/OLMo/Llama/Phi from the Open LLM Leaderboard, official-provider
+   uploads ≤35B) to the xlsx. Re-runnable; replaces the sheet in place.
 2. `scripts/audit_connectivity.py` — model×benchmark connectivity audit
    (components, generation bridges, merge assumptions). Output: docs/connectivity_audit.md.
+   **Only covers Qwen and Gemma** — the family list and generation order are
+   hardcoded, so the OLL cross-family entries are absent from its report.
+2b. `scripts/sensitivity.py` — refits method A with each flagged merge reversed.
+   Output: docs/sensitivity.md.
 3. `scripts/prep_obs.py` — xlsx → `data/obs_ours.csv` (entry, instrument,
    baseline-corrected performance in [0,1]).
 4. `scripts/fit_methods.py` — fits methods A/B/C → `data/results_methods.csv`.
@@ -43,6 +53,13 @@ own location and can be run from anywhere.
   (all per Epoch's eci-public conventions).
 - OLL and LiveBench instruments are cross-family (same harness); vendor
   instruments are family-scoped.
+- **Bridge on Epoch's `model_version` column, never on the display name.**
+  Epoch's names drop the base/instruct distinction that the entry convention
+  depends on: 14 of their 222 nodes pool base and instruct observations under
+  one name, and instruction tuning is worth a median +11 ECI in our own fit.
+  Two bridges were wrong on exactly this before the "Fix two mis-specified
+  bridge nodes" commit. `Llama 3-8B` is the one bridge knowingly left pooled
+  (1 base observation out of 9).
 
 ## Fit methods
 
@@ -103,7 +120,19 @@ own location and can be run from anywhere.
   entry convention — they cannot be merged as bridges without breaking it.
 - Sensitivity pass on flagged merges (fit with/without GPQA + HMMT merges).
 - Weighted index variants (knowledge-heavy vs instruction-following-heavy).
-- Add cross-family small models (SmolLM, Llama 3.2 1B/3B, Phi-mini, OLMo) to
-  de-bias new-era instrument parameters and sharpen the low-end trend.
+- ~~Add cross-family small models (SmolLM, Llama 3.2 1B/3B, Phi-mini, OLMo)~~ —
+  done via `add_oll_models.py` (43 entries, 17 sub-2B). **Partial fix only:**
+  OLL froze 2025-03-13, so this de-biases the 2023–2024 span of the trend, not
+  its most recent points. Our 2025+ small entries still rest almost entirely on
+  family-scoped `Qwen::*`/`Gemma::*` instruments, and no available source fixes
+  that — LiveBench (the one modern cross-family harness we use) has nothing
+  below ~3.8B, and Epoch's low-end coverage is all 2018–2022 instruments.
+  State this as a known limitation when publishing.
+- Extend `audit_connectivity.py` past Qwen/Gemma so the cross-family entries
+  appear in the audit (connectivity itself is verified: 1 component, 123
+  entries, none below 4 instruments).
+- Liquid AI's LFM2/LFM2.5 (230M–8B) sit right in the tier of interest but have
+  no shared-harness coverage at all — absent from OLL, Epoch and LiveBench.
+  Only route is vendor cards, which reintroduces the vendor-vs-harness bias.
 - Consider LMArena dated snapshots as an external validity check (not fit input).
 - Artificial Analysis: check ToS before using API/scraped data in anything published.

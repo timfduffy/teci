@@ -459,6 +459,168 @@ Gemma 7B [Pretrained (PT)],OpenBookQA,epoch,0.3706666666666667,Gemma,Gemma 1,7.0
 Gemma 7B [Pretrained (PT)],PIQA,epoch,0.6240000000000001,Gemma,Gemma 1,7.0,2024-02
 Gemma 7B [Pretrained (PT)],TriviaQA,epoch,0.634,Gemma,Gemma 1,7.0,2024-02
 Gemma 7B [Pretrained (PT)],Winogrande,epoch,0.569,Gemma,Gemma 1,7.0,2024-02
+Llama-2-13b-chat-hf [Instruct/chat],MATH level 5,epoch,0.01359516616314199,Llama,Llama 2,13.016,2023-07
+Llama-2-13b-chat-hf [Instruct/chat],OLLv2: BBH,own,0.07155379968626989,Llama,Llama 2,13.016,2023-07
+Llama-2-13b-chat-hf [Instruct/chat],OLLv2: GPQA,own,0.0,Llama,Llama 2,13.016,2023-07
+Llama-2-13b-chat-hf [Instruct/chat],OLLv2: IFEval,own,0.398472719052115,Llama,Llama 2,13.016,2023-07
+Llama-2-13b-chat-hf [Instruct/chat],OLLv2: MMLU-PRO,own,0.1025783096926714,Llama,Llama 2,13.016,2023-07
+Llama-2-13b-chat-hf [Instruct/chat],OLLv2: MUSR,own,0.081578125,Llama,Llama 2,13.016,2023-07
+Llama-2-13b-hf [Pretrained (PT)],MATH level 5,epoch,0.015105740181268881,Llama,Llama 2,13.016,2023-07
+Llama-2-13b-hf [Pretrained (PT)],OLLv2: BBH,own,0.1722255982505813,Llama,Llama 2,13.016,2023-07
+Llama-2-13b-hf [Pretrained (PT)],OLLv2: GPQA,own,0.04138702460850116,Llama,Llama 2,13.016,2023-07
+Llama-2-13b-hf [Pretrained (PT)],OLLv2: IFEval,own,0.24824687385027278,Llama,Llama 2,13.016,2023-07
+Llama-2-13b-hf [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.1530917553191489,Llama,Llama 2,13.016,2023-07
+Llama-2-13b-hf [Pretrained (PT)],OLLv2: MUSR,own,0.03385416666666666,Llama,Llama 2,13.016,2023-07
+Llama-2-7b-chat-hf [Instruct/chat],MATH level 5,epoch,0.01963746223564955,Llama,Llama 2,6.738,2023-07
+Llama-2-7b-chat-hf [Instruct/chat],OLLv2: BBH,own,0.044591716459594845,Llama,Llama 2,6.738,2023-07
+Llama-2-7b-chat-hf [Instruct/chat],OLLv2: GPQA,own,0.0044742729306487625,Llama,Llama 2,6.738,2023-07
+Llama-2-7b-chat-hf [Instruct/chat],OLLv2: IFEval,own,0.39864781003293487,Llama,Llama 2,6.738,2023-07
+Llama-2-7b-chat-hf [Instruct/chat],OLLv2: MMLU-PRO,own,0.0764442966903073,Llama,Llama 2,6.738,2023-07
+Llama-2-7b-chat-hf [Instruct/chat],OLLv2: MUSR,own,0.0327734375,Llama,Llama 2,6.738,2023-07
+Llama-2-7b-hf [Pretrained (PT)],MATH level 5,epoch,0.01737160120845922,Llama,Llama 2,6.738,2023-07
+Llama-2-7b-hf [Pretrained (PT)],OLLv2: BBH,own,0.1035141665784897,Llama,Llama 2,6.738,2023-07
+Llama-2-7b-hf [Pretrained (PT)],OLLv2: GPQA,own,0.022371364653243807,Llama,Llama 2,6.738,2023-07
+Llama-2-7b-hf [Pretrained (PT)],OLLv2: IFEval,own,0.2518938638368418,Llama,Llama 2,6.738,2023-07
+Llama-2-7b-hf [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.09565233451536641,Llama,Llama 2,6.738,2023-07
+Llama-2-7b-hf [Pretrained (PT)],OLLv2: MUSR,own,0.037578125,Llama,Llama 2,6.738,2023-07
+Llama-3.1-8B [Pretrained (PT)],MATH level 5,epoch,0.06570996978851963,Llama,Llama 3.1,8.03,2024-07
+Llama-3.1-8B [Pretrained (PT)],OLLv2: BBH,own,0.25304470634754933,Llama,Llama 3.1,8.03,2024-07
+Llama-3.1-8B [Pretrained (PT)],OLLv2: GPQA,own,0.0805369127516779,Llama,Llama 3.1,8.03,2024-07
+Llama-3.1-8B [Pretrained (PT)],OLLv2: IFEval,own,0.1245982880978027,Llama,Llama 3.1,8.03,2024-07
+Llama-3.1-8B [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.2542109929078014,Llama,Llama 3.1,8.03,2024-07
+Llama-3.1-8B [Pretrained (PT)],OLLv2: MUSR,own,0.08715104166666668,Llama,Llama 3.1,8.03,2024-07
+Llama-3.1-8B-Instruct [Instruct/chat],MATH level 5,epoch,0.1555891238670695,Llama,Llama 3.1,8.03,2024-07
+Llama-3.1-8B-Instruct [Instruct/chat],OLLv2: BBH,own,0.2937919249733404,Llama,Llama 3.1,8.03,2024-07
+Llama-3.1-8B-Instruct [Instruct/chat],OLLv2: GPQA,own,0.08724832214765099,Llama,Llama 3.1,8.03,2024-07
+Llama-3.1-8B-Instruct [Instruct/chat],OLLv2: IFEval,own,0.4921707735475206,Llama,Llama 3.1,8.03,2024-07
+Llama-3.1-8B-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.3109116430260046,Llama,Llama 3.1,8.03,2024-07
+Llama-3.1-8B-Instruct [Instruct/chat],OLLv2: MUSR,own,0.08611197916666667,Llama,Llama 3.1,8.03,2024-07
+Llama-3.2-1B [Pretrained (PT)],MATH level 5,epoch,0.01208459214501511,Llama,Llama 3.2,1.24,2024-09
+Llama-3.2-1B [Pretrained (PT)],OLLv2: BBH,own,0.04366029656556756,Llama,Llama 3.2,1.24,2024-09
+Llama-3.2-1B [Pretrained (PT)],OLLv2: GPQA,own,0.0,Llama,Llama 3.2,1.24,2024-09
+Llama-3.2-1B [Pretrained (PT)],OLLv2: IFEval,own,0.147779004153424,Llama,Llama 3.2,1.24,2024-09
+Llama-3.2-1B [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.02260638297872339,Llama,Llama 3.2,1.24,2024-09
+Llama-3.2-1B [Pretrained (PT)],OLLv2: MUSR,own,0.025578124999999997,Llama,Llama 3.2,1.24,2024-09
+Llama-3.2-1B-Instruct [Instruct/chat],MATH level 5,epoch,0.0702416918429003,Llama,Llama 3.2,1.24,2024-09
+Llama-3.2-1B-Instruct [Instruct/chat],OLLv2: BBH,own,0.08742521312303046,Llama,Llama 3.2,1.24,2024-09
+Llama-3.2-1B-Instruct [Instruct/chat],OLLv2: GPQA,own,0.03355704697986576,Llama,Llama 3.2,1.24,2024-09
+Llama-3.2-1B-Instruct [Instruct/chat],OLLv2: IFEval,own,0.569831380736446,Llama,Llama 3.2,1.24,2024-09
+Llama-3.2-1B-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.07579787234042552,Llama,Llama 3.2,1.24,2024-09
+Llama-3.2-1B-Instruct [Instruct/chat],OLLv2: MUSR,own,0.02973437500000001,Llama,Llama 3.2,1.24,2024-09
+Llama-3.2-3B [Pretrained (PT)],MATH level 5,epoch,0.018882175226586098,Llama,Llama 3.2,3.213,2024-09
+Llama-3.2-3B [Pretrained (PT)],OLLv2: BBH,own,0.1423266488436411,Llama,Llama 3.2,3.213,2024-09
+Llama-3.2-3B [Pretrained (PT)],OLLv2: GPQA,own,0.02348993288590602,Llama,Llama 3.2,3.213,2024-09
+Llama-3.2-3B [Pretrained (PT)],OLLv2: IFEval,own,0.1337406969064305,Llama,Llama 3.2,3.213,2024-09
+Llama-3.2-3B [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.1652814716312056,Llama,Llama 3.2,3.213,2024-09
+Llama-3.2-3B [Pretrained (PT)],OLLv2: MUSR,own,0.0381484375,Llama,Llama 3.2,3.213,2024-09
+Llama-3.2-3B-Instruct [Instruct/chat],MATH level 5,epoch,0.1767371601208459,Llama,Llama 3.2,3.213,2024-09
+Llama-3.2-3B-Instruct [Instruct/chat],OLLv2: BBH,own,0.2405918644688547,Llama,Llama 3.2,3.213,2024-09
+Llama-3.2-3B-Instruct [Instruct/chat],OLLv2: GPQA,own,0.03803131991051452,Llama,Llama 3.2,3.213,2024-09
+Llama-3.2-3B-Instruct [Instruct/chat],OLLv2: IFEval,own,0.7393161256576994,Llama,Llama 3.2,3.213,2024-09
+Llama-3.2-3B-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.24386820330969272,Llama,Llama 3.2,3.213,2024-09
+Llama-3.2-3B-Instruct [Instruct/chat],OLLv2: MUSR,own,0.013734375,Llama,Llama 3.2,3.213,2024-09
+Meta-Llama-3-8B [Pretrained (PT)],MATH level 5,epoch,0.045317220543806644,Llama,Llama 3,8.03,2024-04
+Meta-Llama-3-8B [Pretrained (PT)],OLLv2: BBH,own,0.2450076379676797,Llama,Llama 3,8.03,2024-04
+Meta-Llama-3-8B [Pretrained (PT)],OLLv2: GPQA,own,0.0738255033557047,Llama,Llama 3,8.03,2024-04
+Meta-Llama-3-8B [Pretrained (PT)],OLLv2: IFEval,own,0.1455061459150609,Llama,Llama 3,8.03,2024-04
+Meta-Llama-3-8B [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.2455304373522458,Llama,Llama 3,8.03,2024-04
+Meta-Llama-3-8B [Pretrained (PT)],OLLv2: MUSR,own,0.062424479166666665,Llama,Llama 3,8.03,2024-04
+Meta-Llama-3-8B-Instruct [Instruct/chat],MATH level 5,epoch,0.09138972809667674,Llama,Llama 3,8.03,2024-04
+Meta-Llama-3-8B-Instruct [Instruct/chat],OLLv2: BBH,own,0.2824494957634361,Llama,Llama 3,8.03,2024-04
+Meta-Llama-3-8B-Instruct [Instruct/chat],OLLv2: GPQA,own,0.05704697986577179,Llama,Llama 3,8.03,2024-04
+Meta-Llama-3-8B-Instruct [Instruct/chat],OLLv2: IFEval,own,0.7408398604591373,Llama,Llama 3,8.03,2024-04
+Meta-Llama-3-8B-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.2960438829787234,Llama,Llama 3,8.03,2024-04
+Meta-Llama-3-8B-Instruct [Instruct/chat],OLLv2: MUSR,own,0.05401041666666668,Llama,Llama 3,8.03,2024-04
+OLMo-1B-hf [Pretrained (PT)],MATH level 5,epoch,0.01737160120845922,OLMo,OLMo,1.177,2024-04
+OLMo-1B-hf [Pretrained (PT)],OLLv2: BBH,own,0.03196546312430317,OLMo,OLMo,1.177,2024-04
+OLMo-1B-hf [Pretrained (PT)],OLLv2: GPQA,own,0.01565995525727071,OLMo,OLMo,1.177,2024-04
+OLMo-1B-hf [Pretrained (PT)],OLLv2: IFEval,own,0.2181966072243868,OLMo,OLMo,1.177,2024-04
+OLMo-1B-hf [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.01928191489361701,OLMo,OLMo,1.177,2024-04
+OLMo-1B-hf [Pretrained (PT)],OLLv2: MUSR,own,0.09555989583333334,OLMo,OLMo,1.177,2024-04
+OLMo-2-1124-7B-Instruct [Instruct/chat],MATH level 5,epoch,0.1487915407854985,OLMo,OLMo 2,7.299,2024-12
+OLMo-2-1124-7B-Instruct [Instruct/chat],OLLv2: BBH,own,0.16326772949551832,OLMo,OLMo 2,7.299,2024-12
+OLMo-2-1124-7B-Instruct [Instruct/chat],OLLv2: GPQA,own,0.03803131991051452,OLMo,OLMo 2,7.299,2024-12
+OLMo-2-1124-7B-Instruct [Instruct/chat],OLLv2: IFEval,own,0.7244034716773716,OLMo,OLMo 2,7.299,2024-12
+OLMo-2-1124-7B-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.1857823581560283,OLMo,OLMo 2,7.299,2024-12
+OLMo-2-1124-7B-Instruct [Instruct/chat],OLLv2: MUSR,own,0.04687499999999999,OLMo,OLMo 2,7.299,2024-12
+OLMo-7B-Instruct-hf [Instruct/chat],MATH level 5,epoch,0.01359516616314199,OLMo,OLMo,7.0,2024-06
+OLMo-7B-Instruct-hf [Instruct/chat],OLLv2: BBH,own,0.1315993341526703,OLMo,OLMo,7.0,2024-06
+OLMo-7B-Instruct-hf [Instruct/chat],OLLv2: GPQA,own,0.027964205816554788,OLMo,OLMo,7.0,2024-06
+OLMo-7B-Instruct-hf [Instruct/chat],OLLv2: IFEval,own,0.3472652561869174,OLMo,OLMo,7.0,2024-06
+OLMo-7B-Instruct-hf [Instruct/chat],OLLv2: MMLU-PRO,own,0.08724881796690305,OLMo,OLMo,7.0,2024-06
+OLMo-7B-Instruct-hf [Instruct/chat],OLLv2: MUSR,own,0.043265624999999995,OLMo,OLMo,7.0,2024-06
+OLMo-7B-hf [Pretrained (PT)],MATH level 5,epoch,0.01208459214501511,OLMo,OLMo,6.888,2024-04
+OLMo-7B-hf [Pretrained (PT)],OLLv2: BBH,own,0.057619870410808315,OLMo,OLMo,6.888,2024-04
+OLMo-7B-hf [Pretrained (PT)],OLLv2: GPQA,own,0.03020134228187921,OLMo,OLMo,6.888,2024-04
+OLMo-7B-hf [Pretrained (PT)],OLLv2: IFEval,own,0.2719273749207658,OLMo,OLMo,6.888,2024-04
+OLMo-7B-hf [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.01918956855791961,OLMo,OLMo,6.888,2024-04
+OLMo-7B-hf [Pretrained (PT)],OLLv2: MUSR,own,0.02083333333333333,OLMo,OLMo,6.888,2024-04
+OLMoE-1B-7B-0125-Instruct [Instruct/chat],MATH level 5,epoch,0.08987915407854985,OLMo,OLMoE,6.919,2025-01
+OLMoE-1B-7B-0125-Instruct [Instruct/chat],OLLv2: BBH,own,0.1400795649891339,OLMo,OLMoE,6.919,2025-01
+OLMoE-1B-7B-0125-Instruct [Instruct/chat],OLLv2: GPQA,own,0.01342281879194629,OLMo,OLMoE,6.919,2025-01
+OLMoE-1B-7B-0125-Instruct [Instruct/chat],OLLv2: IFEval,own,0.6757436934001783,OLMo,OLMoE,6.919,2025-01
+OLMoE-1B-7B-0125-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.1016548463356974,OLMo,OLMoE,6.919,2025-01
+OLMoE-1B-7B-0125-Instruct [Instruct/chat],OLLv2: MUSR,own,0.02981250000000001,OLMo,OLMoE,6.919,2025-01
+OLMoE-1B-7B-0924 [Pretrained (PT)],MATH level 5,epoch,0.01661631419939577,OLMo,OLMoE,6.919,2024-07
+OLMoE-1B-7B-0924 [Pretrained (PT)],OLLv2: BBH,own,0.08308106894895778,OLMo,OLMoE,6.919,2024-07
+OLMoE-1B-7B-0924 [Pretrained (PT)],OLLv2: GPQA,own,0.0,OLMo,OLMoE,6.919,2024-07
+OLMoE-1B-7B-0924 [Pretrained (PT)],OLLv2: IFEval,own,0.21847143357402798,OLMo,OLMoE,6.919,2024-07
+OLMoE-1B-7B-0924 [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.08216976950354608,OLMo,OLMoE,6.919,2024-07
+OLMoE-1B-7B-0924 [Pretrained (PT)],OLLv2: MUSR,own,0.035656250000000014,OLMo,OLMoE,6.919,2024-07
+OLMoE-1B-7B-0924-Instruct [Instruct/chat],MATH level 5,epoch,0.027945619335347432,OLMo,OLMoE,6.919,2024-08
+OLMoE-1B-7B-0924-Instruct [Instruct/chat],OLLv2: BBH,own,0.145715628213372,OLMo,OLMoE,6.919,2024-08
+OLMoE-1B-7B-0924-Instruct [Instruct/chat],OLLv2: GPQA,own,0.02348993288590602,OLMo,OLMoE,6.919,2024-08
+OLMoE-1B-7B-0924-Instruct [Instruct/chat],OLLv2: IFEval,own,0.46674157901035934,OLMo,OLMoE,6.919,2024-08
+OLMoE-1B-7B-0924-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.09731456855791962,OLMo,OLMoE,6.919,2024-08
+OLMoE-1B-7B-0924-Instruct [Instruct/chat],OLLv2: MUSR,own,0.0606953125,OLMo,OLMoE,6.919,2024-08
+Phi-3-medium-128k-instruct [Instruct/chat],MATH level 5,epoch,0.1918429003021148,Phi,Phi-3,13.96,2024-05
+Phi-3-medium-128k-instruct [Instruct/chat],OLLv2: BBH,own,0.4846045127399018,Phi,Phi-3,13.96,2024-05
+Phi-3-medium-128k-instruct [Instruct/chat],OLLv2: GPQA,own,0.1152125279642058,Phi,Phi-3,13.96,2024-05
+Phi-3-medium-128k-instruct [Instruct/chat],OLLv2: IFEval,own,0.6040029344361849,Phi,Phi-3,13.96,2024-05
+Phi-3-medium-128k-instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.41240026595744683,Phi,Phi-3,13.96,2024-05
+Phi-3-medium-128k-instruct [Instruct/chat],OLLv2: MUSR,own,0.1135182291666666,Phi,Phi-3,13.96,2024-05
+Phi-3-medium-4k-instruct [Instruct/chat],MATH level 5,epoch,0.195619335347432,Phi,Phi-3,13.96,2024-05
+Phi-3-medium-4k-instruct [Instruct/chat],OLLv2: BBH,own,0.4938061007422016,Phi,Phi-3,13.96,2024-05
+Phi-3-medium-4k-instruct [Instruct/chat],OLLv2: GPQA,own,0.1152125279642058,Phi,Phi-3,13.96,2024-05
+Phi-3-medium-4k-instruct [Instruct/chat],OLLv2: IFEval,own,0.6422713954529538,Phi,Phi-3,13.96,2024-05
+Phi-3-medium-4k-instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.40842937352245867,Phi,Phi-3,13.96,2024-05
+Phi-3-medium-4k-instruct [Instruct/chat],OLLv2: MUSR,own,0.1305208333333333,Phi,Phi-3,13.96,2024-05
+Phi-3-mini-128k-instruct [Instruct/chat],MATH level 5,epoch,0.1404833836858006,Phi,Phi-3,3.821,2024-04
+Phi-3-mini-128k-instruct [Instruct/chat],OLLv2: BBH,own,0.3709976663224031,Phi,Phi-3,3.821,2024-04
+Phi-3-mini-128k-instruct [Instruct/chat],OLLv2: GPQA,own,0.09060402684563762,Phi,Phi-3,3.821,2024-04
+Phi-3-mini-128k-instruct [Instruct/chat],OLLv2: IFEval,own,0.5976331688807919,Phi,Phi-3,3.821,2024-04
+Phi-3-mini-128k-instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.3038009751773049,Phi,Phi-3,3.821,2024-04
+Phi-3-mini-128k-instruct [Instruct/chat],OLLv2: MUSR,own,0.07710937500000002,Phi,Phi-3,3.821,2024-04
+Phi-3-mini-4k-instruct [Instruct/chat],MATH level 5,epoch,0.16389728096676742,Phi,Phi-3,3.821,2024-04
+Phi-3-mini-4k-instruct [Instruct/chat],OLLv2: BBH,own,0.392693352377728,Phi,Phi-3,3.821,2024-04
+Phi-3-mini-4k-instruct [Instruct/chat],OLLv2: GPQA,own,0.1096196868008949,Phi,Phi-3,3.821,2024-04
+Phi-3-mini-4k-instruct [Instruct/chat],OLLv2: IFEval,own,0.5612884923115112,Phi,Phi-3,3.821,2024-04
+Phi-3-mini-4k-instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.3357528073286053,Phi,Phi-3,3.821,2024-04
+Phi-3-mini-4k-instruct [Instruct/chat],OLLv2: MUSR,own,0.1311875,Phi,Phi-3,3.821,2024-04
+Phi-3-small-128k-instruct [Instruct/chat],MATH level 5,epoch,0.2026086956521739,Phi,Phi-3,7.392,2024-05
+Phi-3-small-128k-instruct [Instruct/chat],OLLv2: BBH,own,0.4563406964144793,Phi,Phi-3,7.392,2024-05
+Phi-3-small-128k-instruct [Instruct/chat],OLLv2: GPQA,own,0.08948545861297541,Phi,Phi-3,7.392,2024-05
+Phi-3-small-128k-instruct [Instruct/chat],OLLv2: IFEval,own,0.6368258443153055,Phi,Phi-3,7.392,2024-05
+Phi-3-small-128k-instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.3878361406619386,Phi,Phi-3,7.392,2024-05
+Phi-3-small-128k-instruct [Instruct/chat],OLLv2: MUSR,own,0.1449713541666666,Phi,Phi-3,7.392,2024-05
+Phi-3-small-8k-instruct [Instruct/chat],MATH level 5,epoch,0.18869565217391301,Phi,Phi-3,7.392,2024-05
+Phi-3-small-8k-instruct [Instruct/chat],OLLv2: BBH,own,0.4620557036638908,Phi,Phi-3,7.392,2024-05
+Phi-3-small-8k-instruct [Instruct/chat],OLLv2: GPQA,own,0.08277404921700222,Phi,Phi-3,7.392,2024-05
+Phi-3-small-8k-instruct [Instruct/chat],OLLv2: IFEval,own,0.6496651107949131,Phi,Phi-3,7.392,2024-05
+Phi-3-small-8k-instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.3895907210401891,Phi,Phi-3,7.392,2024-05
+Phi-3-small-8k-instruct [Instruct/chat],OLLv2: MUSR,own,0.1677395833333333,Phi,Phi-3,7.392,2024-05
+Phi-3.5-mini-instruct [Instruct/chat],MATH level 5,epoch,0.1963746223564955,Phi,Phi-3.5,3.821,2024-08
+Phi-3.5-mini-instruct [Instruct/chat],OLLv2: BBH,own,0.36745853908516607,Phi,Phi-3.5,3.821,2024-08
+Phi-3.5-mini-instruct [Instruct/chat],OLLv2: GPQA,own,0.1196868008948546,Phi,Phi-3.5,3.821,2024-08
+Phi-3.5-mini-instruct [Instruct/chat],OLLv2: IFEval,own,0.5774500547436358,Phi,Phi-3.5,3.821,2024-08
+Phi-3.5-mini-instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.3291038711583924,Phi,Phi-3.5,3.821,2024-08
+Phi-3.5-mini-instruct [Instruct/chat],OLLv2: MUSR,own,0.1009895833333333,Phi,Phi-3.5,3.821,2024-08
+Phi-4-mini-instruct [Instruct/chat],MATH level 5,epoch,0.1699395770392749,Phi,Phi-4,3.836,2025-02
+Phi-4-mini-instruct [Instruct/chat],OLLv2: BBH,own,0.3873553611173529,Phi,Phi-4,3.836,2025-02
+Phi-4-mini-instruct [Instruct/chat],OLLv2: GPQA,own,0.07941834451901568,Phi,Phi-4,3.836,2025-02
+Phi-4-mini-instruct [Instruct/chat],OLLv2: IFEval,own,0.7377923908562615,Phi,Phi-4,3.836,2025-02
+Phi-4-mini-instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.325779403073286,Phi,Phi-4,3.836,2025-02
+Phi-4-mini-instruct [Instruct/chat],OLLv2: MUSR,own,0.06446093750000002,Phi,Phi-4,3.836,2025-02
 Qwen-1.8B-Chat [Instruct/chat],GSM8K,epoch,0.32299999999999995,Qwen,Qwen (v1),1.8,2023-11
 Qwen-1.8B-Chat [Instruct/chat],MMLU,epoch,0.2706666666666666,Qwen,Qwen (v1),1.8,2023-11
 Qwen-1.8B-Chat [Instruct/chat],Qwen::C-Eval,own,0.41466666666666674,Qwen,Qwen (v1),1.8,2023-11
@@ -1167,3 +1329,99 @@ Qwen3.6-35B-A3B [Thinking (default)],Qwen::MMLU-Redux,own,0.9106666666666666,Qwe
 Qwen3.6-35B-A3B [Thinking (default)],Qwen::SWE-bench Verified,own,0.7340000000000001,Qwen,Qwen3.6,35.0,2026-04
 Qwen3.6-35B-A3B [Thinking (default)],Qwen::SuperGPQA,own,0.5293333333333333,Qwen,Qwen3.6,35.0,2026-04
 Qwen3.6-35B-A3B [Thinking (default)],Qwen::Terminal-Bench 2.0,own,0.515,Qwen,Qwen3.6,35.0,2026-04
+SmolLM-1.7B [Pretrained (PT)],MATH level 5,epoch,0.01661631419939577,SmolLM,SmolLM,1.71,2024-07
+SmolLM-1.7B [Pretrained (PT)],OLLv2: BBH,own,0.044111278515492014,SmolLM,SmolLM,1.71,2024-07
+SmolLM-1.7B [Pretrained (PT)],OLLv2: GPQA,own,0.0,SmolLM,SmolLM,1.71,2024-07
+SmolLM-1.7B [Pretrained (PT)],OLLv2: IFEval,own,0.23615673080759048,SmolLM,SmolLM,1.71,2024-07
+SmolLM-1.7B [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.01641917848699764,SmolLM,SmolLM,1.71,2024-07
+SmolLM-1.7B [Pretrained (PT)],OLLv2: MUSR,own,0.02128385416666667,SmolLM,SmolLM,1.71,2024-07
+SmolLM-1.7B-Instruct [Instruct/chat],MATH level 5,epoch,0.02114803625377644,SmolLM,SmolLM,1.71,2024-07
+SmolLM-1.7B-Instruct [Instruct/chat],OLLv2: BBH,own,0.02080374290853742,SmolLM,SmolLM,1.71,2024-07
+SmolLM-1.7B-Instruct [Instruct/chat],OLLv2: GPQA,own,0.01342281879194629,SmolLM,SmolLM,1.71,2024-07
+SmolLM-1.7B-Instruct [Instruct/chat],OLLv2: IFEval,own,0.2347825990593847,SmolLM,SmolLM,1.71,2024-07
+SmolLM-1.7B-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.01845079787234041,SmolLM,SmolLM,1.71,2024-07
+SmolLM-1.7B-Instruct [Instruct/chat],OLLv2: MUSR,own,0.02083333333333333,SmolLM,SmolLM,1.71,2024-07
+SmolLM-135M [Pretrained (PT)],MATH level 5,epoch,0.01359516616314199,SmolLM,SmolLM,0.13,2024-07
+SmolLM-135M [Pretrained (PT)],OLLv2: BBH,own,0.03285399822085262,SmolLM,SmolLM,0.13,2024-07
+SmolLM-135M [Pretrained (PT)],OLLv2: GPQA,own,0.01118568232662195,SmolLM,SmolLM,0.13,2024-07
+SmolLM-135M [Pretrained (PT)],OLLv2: IFEval,own,0.2124762297370976,SmolLM,SmolLM,0.13,2024-07
+SmolLM-135M [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.013556442080378251,SmolLM,SmolLM,0.13,2024-07
+SmolLM-135M [Pretrained (PT)],OLLv2: MUSR,own,0.133421875,SmolLM,SmolLM,0.13,2024-07
+SmolLM-135M-Instruct [Instruct/chat],MATH level 5,epoch,0.005287009063444109,SmolLM,SmolLM,0.135,2024-07
+SmolLM-135M-Instruct [Instruct/chat],OLLv2: BBH,own,0.0269295800470458,SmolLM,SmolLM,0.135,2024-07
+SmolLM-135M-Instruct [Instruct/chat],OLLv2: GPQA,own,0.01230425055928408,SmolLM,SmolLM,0.135,2024-07
+SmolLM-135M-Instruct [Instruct/chat],OLLv2: IFEval,own,0.12140121544169469,SmolLM,SmolLM,0.135,2024-07
+SmolLM-135M-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.01955895390070921,SmolLM,SmolLM,0.135,2024-07
+SmolLM-135M-Instruct [Instruct/chat],OLLv2: MUSR,own,0.03365625,SmolLM,SmolLM,0.135,2024-07
+SmolLM-360M [Pretrained (PT)],MATH level 5,epoch,0.01132930513595166,SmolLM,SmolLM,0.36,2024-07
+SmolLM-360M [Pretrained (PT)],OLLv2: BBH,own,0.03284915303246592,SmolLM,SmolLM,0.36,2024-07
+SmolLM-360M [Pretrained (PT)],OLLv2: GPQA,own,0.02348993288590602,SmolLM,SmolLM,0.36,2024-07
+SmolLM-360M [Pretrained (PT)],OLLv2: IFEval,own,0.2133505764704318,SmolLM,SmolLM,0.36,2024-07
+SmolLM-360M [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.013741134751773042,SmolLM,SmolLM,0.36,2024-07
+SmolLM-360M [Pretrained (PT)],OLLv2: MUSR,own,0.08089322916666665,SmolLM,SmolLM,0.36,2024-07
+SmolLM-360M-Instruct [Instruct/chat],MATH level 5,epoch,0.01812688821752266,SmolLM,SmolLM,0.362,2024-07
+SmolLM-360M-Instruct [Instruct/chat],OLLv2: BBH,own,0.02080374290853742,SmolLM,SmolLM,0.362,2024-07
+SmolLM-360M-Instruct [Instruct/chat],OLLv2: GPQA,own,0.01901565995525726,SmolLM,SmolLM,0.362,2024-07
+SmolLM-360M-Instruct [Instruct/chat],OLLv2: IFEval,own,0.1951654942219977,SmolLM,SmolLM,0.362,2024-07
+SmolLM-360M-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.01845079787234041,SmolLM,SmolLM,0.362,2024-07
+SmolLM-360M-Instruct [Instruct/chat],OLLv2: MUSR,own,0.02897135416666666,SmolLM,SmolLM,0.362,2024-07
+SmolLM2-1.7B [Pretrained (PT)],MATH level 5,epoch,0.02643504531722054,SmolLM,SmolLM2,1.71,2024-10
+SmolLM2-1.7B [Pretrained (PT)],OLLv2: BBH,own,0.09301788459551683,SmolLM,SmolLM2,1.71,2024-10
+SmolLM2-1.7B [Pretrained (PT)],OLLv2: GPQA,own,0.03914988814317673,SmolLM,SmolLM2,1.71,2024-10
+SmolLM2-1.7B [Pretrained (PT)],OLLv2: IFEval,own,0.2440003634800108,SmolLM,SmolLM2,1.71,2024-10
+SmolLM2-1.7B [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.1264036643026004,SmolLM,SmolLM2,1.71,2024-10
+SmolLM2-1.7B [Pretrained (PT)],OLLv2: MUSR,own,0.04601041666666668,SmolLM,SmolLM2,1.71,2024-10
+SmolLM2-1.7B-Instruct [Instruct/chat],MATH level 5,epoch,0.0581570996978852,SmolLM,SmolLM2,1.711,2024-10
+SmolLM2-1.7B-Instruct [Instruct/chat],OLLv2: BBH,own,0.10917989226208069,SmolLM,SmolLM2,1.711,2024-10
+SmolLM2-1.7B-Instruct [Instruct/chat],OLLv2: GPQA,own,0.03914988814317673,SmolLM,SmolLM2,1.711,2024-10
+SmolLM2-1.7B-Instruct [Instruct/chat],OLLv2: IFEval,own,0.5367835121920946,SmolLM,SmolLM2,1.711,2024-10
+SmolLM2-1.7B-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.1170766843971631,SmolLM,SmolLM2,1.711,2024-10
+SmolLM2-1.7B-Instruct [Instruct/chat],OLLv2: MUSR,own,0.04098958333333335,SmolLM,SmolLM2,1.711,2024-10
+SmolLM2-135M [Pretrained (PT)],MATH level 5,epoch,0.01208459214501511,SmolLM,SmolLM2,0.135,2024-10
+SmolLM2-135M [Pretrained (PT)],OLLv2: BBH,own,0.0370807758683998,SmolLM,SmolLM2,0.135,2024-10
+SmolLM2-135M [Pretrained (PT)],OLLv2: GPQA,own,0.0,SmolLM,SmolLM2,0.135,2024-10
+SmolLM2-135M [Pretrained (PT)],OLLv2: IFEval,own,0.1817765750431078,SmolLM,SmolLM2,0.135,2024-10
+SmolLM2-135M [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.01050901300236406,SmolLM,SmolLM2,0.135,2024-10
+SmolLM2-135M [Pretrained (PT)],OLLv2: MUSR,own,0.1003046875,SmolLM,SmolLM2,0.135,2024-10
+SmolLM2-135M-Instruct [Instruct/chat],MATH level 5,epoch,0.01435045317220544,SmolLM,SmolLM2,0.135,2024-10
+SmolLM2-135M-Instruct [Instruct/chat],OLLv2: BBH,own,0.04796275744662444,SmolLM,SmolLM2,0.135,2024-10
+SmolLM2-135M-Instruct [Instruct/chat],OLLv2: GPQA,own,0.0,SmolLM,SmolLM2,0.135,2024-10
+SmolLM2-135M-Instruct [Instruct/chat],OLLv2: IFEval,own,0.2883138960181208,SmolLM,SmolLM2,0.135,2024-10
+SmolLM2-135M-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.012725325059101652,SmolLM,SmolLM2,0.135,2024-10
+SmolLM2-135M-Instruct [Instruct/chat],OLLv2: MUSR,own,0.06059895833333335,SmolLM,SmolLM2,0.135,2024-10
+SmolLM2-360M [Pretrained (PT)],MATH level 5,epoch,0.01208459214501511,SmolLM,SmolLM2,0.36,2024-10
+SmolLM2-360M [Pretrained (PT)],OLLv2: BBH,own,0.05543603155369513,SmolLM,SmolLM2,0.36,2024-10
+SmolLM2-360M [Pretrained (PT)],OLLv2: GPQA,own,0.0,SmolLM,SmolLM2,0.36,2024-10
+SmolLM2-360M [Pretrained (PT)],OLLv2: IFEval,own,0.2114522799505312,SmolLM,SmolLM2,0.36,2024-10
+SmolLM2-360M [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.01882018321513002,SmolLM,SmolLM2,0.36,2024-10
+SmolLM2-360M [Pretrained (PT)],OLLv2: MUSR,own,0.07728385416666667,SmolLM,SmolLM2,0.36,2024-10
+SmolLM2-360M-Instruct [Instruct/chat],MATH level 5,epoch,0.015105740181268881,SmolLM,SmolLM2,0.362,2024-10
+SmolLM2-360M-Instruct [Instruct/chat],OLLv2: BBH,own,0.041738636363636374,SmolLM,SmolLM2,0.362,2024-10
+SmolLM2-360M-Instruct [Instruct/chat],OLLv2: GPQA,own,0.02013422818791947,SmolLM,SmolLM2,0.362,2024-10
+SmolLM2-360M-Instruct [Instruct/chat],OLLv2: IFEval,own,0.38415958545548035,SmolLM,SmolLM2,0.362,2024-10
+SmolLM2-360M-Instruct [Instruct/chat],OLLv2: MMLU-PRO,own,0.01401817375886524,SmolLM,SmolLM2,0.362,2024-10
+SmolLM2-360M-Instruct [Instruct/chat],OLLv2: MUSR,own,0.02765625,SmolLM,SmolLM2,0.362,2024-10
+phi-1 [Pretrained (PT)],MATH level 5,epoch,0.009818731117824773,Phi,Phi-1,1.418,2023-09
+phi-1 [Pretrained (PT)],OLLv2: BBH,own,0.04273999212214678,Phi,Phi-1,1.418,2023-09
+phi-1 [Pretrained (PT)],OLLv2: GPQA,own,0.02013422818791947,Phi,Phi-1,1.418,2023-09
+phi-1 [Pretrained (PT)],OLLv2: IFEval,own,0.206805719934219,Phi,Phi-1,1.418,2023-09
+phi-1 [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.01798906619385342,Phi,Phi-1,1.418,2023-09
+phi-1 [Pretrained (PT)],OLLv2: MUSR,own,0.036971354166666665,Phi,Phi-1,1.418,2023-09
+phi-1_5 [Pretrained (PT)],MATH level 5,epoch,0.01812688821752266,Phi,Phi-1.5,1.418,2023-09
+phi-1_5 [Pretrained (PT)],OLLv2: BBH,own,0.07468938770070242,Phi,Phi-1.5,1.418,2023-09
+phi-1_5 [Pretrained (PT)],OLLv2: GPQA,own,0.02348993288590602,Phi,Phi-1.5,1.418,2023-09
+phi-1_5 [Pretrained (PT)],OLLv2: IFEval,own,0.2032839532440591,Phi,Phi-1.5,1.418,2023-09
+phi-1_5 [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.07681368203309692,Phi,Phi-1.5,1.418,2023-09
+phi-1_5 [Pretrained (PT)],OLLv2: MUSR,own,0.03385416666666666,Phi,Phi-1.5,1.418,2023-09
+phi-2 [Pretrained (PT)],MATH level 5,epoch,0.029456193353474318,Phi,Phi-2,2.78,2023-12
+phi-2 [Pretrained (PT)],OLLv2: BBH,own,0.280385192934393,Phi,Phi-2,2.78,2023-12
+phi-2 [Pretrained (PT)],OLLv2: GPQA,own,0.029082774049217,Phi,Phi-2,2.78,2023-12
+phi-2 [Pretrained (PT)],OLLv2: IFEval,own,0.273875539125077,Phi,Phi-2,2.78,2023-12
+phi-2 [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.18088800236406619,Phi,Phi-2,2.78,2023-12
+phi-2 [Pretrained (PT)],OLLv2: MUSR,own,0.1383697916666666,Phi,Phi-2,2.78,2023-12
+phi-4 [Pretrained (PT)],MATH level 5,epoch,0.3164652567975831,Phi,Phi-4,14.66,2024-12
+phi-4 [Pretrained (PT)],OLLv2: BBH,own,0.5257567157258284,Phi,Phi-4,14.66,2024-12
+phi-4 [Pretrained (PT)],OLLv2: GPQA,own,0.2080536912751678,Phi,Phi-4,14.66,2024-12
+phi-4 [Pretrained (PT)],OLLv2: IFEval,own,0.05852693076592331,Phi,Phi-4,14.66,2024-12
+phi-4 [Pretrained (PT)],OLLv2: MMLU-PRO,own,0.47722739361702116,Phi,Phi-4,14.66,2024-12
+phi-4 [Pretrained (PT)],OLLv2: MUSR,own,0.23785937499999998,Phi,Phi-4,14.66,2024-12

@@ -11,7 +11,8 @@ import numpy as np
 
 XLSX = "./qwen_gemma_benchmarks.xlsx"
 
-frames = [pd.read_excel(XLSX, sheet_name=s) for s in ("Qwen scores", "Gemma scores", "OLL scores", "LiveBench scores")]
+frames = [pd.read_excel(XLSX, sheet_name=s) for s in ("Qwen scores", "Gemma scores", "OLL scores",
+                                                     "LiveBench scores", "OLL cross-family")]
 df = pd.concat(frames, ignore_index=True)
 df["Eval config / notes"] = df["Eval config / notes"].fillna("")
 
@@ -80,6 +81,18 @@ EPOCH_MAP = {
     ("Qwen", "OLLv1: ARC-Challenge"): "ARC AI2", ("Gemma", "OLLv1: ARC-Challenge"): "ARC AI2",
     ("Qwen", "OLLv2: MATH Lvl 5"): "MATH level 5", ("Gemma", "OLLv2: MATH Lvl 5"): "MATH level 5",
 }
+
+# OLL instruments that ARE the same test as an Epoch benchmark. Keyed on the
+# instrument alone rather than (family, instrument): OLL is a single harness, so
+# these hold for any family. The Qwen/Gemma pairs above are kept for the sake of
+# not perturbing existing rows, and are hit first; this catches the families
+# added later by add_oll_models.py.
+OLL_EPOCH = {
+    "OLLv1: MMLU": "MMLU", "OLLv1: GSM8K": "GSM8K", "OLLv1: HellaSwag": "HellaSwag",
+    "OLLv1: Winogrande": "Winogrande", "OLLv1: ARC-Challenge": "ARC AI2",
+    "OLLv2: MATH Lvl 5": "MATH level 5",
+}
+
 EPOCH_BASE = pd.read_csv("./edi_frozen.csv").set_index("benchmark")["baseline"].to_dict()
 
 # ---- baselines for own instruments (fraction of 1) ----
@@ -103,6 +116,10 @@ for r in df.itertuples():
         scope = "epoch"
         base = EPOCH_BASE.get(bench, 0.0)
         # OLLv2 MATH Lvl5 is already chance-normalized (baseline 0 anyway)
+    elif cn in OLL_EPOCH:
+        bench = OLL_EPOCH[cn]
+        scope = "epoch"
+        base = EPOCH_BASE.get(bench, 0.0)
     else:
         scope = "own"
         # OLL instruments are shared across families (same harness) -> global key

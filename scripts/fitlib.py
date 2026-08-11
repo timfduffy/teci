@@ -33,6 +33,24 @@ BRIDGE = {
     "Gemma 4 31B IT": "Gemma 4 31B [IT, Thinking mode]",
     "Qwen 3.6 35B-A3B": "Qwen3.6-35B-A3B [Thinking (default)]",
     "Qwen 3.5 Flash (hosted 35B-A3B)": "Qwen3.5-35B-A3B [Thinking (default)]",
+    # Cross-family bridges from the OLL addition. Every one is an exact
+    # model_version match against Epoch's matrix, so the base/instruct ambiguity
+    # above does not arise -- except Llama 3-8B, whose node pools one base
+    # observation (Winogrande, from the Llama 3 paper) with eight instruct ones,
+    # so it maps to the instruct entry and carries that single contaminated row.
+    "Llama 3-8B": "Meta-Llama-3-8B-Instruct [Instruct/chat]",
+    "Llama 3.1-8B": "Llama-3.1-8B-Instruct [Instruct/chat]",
+    "Phi-1.5": "phi-1_5 [Pretrained (PT)]",
+    "Phi-2": "phi-2 [Pretrained (PT)]",
+    "Phi-4": "phi-4 [Pretrained (PT)]",
+    "phi-3-mini 3.8B": "Phi-3-mini-4k-instruct [Instruct/chat]",
+    "phi-3-small 7.4B": "Phi-3-small-8k-instruct [Instruct/chat]",
+    "phi-3-medium 14B": "Phi-3-medium-128k-instruct [Instruct/chat]",
+    # Epoch records these as `Llama-2-7b`/`Llama-2-13b` against OLL's
+    # `-hf` names. The suffix denotes the HuggingFace-format conversion of the
+    # same weights, so this is a naming difference rather than a judgment call.
+    "Llama 2-7B": "Llama-2-7b-hf [Pretrained (PT)]",
+    "Llama 2-13B": "Llama-2-13b-hf [Pretrained (PT)]",
 }
 
 
