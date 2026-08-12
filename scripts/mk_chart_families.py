@@ -15,11 +15,14 @@
                           in five bands. Finer banding than the tiers used
                           elsewhere, deliberately: the slopes come out near
                           parallel, which is the point.
-(4) eci_small_models.png — the <=2B tier alone, every entry named, ranked by
-                          score rather than plotted against time. No trend line.
-                          Ranked because 42 labels will not fit on a date axis:
-                          the releases bunch into mid-2024 and the labels
-                          overwrite each other whichever side they take.
+(4) eci_small_models.png — the <=2B tier alone, every entry named, against
+                          release date. No trend line. Where a model has both a
+                          thinking and a non-thinking entry only the thinking one
+                          is plotted, so no label needs a "(think)" suffix.
+                          Labels are placed by rectangle-overlap search rather
+                          than per-release-month nudging: a label is wider than
+                          the gap between neighbouring releases, so grouping by
+                          month cannot see the collisions that actually happen.
 
 Palette: reference dataviz palette. Size tier is an ORDERED category, so it uses
 the ordinal blue ramp (steps 250/450/650), not categorical hues -- validated with
@@ -231,14 +234,15 @@ SMALL_C = dict(zip(SMALL_BANDS, ["#86b6ef", "#2a78d6", "#104281"]))
 
 
 def short(entry):
-    """'Qwen3-0.6B [Thinking mode]' -> 'Qwen3-0.6B (think)'."""
+    """'Qwen3-0.6B [Thinking mode]' -> 'Qwen3-0.6B'.
+
+    No "(think)" suffix: where a model has both modes only the thinking entry is
+    plotted, so the distinction never needs spelling out. "(base)" stays --
+    Qwen1.5-1.8B and Qwen1.5-1.8B-Chat are both on the chart.
+    """
     name, _, variant = entry.partition(" [")
     name = name.replace("-Instruct", "-Inst")
-    if "Thinking" in variant and "Non-thinking" not in variant:
-        name += " (think)"
-    elif variant.startswith("Base ("):
-        name += " (base)"
-    return name
+    return name + " (base)" if variant.startswith("Base (") else name
 
 
 def stack(vals, gap):
@@ -256,48 +260,69 @@ def stack(vals, gap):
 sm = r[r.params_B <= 2.1].copy()
 sm["band"] = pd.cut(sm.params_B, [0, 0.5, 1.0, 2.1], labels=SMALL_BANDS)
 
-# Ranked rather than plotted against time. Naming 42 points on a date axis is not
-# achievable cleanly: the releases bunch into mid-2024 (eight in 2024-07 alone,
-# six in 2024-10) and a label runs about three months wide, so neighbouring
-# months overwrite each other whichever side the labels take. Ranking gives every
-# name its own row and keeps the date as a printed column -- nothing is lost but
-# the visual spacing of time, which eci_all_models.png already carries.
-sm = sm.sort_values("eci_A").reset_index(drop=True)
-fig4, ax = plt.subplots(figsize=(10.5, 11), facecolor=SURF)
+# Where a model has both a thinking and a non-thinking entry, keep only the
+# thinking one. Four models qualify (Qwen3-0.6B/1.7B, Qwen3.5-0.8B/2B), so this
+# drops four points -- and, more usefully, lets every label lose its "(think)"
+# suffix, which is what actually buys horizontal room.
+sm["model"] = sm.entry.str.partition(" [")[0]
+variant = sm.entry.str.partition(" [")[2].str.rstrip("]")
+is_think = variant.str.contains("Thinking") & ~variant.str.contains("Non-thinking")
+is_nonthink = variant.str.contains("Non-thinking")
+sm = sm[~(is_nonthink & sm.model.isin(set(sm[is_think].model)))]
+
+# Back on a date axis, at a larger canvas. Labels sit beside their point,
+# de-collided vertically within each release month, and the side alternates
+# month to month so neighbouring releases do not label into each other.
+fig4, ax = plt.subplots(figsize=(18, 11), facecolor=SURF)
 ax.set_facecolor(SURF)
-LO = sm.eci_A.min() - 3
-ax.hlines(np.arange(len(sm)), LO, sm.eci_A, color=GRID, lw=0.7, zorder=1)
 for b in SMALL_BANDS:
-    s = sm[sm.band == b]
-    ax.plot(s.eci_A, s.index, "o", ms=7, color=SMALL_C[b], markeredgecolor=SURF,
-            markeredgewidth=1.3, linestyle="none", zorder=3, label=f"{b}  (n={len(s)})")
-for y, row in sm.iterrows():
-    ax.annotate(f"{row.eci_A:.1f}", xy=(row.eci_A, y), xytext=(9, 0),
-                textcoords="offset points", fontsize=7.5, color=INK, va="center",
-                fontweight="bold", zorder=4)
-    ax.annotate(f"{row.date:%Y-%m}", xy=(row.eci_A, y), xytext=(40, 0),
-                textcoords="offset points", fontsize=7, color=MUTED, va="center", zorder=4)
-ax.set_yticks(np.arange(len(sm)))
-ax.set_yticklabels([short(e) for e in sm.entry], fontsize=7.6, color=INK2)
-ax.set_ylim(-1, len(sm))
-ax.set_xlim(LO, sm.eci_A.max() + 10)
-ax.set_xlabel(TECI_AXIS, color=INK2, fontsize=10)
-ax.grid(axis="x", color=GRID, lw=0.7)
+    s_ = sm[sm.band == b]
+    ax.plot(s_.date, s_.eci_A, "o", ms=7, color=SMALL_C[b], markeredgecolor=SURF,
+            markeredgewidth=1.3, linestyle="none", zorder=3, label=f"{b}  (n={len(s_)})")
+# Label placement. Grouping by release month is not enough -- a label is wider
+# than the gap between neighbouring releases, so labels from different months
+# collide (2024-02's ran into 2024-04's, and both into 2024-07's). Instead every
+# label is treated as the rectangle it actually occupies and nudged vertically
+# until it clears the ones already placed, densest region first.
+GAP, OFF, CHAR_DAYS = 1.15, 16, 4.6  # TECI, days, days per character at size 8
+placed = []
+sm_lab = sm.assign(lab=[short(e) for e in sm.entry])
+# place the crowded rows first: they have the least freedom
+order = sm_lab.assign(_n=sm_lab.groupby("date").eci_A.transform("size")) \
+              .sort_values(["_n", "eci_A"], ascending=[False, True])
+for row in order.itertuples():
+    x0 = mdates.date2num(row.date) + OFF
+    x1 = x0 + len(row.lab) * CHAR_DAYS
+    for step in [0] + [s * d for s in np.arange(0.25, 12, 0.25) for d in (1, -1)]:
+        y = row.eci_A + step
+        if not any(x0 < px1 and px0 < x1 and abs(y - py) < GAP for px0, px1, py in placed):
+            break
+    placed.append((x0, x1, y))
+    ax.annotate(row.lab, xy=(row.date, row.eci_A), xytext=(x0, y), textcoords="data",
+                ha="left", fontsize=8, color=INK2, va="center", zorder=4,
+                arrowprops=dict(arrowstyle="-", color=GRID, lw=0.6, shrinkA=1, shrinkB=2)
+                if abs(y - row.eci_A) >= 0.05 else None)
+ax.set_ylabel(TECI_AXIS, color=INK2, fontsize=10.5)
+ax.grid(axis="y", color=GRID, lw=0.7)
 ax.set_axisbelow(True)
-ax.tick_params(colors=MUTED, labelsize=8.5)
+ax.tick_params(colors=MUTED, labelsize=9)
 for s_ in ("top", "right", "left"):
     ax.spines[s_].set_visible(False)
 ax.spines["bottom"].set_color(AXIS)
-ax.legend(loc="lower right", fontsize=9, frameon=False, labelcolor=INK2,
-          title="parameters", title_fontsize=9)
-fig4.suptitle(f"Every model at or below 2B, ranked ({len(sm)} entries)",
-              color=INK, fontsize=13.5, x=0.012, ha="left", fontweight="bold", y=0.982)
-fig4.text(0.012, 0.955,
-          "Base, instruct and thinking entries are separate rows; \"(think)\" marks thinking mode "
-          "and \"(base)\" a pretrained-only entry.\nRelease month in grey.",
-          color=INK2, fontsize=8.8, va="top")
-fig4.text(0.012, 0.008, TECI_NOTE, color=MUTED, fontsize=7.5, va="bottom")
-fig4.tight_layout(rect=(0, 0.032, 1, 0.938))
+ax.xaxis.set_major_locator(mdates.MonthLocator(interval=3))
+ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m"))
+ax.set_xlim(pd.Timestamp("2023-06-01"), pd.Timestamp("2026-09-01"))
+ax.set_ylim(sm.eci_A.min() - 5, sm.eci_A.max() + 5)
+ax.legend(loc="upper left", fontsize=9.5, frameon=False, labelcolor=INK2,
+          title="parameters", title_fontsize=9.5)
+fig4.suptitle(f"Every model at or below 2B ({len(sm)} entries)",
+              color=INK, fontsize=14, x=0.008, ha="left", fontweight="bold", y=0.982)
+fig4.text(0.008, 0.952,
+          "Where a model has both a thinking and a non-thinking entry only the thinking one is "
+          "shown. \"(base)\" marks a pretrained-only entry.",
+          color=INK2, fontsize=9.5, va="top")
+fig4.text(0.008, 0.008, TECI_NOTE, color=MUTED, fontsize=8, va="bottom")
+fig4.tight_layout(rect=(0, 0.035, 1, 0.938))
 fig4.savefig("eci_small_models.png", dpi=170, facecolor=SURF)
 
 # ---- table-view twin (relief for the sub-3:1 palette steps, and the numbers) --
