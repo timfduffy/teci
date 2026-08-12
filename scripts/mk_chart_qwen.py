@@ -16,13 +16,18 @@ C = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"]
 #
 # The caveat differs from theirs, though. Anthropic's is powered by internal
 # benchmarks and so is NOT comparable to Epoch's published ECI. Ours is
-# calibrated onto Epoch's scale through the 204 models they have scored
-# (r=0.9998) -- comparability is the point. What differs is coverage: Epoch has
-# not scored the small models we care about, so these values are our estimates.
-# Saying "not directly comparable" here would disclaim the wrong thing.
+# calibrated onto Epoch's scale through 204 models they have scored (r=0.9998)
+# -- comparability is the point. Saying "not directly comparable" would disclaim
+# the wrong thing.
+#
+# The note claims the values are ours, NOT that Epoch has never scored these
+# models -- 18 of our 123 entries do have a published ECI (2 of the 31 on this
+# chart: Qwen3.5-35B-A3B and Qwen3.6-35B-A3B). Those are the bridge nodes that
+# calibrate the fit. Even for them the plotted number is our fitted value, so
+# "our own estimates, not Epoch's published ECI" is true of every point.
 TECI_AXIS = "Tim's ECI (TECI)"
 TECI_NOTE = ("Tim's ECI: an independent fit of public vendor and leaderboard scores, calibrated to Epoch AI's ECI scale\n"
-             "via the 204 models Epoch has scored. Epoch has not published ECI for the models shown here.")
+             "via 204 models Epoch has scored. TECI values are our own estimates, not Epoch's published ECI.")
 
 r = pd.read_csv("results_methods.csv")
 r["date"] = pd.to_datetime(r.release.astype(str), format="%Y-%m")

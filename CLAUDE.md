@@ -60,9 +60,13 @@ own location and can be run from anywhere.
   (all per Epoch's eci-public conventions).
 - OLL and LiveBench instruments are cross-family (same harness); vendor
   instruments are family-scoped.
-- **Our numbers are TECI ("Tim's ECI"), never plain "ECI".** Epoch has published
-  no ECI for any model we score; our values are estimates calibrated onto their
-  scale via the 204 models they *have* scored (method A's rescale, r=0.9998).
+- **Our numbers are TECI ("Tim's ECI"), never plain "ECI".** Our values are
+  estimates calibrated onto Epoch's scale via 204 models they have scored
+  (method A's rescale, r=0.9998). Note that Epoch *has* published ECI for 18 of
+  our 123 entries — the bridge nodes — so "Epoch has not scored these models" is
+  false and must not be used as the caveat. What is true of every plotted point
+  is that the number shown is our fitted value, not Epoch's published one (e.g.
+  Qwen3.5-35B-A3B: ours 144.6, Epoch's 143.9).
   Charts and generated docs say `Tim's ECI (TECI)` on the axis, `TECI/yr` for
   rates, and carry the footnote in `TECI_NOTE` (defined per chart script).
   Naming follows Anthropic's convention for their own variant ("Anthropic ECI"):

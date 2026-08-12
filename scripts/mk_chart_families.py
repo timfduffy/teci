@@ -34,9 +34,8 @@ MUTED, GRID, AXIS = "#898781", "#e1e0d9", "#c3c2b7"
 # Our estimates in the units of Epoch's ECI scale; Epoch has not scored these
 # models, so the axis must not say "ECI". See mk_chart_qwen.py for the rationale.
 TECI_AXIS = "Tim's ECI (TECI)"
-TECI_NOTE = ("Tim's ECI: an independent fit of public vendor and leaderboard scores, calibrated to\n"
-             "Epoch AI's ECI scale via the 204 models Epoch has scored. Epoch has not published\n"
-             "ECI for the models shown here.")
+TECI_NOTE = ("Tim's ECI: an independent fit of public vendor and leaderboard scores, calibrated to Epoch AI's ECI scale\n"
+             "via 204 models Epoch has scored. TECI values are our own estimates, not Epoch's published ECI.")
 # ordinal ramp, light -> dark = small -> large
 TIER_C = {"≤2B": "#86b6ef", "2–10B": "#2a78d6", ">10B": "#104281"}
 TIERS = list(TIER_C)
