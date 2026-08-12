@@ -36,8 +36,8 @@ MUTED, GRID, AXIS = "#898781", "#e1e0d9", "#c3c2b7"
 # the true claim is that the plotted number is ours, not theirs. Rationale and
 # naming convention in mk_chart_qwen.py.
 TECI_AXIS = "Tim's ECI (TECI)"
-TECI_NOTE = ("Tim's ECI: an independent fit of public vendor and leaderboard scores, calibrated to Epoch AI's ECI scale\n"
-             "via 204 models Epoch has scored. TECI values are our (Tim and Claude's) own estimates, not Epoch's published ECI.")
+TECI_NOTE = ("Tim's ECI: an independent fit of public vendor and leaderboard scores, calibrated to Epoch AI's ECI scale via\n"
+             "204 models Epoch has scored. TECI values are our (Tim and Claude's) own estimates, not Epoch's published ECI.")
 # ordinal ramp, light -> dark = small -> large
 TIER_C = {"≤2B": "#86b6ef", "2–10B": "#2a78d6", ">10B": "#104281"}
 TIERS = list(TIER_C)

@@ -27,8 +27,8 @@ C = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"]
 # "our (Tim and Claude's) own estimates, not Epoch's published ECI" holds for
 # every point.
 TECI_AXIS = "Tim's ECI (TECI)"
-TECI_NOTE = ("Tim's ECI: an independent fit of public vendor and leaderboard scores, calibrated to Epoch AI's ECI scale\n"
-             "via 204 models Epoch has scored. TECI values are our (Tim and Claude's) own estimates, not Epoch's published ECI.")
+TECI_NOTE = ("Tim's ECI: an independent fit of public vendor and leaderboard scores, calibrated to Epoch AI's ECI scale via\n"
+             "204 models Epoch has scored. TECI values are our (Tim and Claude's) own estimates, not Epoch's published ECI.")
 
 r = pd.read_csv("results_methods.csv")
 r["date"] = pd.to_datetime(r.release.astype(str), format="%Y-%m")

@@ -1,0 +1,12 @@
+Open LLM Leaderboard contents (not redistributed here)
+
+url:      https://huggingface.co/api/datasets/open-llm-leaderboard/contents/parquet/default/train/0.parquet
+fetched:  2026-08-11
+bytes:    1109997
+sha256:   f13a7061e63133bc8745d89f8c7a56148584940ede22d3b27e21cad1e078dca5
+
+The HF dataset declares no license, so the parquet is not committed. Run
+scripts/add_oll_models.py and it will download to this directory. The scores we
+actually use are already extracted into the "OLL cross-family" sheet of
+data/qwen_gemma_benchmarks.xlsx, which IS committed, so the pipeline downstream
+of that script does not need the download.
