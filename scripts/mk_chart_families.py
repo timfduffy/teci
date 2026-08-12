@@ -31,11 +31,13 @@ import matplotlib.pyplot as plt  # noqa: E402
 SURF, INK, INK2 = "#fcfcfb", "#0b0b0b", "#52514e"
 MUTED, GRID, AXIS = "#898781", "#e1e0d9", "#c3c2b7"
 
-# Our estimates in the units of Epoch's ECI scale; Epoch has not scored these
-# models, so the axis must not say "ECI". See mk_chart_qwen.py for the rationale.
+# Our estimates in the units of Epoch's ECI scale, so the axis must not say
+# plain "ECI". Note Epoch HAS scored 18 of these 123 entries (the bridge nodes);
+# the true claim is that the plotted number is ours, not theirs. Rationale and
+# naming convention in mk_chart_qwen.py.
 TECI_AXIS = "Tim's ECI (TECI)"
 TECI_NOTE = ("Tim's ECI: an independent fit of public vendor and leaderboard scores, calibrated to Epoch AI's ECI scale\n"
-             "via 204 models Epoch has scored. TECI values are our own estimates, not Epoch's published ECI.")
+             "via 204 models Epoch has scored. TECI values are our (Tim and Claude's) own estimates, not Epoch's published ECI.")
 # ordinal ramp, light -> dark = small -> large
 TIER_C = {"≤2B": "#86b6ef", "2–10B": "#2a78d6", ">10B": "#104281"}
 TIERS = list(TIER_C)
