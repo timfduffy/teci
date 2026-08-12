@@ -30,6 +30,13 @@ import matplotlib.pyplot as plt  # noqa: E402
 
 SURF, INK, INK2 = "#fcfcfb", "#0b0b0b", "#52514e"
 MUTED, GRID, AXIS = "#898781", "#e1e0d9", "#c3c2b7"
+
+# Our estimates in the units of Epoch's ECI scale; Epoch has not scored these
+# models, so the axis must not say "ECI". See mk_chart_qwen.py for the rationale.
+TECI_AXIS = "TECI (Tim's ECI-scale estimate)"
+TECI_NOTE = ("TECI: an independent re-fit onto Epoch AI's ECI scale, anchored at "
+             "Claude 3.5 Sonnet = 130 and GPT-5 = 150.\n"
+             "Not Epoch's published ECI — Epoch has not scored these models.")
 # ordinal ramp, light -> dark = small -> large
 TIER_C = {"≤2B": "#86b6ef", "2–10B": "#2a78d6", ">10B": "#104281"}
 TIERS = list(TIER_C)
@@ -89,7 +96,7 @@ for ax, fam in zip(axes.ravel(), FAMS):
     ax.tick_params(labelbottom=True)
 axes[0, 0].set_ylim(70, 155)
 for ax in axes[:, 0]:
-    ax.set_ylabel("ECI (method A)", color=INK2, fontsize=9)
+    ax.set_ylabel(TECI_AXIS, color=INK2, fontsize=9)
 
 handles = [plt.Line2D([], [], marker="o", ms=6.5, linestyle="none", color=c,
                       markeredgecolor=SURF, markeredgewidth=1.4, label=t)
@@ -97,13 +104,14 @@ handles = [plt.Line2D([], [], marker="o", ms=6.5, linestyle="none", color=c,
 fig.legend(handles=handles, loc="upper right", bbox_to_anchor=(0.995, 0.978),
            ncol=3, fontsize=8.5, frameon=False, labelcolor=INK2,
            title="parameter size", title_fontsize=8.5)
-fig.suptitle("Small-model progress by family, on the Epoch Capabilities Index",
+fig.suptitle("Small-model progress by family, on the TECI scale",
              color=INK, fontsize=13.5, x=0.012, ha="left", fontweight="bold", y=0.985)
 fig.text(0.012, 0.932,
          "Trend lines fitted only where a tier has ≥4 entries spanning ≥1 year. "
          "The four families added from the Open LLM Leaderboard stop at 2025-03, when it froze.",
          color=INK2, fontsize=9)
-fig.tight_layout(rect=(0, 0, 1, 0.918))
+fig.text(0.012, 0.008, TECI_NOTE, color=MUTED, fontsize=7.5, va="bottom")
+fig.tight_layout(rect=(0, 0.052, 1, 0.918))
 fig.savefig("eci_families.png", dpi=170, facecolor=SURF)
 
 # ---------------------------------------------------------------- chart 2
@@ -136,7 +144,7 @@ ax.set_yticklabels([f"{lbl}\nsmall tier n={n}" for lbl, _, n in STEPS],
                    fontsize=9.5, color=INK2)
 ax.set_ylim(-0.6, len(STEPS) - 0.4)
 ax.set_xlim(0, 3.9)
-ax.set_xlabel("gap in ECI/yr  (how much faster the >10B tier improves than the small tier)",
+ax.set_xlabel("gap in TECI/yr  (how much faster the >10B tier improves than the small tier)",
               color=INK2, fontsize=9)
 ax.grid(axis="x", color=GRID, lw=0.7)
 ax.set_axisbelow(True)

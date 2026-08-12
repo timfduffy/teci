@@ -7,7 +7,15 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
 SURF, INK, INK2, GRID = "#fcfcfb", "#0b0b0b", "#52514e", "#e5e4e0"
+MUTED = "#898781"
 C = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"]
+
+# Our estimates in the units of Epoch's ECI scale; Epoch has not scored these
+# models, so the axis must not say "ECI". See mk_chart_qwen.py for the rationale.
+TECI_AXIS = "TECI (Tim's ECI-scale estimate)"
+TECI_NOTE = ("TECI: an independent re-fit onto Epoch AI's ECI scale, anchored at "
+             "Claude 3.5 Sonnet = 130 and GPT-5 = 150.\n"
+             "Not Epoch's published ECI — Epoch has not scored these models.")
 
 r = pd.read_csv("results_methods.csv")
 r["date"] = pd.to_datetime(r.release.astype(str), format="%Y-%m")
@@ -72,12 +80,13 @@ for ax, tracks, title, direct in ((axes[0], TRACKS_Q, "Qwen", DIRECT_Q),
     ax.set_xlim(pd.Timestamp("2023-06-01"), pd.Timestamp("2026-12-01"))
     ax.legend(loc="lower right", fontsize=8, frameon=False, labelcolor=INK2,
               title="size track", title_fontsize=8)
-axes[0].set_ylabel("ECI (Epoch Capabilities Index scale)", color=INK2, fontsize=9.5)
-fig.suptitle("Small Qwen & Gemma models on the ECI scale (method A: joint refit with Epoch data)",
+axes[0].set_ylabel(TECI_AXIS, color=INK2, fontsize=9.5)
+fig.suptitle("Small Qwen & Gemma models on the TECI scale (method A: joint refit with Epoch data)",
              color=INK, fontsize=13, x=0.02, ha="left", fontweight="bold", y=0.99)
 fig.text(0.02, 0.925, "Instruct/thinking entries",
          color=INK2, fontsize=9)
-fig.tight_layout(rect=(0, 0, 1, 0.91))
+fig.text(0.02, 0.012, TECI_NOTE, color=MUTED, fontsize=7.5, va="bottom")
+fig.tight_layout(rect=(0, 0.062, 1, 0.91))
 fig.savefig("eci_trajectories.png", dpi=170, facecolor=SURF)
 
 # ---- chart 2: method agreement ----
@@ -93,10 +102,10 @@ ax.scatter(v.eci_A, v.eci_C, s=26, color=C[1], edgecolors=SURF, linewidths=0.8, 
            label="C: standalone + bridge")
 pubv = r.dropna(subset=["eci_published"])
 ax.scatter(pubv.eci_A, pubv.eci_published, s=60, marker="D", color=C[2], edgecolors=SURF,
-           linewidths=1, zorder=4, label="Epoch published (8 shared models)")
+           linewidths=1, zorder=4, label=f"Epoch published ({len(pubv)} shared models)")
 ax.set_xlim(lims); ax.set_ylim(lims)
-ax.set_xlabel("ECI — method A (joint refit)", color=INK2, fontsize=9.5)
-ax.set_ylabel("ECI — other methods", color=INK2, fontsize=9.5)
+ax.set_xlabel("TECI — method A (joint refit)", color=INK2, fontsize=9.5)
+ax.set_ylabel("TECI — methods B and C  ·  diamonds: Epoch's published ECI", color=INK2, fontsize=9.5)
 ax.grid(color=GRID, lw=0.7)
 ax.tick_params(colors=INK2, labelsize=8.5)
 for s in ("top", "right"): ax.spines[s].set_visible(False)
@@ -104,6 +113,7 @@ for s in ("bottom", "left"): ax.spines[s].set_color(GRID)
 ax.legend(loc="upper left", fontsize=8.5, frameon=False, labelcolor=INK2)
 ax.set_title(f"Method agreement: {len(v)} model entries, three grafting methods",
              color=INK, fontsize=12, loc="left", fontweight="bold")
-fig2.tight_layout()
+fig2.text(0.02, 0.012, TECI_NOTE, color=MUTED, fontsize=7.5, va="bottom")
+fig2.tight_layout(rect=(0, 0.075, 1, 1))
 fig2.savefig("eci_method_agreement.png", dpi=170, facecolor=SURF)
 print("saved")

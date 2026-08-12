@@ -7,7 +7,18 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 
 SURF, INK, INK2, GRID = "#fcfcfb", "#0b0b0b", "#52514e", "#e5e4e0"
+MUTED = "#898781"
 C = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"]
+
+# These are OUR estimates, expressed in the units of Epoch's ECI scale -- Epoch
+# has not scored any of these models. Labelling the axis "ECI" would credit them
+# with numbers they did not publish, so every chart says TECI and carries the
+# footnote. Deliberately expanded as "ECI-scale estimate" rather than as an
+# Epoch-branded index: the scale is theirs, the estimates are not.
+TECI_AXIS = "TECI (Tim's ECI-scale estimate)"
+TECI_NOTE = ("TECI: an independent re-fit onto Epoch AI's ECI scale, anchored at "
+             "Claude 3.5 Sonnet = 130 and GPT-5 = 150.\nNot Epoch's published ECI — "
+             "Epoch has not scored these models.")
 
 r = pd.read_csv("results_methods.csv")
 r["date"] = pd.to_datetime(r.release.astype(str), format="%Y-%m")
@@ -73,11 +84,14 @@ ax.spines["bottom"].set_color(GRID)
 ax.xaxis.set_major_locator(mdates.MonthLocator(interval=4))
 ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m"))
 ax.set_xlim(pd.Timestamp("2024-01-01"), pd.Timestamp("2026-09-01"))
-ax.set_ylabel("ECI (Epoch Capabilities Index scale)", color=INK2, fontsize=10)
+ax.set_ylabel(TECI_AXIS, color=INK2, fontsize=10)
 ax.legend(loc="lower right", fontsize=8.5, frameon=False, labelcolor=INK2,
           title="size track", title_fontsize=8.5)
-ax.set_title("Qwen models on the ECI scale, by size track (Qwen1.5 onward)",
+ax.set_title("Qwen models on the TECI scale, by size track (Qwen1.5 onward)",
              color=INK, fontsize=13, loc="left", fontweight="bold", pad=34)
-fig.tight_layout()
+# the disclaimer rides at the foot rather than under the title, so the header
+# stays clean and the claim is still on the chart wherever it gets pasted
+fig.text(0.012, 0.012, TECI_NOTE, color=MUTED, fontsize=7.5, va="bottom")
+fig.tight_layout(rect=(0, 0.062, 1, 1))
 fig.savefig("eci_trajectories_qwen.png", dpi=170, facecolor=SURF)
 print("saved")
