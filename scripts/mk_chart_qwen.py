@@ -39,6 +39,24 @@ ax.set_facecolor(SURF)
 # bottom once the Epoch refresh pushed them down
 _plotted = [float(rr.loc[e, "eci_A"]) for es in TRACKS.values() for e in es if e in rr.index]
 ax.set_ylim(min(_plotted) - 4, max(_plotted) + 10)
+
+# ---- generation markers -----------------------------------------------------
+# Every model in a Qwen generation ships in the same month, so each generation is
+# a single x position and the markers are already vertically aligned. A hairline
+# through each one names the release wave without adding a colour or a shape:
+# the date axis keeps the real calendar spacing, and the labels say what the
+# clusters are. Labels alternate between two rows because Qwen3.5 (2026-02) and
+# Qwen3.6 (2026-04) are two months apart and would otherwise collide.
+plotted = {e for es in TRACKS.values() for e in es if e in rr.index}
+gen_date = (r[r.entry.isin(plotted)].groupby("generation").date.min().sort_values())
+for k, (gen, d) in enumerate(gen_date.items()):
+    ax.axvline(d, color=GRID, lw=0.8, zorder=1)
+    # date2num: annotate's xy goes through the affine transform directly and
+    # will not accept a Timestamp
+    ax.annotate(gen, xy=(mdates.date2num(d), 1.0), xycoords=ax.get_xaxis_transform(),
+                xytext=(0, 7 + (k % 2) * 12), textcoords="offset points",
+                ha="center", va="bottom", fontsize=8, color=INK2, zorder=4)
+
 DIRECT = {"~0.5-0.8B", "~1.5-2B", "~4B", "~30-35B"}
 for i, (name, entries) in enumerate(TRACKS.items()):
     pts = sorted((rr.loc[e, "date"], float(rr.loc[e, "eci_A"])) for e in entries if e in rr.index)
@@ -59,9 +77,7 @@ ax.set_ylabel("ECI (Epoch Capabilities Index scale)", color=INK2, fontsize=10)
 ax.legend(loc="lower right", fontsize=8.5, frameon=False, labelcolor=INK2,
           title="size track", title_fontsize=8.5)
 ax.set_title("Qwen models on the ECI scale, by size track (Qwen1.5 onward)",
-             color=INK, fontsize=13, loc="left", fontweight="bold", pad=28)
-ax.text(0, 1.035, "Instruct/thinking entries, method A (joint refit with Epoch data)",
-        transform=ax.transAxes, color=INK2, fontsize=9)
+             color=INK, fontsize=13, loc="left", fontweight="bold", pad=34)
 fig.tight_layout()
 fig.savefig("eci_trajectories_qwen.png", dpi=170, facecolor=SURF)
 print("saved")
