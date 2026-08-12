@@ -67,7 +67,15 @@ merge("Qwen", [("GPQA",""), ("GPQA-Diamond","")], "GPQA(-Diamond)",
               "Qwen3 GPQA-Diamond values (e.g. 30B-A3B non-thinking 54.8), so 2507=Diamond "
               "is confirmed. Qwen2/2.5 'GPQA' unverified -> assume Diamond, verify.")
 merge("Qwen", [("IFEval","prompt strict-acc."), ("IFEval","strict-prompt"), ("IFEval","")],
-      "IFEval (strict-prompt)", "high", "Same metric, naming varies.")
+      "IFEval (strict-prompt)", "flag",
+      "Downgraded from 'high'. IFEval is reported four ways (prompt- vs "
+      "instruction-level, strict vs loose) and instruction-level typically runs "
+      "8-12 pts above prompt-level. The Qwen3 tech report and the Qwen3.5 model "
+      "cards state no variant, and the rows come from different sources. This is "
+      "load-bearing: IFEval is one of only 3 instruments shared between "
+      "Qwen3-0.6B and Qwen3.5-0.8B, and it alone produces the apparent "
+      "capability decline between them (drop the observation and the two "
+      "entries fit identically).")
 merge("Qwen", [("LiveBench",""), ("LiveBench","release 20241125")], "LiveBench-20241125",
       "flag", "Qwen3 tech report's LiveBench is believed to be the 2024-11-25 release "
               "(same as 2507 cards). Verify in report before merging for the fit.")

@@ -166,7 +166,7 @@ what matters for them is the cross-family section at the end.
 - [FLAG] Qwen :: MBPP — Qwen1 3-shot; later unstated.
 - [FLAG] Qwen :: C-Eval — Qwen1 5-shot; later unstated.
 - [FLAG] Qwen :: GPQA(-Diamond) — Qwen3 report says Diamond; 2507 cards' 'GPQA' column reproduces the Qwen3 GPQA-Diamond values (e.g. 30B-A3B non-thinking 54.8), so 2507=Diamond is confirmed. Qwen2/2.5 'GPQA' unverified -> assume Diamond, verify.
-- [HIGH] Qwen :: IFEval (strict-prompt) — Same metric, naming varies.
+- [FLAG] Qwen :: IFEval (strict-prompt) — Downgraded from 'high'. IFEval is reported four ways (prompt- vs instruction-level, strict vs loose) and instruction-level typically runs 8-12 pts above prompt-level. The Qwen3 tech report and the Qwen3.5 model cards state no variant, and the rows come from different sources. This is load-bearing: IFEval is one of only 3 instruments shared between Qwen3-0.6B and Qwen3.5-0.8B, and it alone produces the apparent capability decline between them (drop the observation and the two entries fit identically).
 - [FLAG] Qwen :: LiveBench-20241125 — Qwen3 tech report's LiveBench is believed to be the 2024-11-25 release (same as 2507 cards). Verify in report before merging for the fit.
 - [FLAG] Qwen :: HMMT Feb'25 — 2507 'HMMT25' presumed = Feb 2025 contest set used later as 'HMMT Feb'25'.
 - [HIGH] Qwen :: LCB v6 (25.02-25.05) — Kept separate from 3.5/3.6 'v6' whose question window is unstated.

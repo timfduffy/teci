@@ -90,7 +90,14 @@ VARIANTS = [
      split("MMLU", ["Qwen (v1)"], "Qwen-v1 5-shot")),
     ("lcb-v6-merge", "opposite direction: treat Qwen 3.5/3.6 'v6' as the 2507 window",
      merge("Qwen::LCB v6 (2507)", "Qwen::LCB v6 (late)")),
+    ("ifeval-split", "Qwen3.5/3.6 IFEval variant unstated (prompt- vs instruction-level)",
+     split("Qwen::IFEval", ["Qwen3.5", "Qwen3.6"], "3.5/3.6 unstated")),
 ]
+
+# Entries whose story rests on one observation are worth watching individually:
+# the Qwen3-0.6B -> Qwen3.5-0.8B decline visible on the size-class chart is
+# carried entirely by IFEval, so it is reported alongside the tier gap.
+WATCH = ("Qwen3-0.6B [Thinking mode]", "Qwen3.5-0.8B [Thinking (default)]")
 
 
 # ---------------------------------------------------------------- trend metric
@@ -153,6 +160,19 @@ for r in res.itertuples():
 lines += ["", "## What each variant tests", ""]
 for r in res.itertuples():
     lines.append(f"- **`{r.variant}`** — {r.what}")
+
+# The one entry-level result worth stating outright, since a reader looking at
+# the size-class chart will ask about it.
+a, b = (base.get(w) for w in WATCH)
+lines += ["", "## The Qwen3-0.6B → Qwen3.5-0.8B decline", "",
+          f"Fitted at {a:.1f} and {b:.1f} TECI ({b - a:+.1f}), and the two share only three",
+          "instruments. On two of them Qwen3.5-0.8B is equal or better (C-Eval 50.4→50.5,",
+          "MMLU-Redux 55.6→59.5); the whole decline comes from IFEval (59.2→44.0). Drop that",
+          "single observation and the two entries fit identically. Qwen's own card shows the",
+          "0.8B scoring *lower* in thinking mode than non-thinking on IFEval (44.0 vs 52.1)",
+          "while every larger sibling gains, which is a real and documented failure mode for",
+          "very small reasoning models — but it is one benchmark, not a broad regression, and",
+          "the two entries' confidence intervals overlap almost entirely."]
 OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
 print(f"\nbaseline tier gap: {base_gap:.2f} TECI/yr")
 print(f"largest gap shift: {res.gap_delta.abs().max():.2f} TECI/yr ({res.loc[res.gap_delta.abs().idxmax(), 'variant']})")
