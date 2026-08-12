@@ -21,11 +21,11 @@ C = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"]
 # the wrong thing.
 #
 # The note claims the values are ours, NOT that Epoch has never scored these
-# models -- 18 of our 123 entries do have a published ECI (2 of the 31 on this
-# chart: Qwen3.5-35B-A3B and Qwen3.6-35B-A3B). Those are the bridge nodes that
-# calibrate the fit. Even for them the plotted number is our fitted value, so
-# "our (Tim and Claude's) own estimates, not Epoch's published ECI" holds for
-# every point.
+# models -- 18 of our 123 entries do have a published ECI (the bridge nodes that
+# calibrate the fit), though since the dense-only change none of them land on
+# this particular chart. Even where they do, the plotted number is our fitted
+# value, so "our (Tim and Claude's) own estimates, not Epoch's published ECI"
+# holds for every point on every chart.
 TECI_AXIS = "Tim's ECI (TECI)"
 TECI_NOTE = ("Tim's ECI: an independent fit of public vendor and leaderboard scores, calibrated to Epoch AI's ECI scale via\n"
              "204 models Epoch has scored. TECI values are our (Tim and Claude's) own estimates, not Epoch's published ECI.")
@@ -49,9 +49,16 @@ TRACKS = {
               "Qwen3.5-9B [Thinking (default)]"],
     "~14B": ["Qwen1.5-14B-Chat [Instruct/chat]", "Qwen2.5-14B-Instruct [Instruct/chat]",
              "Qwen3-14B [Thinking mode]"],
-    "~30-35B": ["Qwen1.5-32B-Chat [Instruct/chat]", "Qwen2.5-32B-Instruct [Instruct/chat]",
-                "Qwen3-32B [Thinking mode]", "Qwen3-30B-A3B-Thinking-2507 [Thinking]",
-                "Qwen3.5-35B-A3B [Thinking (default)]", "Qwen3.6-35B-A3B [Thinking (default)]"],
+    # Dense only. This track used to end on Qwen3-30B-A3B-2507 and the 35B-A3B
+    # models, which are MoE with just 3B active -- so total parameters stayed
+    # ~constant while compute per token fell by roughly 10x, and the apparent
+    # slowdown at the top was partly Qwen moving compute out of this slot rather
+    # than progress stalling. The dense 27B models keep the track comparable and
+    # run to the same date; they also score higher (Qwen3.6-27B 148.5 vs
+    # 35B-A3B 145.8).
+    "~27-32B": ["Qwen1.5-32B-Chat [Instruct/chat]", "Qwen2.5-32B-Instruct [Instruct/chat]",
+                "Qwen3-32B [Thinking mode]", "Qwen3.5-27B [Thinking (default)]",
+                "Qwen3.6-27B [Thinking (default)]"],
 }
 
 fig, ax = plt.subplots(figsize=(9.5, 6.6), facecolor=SURF)
@@ -80,7 +87,7 @@ for gen, d in gen_date.items():
                 xytext=(GEN_NUDGE.get(gen, 0), 7), textcoords="offset points",
                 ha="center", va="bottom", fontsize=8, color=INK2, zorder=4)
 
-DIRECT = {"~0.5-0.8B", "~1.5-2B", "~4B", "~30-35B"}
+DIRECT = {"~0.5-0.8B", "~1.5-2B", "~4B", "~27-32B"}
 for i, (name, entries) in enumerate(TRACKS.items()):
     pts = sorted((rr.loc[e, "date"], float(rr.loc[e, "eci_A"])) for e in entries if e in rr.index)
     xs, ys = zip(*pts)
@@ -100,7 +107,7 @@ ax.set_ylabel(TECI_AXIS, color=INK2, fontsize=10)
 ax.legend(loc="lower right", fontsize=8.5, frameon=False, labelcolor=INK2,
           title="size class", title_fontsize=8.5)
 # no "(Qwen1.5 onward)": the generation labels along the top say where it starts
-ax.set_title("Qwen model TECI (Tim's ECI) scores, by size class",
+ax.set_title("Qwen model TECI (Tim's ECI) scores, by size class (dense models only)",
              color=INK, fontsize=13, loc="center", fontweight="bold", pad=34)
 # The disclaimer rides at the foot rather than under the title, so the header
 # stays clean and the claim travels with the image wherever it gets pasted.

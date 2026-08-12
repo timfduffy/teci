@@ -37,9 +37,12 @@ TRACKS_Q = {
               "Qwen3-8B [Thinking mode]", "Qwen3.5-9B [Thinking (default)]"],
     "~14B": ["Qwen-14B-Chat [Instruct/chat]", "Qwen1.5-14B-Chat [Instruct/chat]",
              "Qwen2.5-14B-Instruct [Instruct/chat]", "Qwen3-14B [Thinking mode]"],
-    "~30-35B": ["Qwen1.5-32B-Chat [Instruct/chat]", "Qwen2.5-32B-Instruct [Instruct/chat]",
-                "Qwen3-32B [Thinking mode]", "Qwen3-30B-A3B-Thinking-2507 [Thinking]",
-                "Qwen3.5-35B-A3B [Thinking (default)]", "Qwen3.6-35B-A3B [Thinking (default)]"],
+    # Dense only, matching mk_chart_qwen.py: the 30-35B MoE models activate just
+    # 3B, so holding total parameters constant hid a ~10x drop in compute per
+    # token and made the top track look like it was stalling.
+    "~27-32B": ["Qwen1.5-32B-Chat [Instruct/chat]", "Qwen2.5-32B-Instruct [Instruct/chat]",
+                "Qwen3-32B [Thinking mode]", "Qwen3.5-27B [Thinking (default)]",
+                "Qwen3.6-27B [Thinking (default)]"],
 }
 TRACKS_G = {
     "~1-2B (E2B)": ["Gemma 2B IT [Instruction-tuned (IT)]", "Gemma 2 2B IT [Instruction-tuned (IT)]",
@@ -58,7 +61,7 @@ _plotted = [float(rr.loc[e, "eci_A"]) for t in (TRACKS_Q, TRACKS_G)
 YLIM = (min(_plotted) - 4, max(_plotted) + 10)
 
 fig, axes = plt.subplots(1, 2, figsize=(13, 6.4), facecolor=SURF)
-DIRECT_Q = {"~0.5-0.8B", "~4B", "~7-9B", "~30-35B"}
+DIRECT_Q = {"~0.5-0.8B", "~4B", "~7-9B", "~27-32B"}
 for ax, tracks, title, direct in ((axes[0], TRACKS_Q, "Qwen", DIRECT_Q),
                                   (axes[1], TRACKS_G, "Gemma (IT)", set(TRACKS_G))):
     ax.set_facecolor(SURF)
@@ -84,7 +87,7 @@ for ax, tracks, title, direct in ((axes[0], TRACKS_Q, "Qwen", DIRECT_Q),
 axes[0].set_ylabel(TECI_AXIS, color=INK2, fontsize=9.5)
 fig.suptitle("Small Qwen & Gemma models on the TECI scale (method A: joint refit with Epoch data)",
              color=INK, fontsize=13, x=0.02, ha="left", fontweight="bold", y=0.99)
-fig.text(0.02, 0.925, "Instruct/thinking entries",
+fig.text(0.02, 0.925, "Instruct/thinking entries. Qwen tracks are dense models only; Gemma's E2B/E4B use selective activation, for which no dense equivalent exists.",
          color=INK2, fontsize=9)
 fig.text(0.02, 0.012, TECI_NOTE, color=MUTED, fontsize=7.5, va="bottom")
 fig.tight_layout(rect=(0, 0.062, 1, 0.91))
