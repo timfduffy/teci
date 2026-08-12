@@ -1,8 +1,9 @@
-# Small-model capabilities index (Qwen/Gemma ≤35B, ECI-grafted)
+# Small-model capabilities index (TECI: small models grafted onto Epoch's ECI scale)
 
 Tim's project tracking whether benchmark progress differs across model sizes
 (core question: is the 0.5–2B tier plateauing relative to ~30B?), by placing
-small models on the Epoch Capabilities Index (ECI) scale. Qwen and Gemma are
+small models on the Epoch Capabilities Index (ECI) scale. Our resulting numbers
+are called TECI, not ECI — see Conventions. Qwen and Gemma are
 the backbone (80 entries, full vendor benchmark suites); SmolLM, OLMo, Llama
 and Phi were added later from the Open LLM Leaderboard (43 entries) to keep the
 low end from being calibrated by Qwen and Gemma alone.
@@ -59,10 +60,21 @@ own location and can be run from anywhere.
   (all per Epoch's eci-public conventions).
 - OLL and LiveBench instruments are cross-family (same harness); vendor
   instruments are family-scoped.
+- **Our numbers are TECI ("Tim's ECI"), never plain "ECI".** Epoch has published
+  no ECI for any model we score; our values are estimates calibrated onto their
+  scale via the 204 models they *have* scored (method A's rescale, r=0.9998).
+  Charts and generated docs say `Tim's ECI (TECI)` on the axis, `TECI/yr` for
+  rates, and carry the footnote in `TECI_NOTE` (defined per chart script).
+  Naming follows Anthropic's convention for their own variant ("Anthropic ECI"):
+  owner's name in front of the metric. The footnote deliberately does NOT copy
+  Anthropic's "not directly comparable" caveat — theirs uses internal benchmarks,
+  ours is calibrated onto Epoch's scale on purpose. What differs is *coverage*,
+  not comparability. Reserve unqualified "ECI" for Epoch's own published values
+  (`data/eci_published.csv`, and the diamonds on the method-agreement chart).
 - **Bridge on Epoch's `model_version` column, never on the display name.**
   Epoch's names drop the base/instruct distinction that the entry convention
   depends on: 14 of their 222 nodes pool base and instruct observations under
-  one name, and instruction tuning is worth a median +11 ECI in our own fit.
+  one name, and instruction tuning is worth a median +11 TECI in our own fit.
   Two bridges were wrong on exactly this before the "Fix two mis-specified
   bridge nodes" commit. `Llama 3-8B` is the one bridge knowingly left pooled
   (1 base observation out of 9).
@@ -70,14 +82,20 @@ own location and can be run from anywhere.
 ## Fit methods
 
 - **A (headline): joint refit** of our obs + `data/eci_benchmarks.csv`
-  (Epoch's full 222-model matrix; 8 bridge nodes merged), rescaled via 214
-  pure-Epoch models against `data/eci_published.csv`.
+  (Epoch's full 222-model matrix; 18 bridge nodes merged), rescaled via the
+  remaining 204 pure-Epoch models against `data/eci_published.csv`, r=0.9998.
+  327 nodes × 176 instruments, 3,652 observations. Every difficulty and slope
+  is re-estimated — nothing of Epoch's published EDI/slope is held fixed; their
+  role is the observation matrix plus the final affine rescale.
 - **B: frozen graft** — `data/edi_frozen.csv` (Epoch's published EDI/slope, ECI
   units) held fixed; our-only instruments estimated by alternation.
   Known bias: runs 3–8 pts high for top thinking entries (vendor-reported
   scores vs Epoch's own harness on GPQA/HLE/Aider).
-- **C: standalone** fit + affine map via 8 shared models (6 Gemma,
-  Qwen3.5/3.6-35B-A3B).
+- **C: standalone** fit + affine map via the 18 bridge models. Degrades for
+  thin-observation entries: the OLL cross-family entries carry only six
+  observations each, and phi-4 lands ~12 pts low under C (and ~10 low under B)
+  against its published ECI, where A — which also sees Epoch's data for that
+  node — is within 2.4.
 - Model spec mirrors `eci-upstream/` (epoch-research/eci-public, MIT):
   performance = σ(slope·(cap − difficulty)), ridge 0.1, scipy trf least
   squares, Winogrande slope pinned; scale anchors Claude 3.5 Sonnet=130, GPT-5=150.

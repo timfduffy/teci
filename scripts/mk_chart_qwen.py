@@ -21,9 +21,8 @@ C = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"]
 # not scored the small models we care about, so these values are our estimates.
 # Saying "not directly comparable" here would disclaim the wrong thing.
 TECI_AXIS = "Tim's ECI (TECI)"
-TECI_NOTE = ("Tim's ECI: an independent fit of public vendor and leaderboard scores, calibrated to\n"
-             "Epoch AI's ECI scale via the 204 models Epoch has scored. Epoch has not published\n"
-             "ECI for the models shown here.")
+TECI_NOTE = ("Tim's ECI: an independent fit of public vendor and leaderboard scores, calibrated to Epoch AI's ECI scale\n"
+             "via the 204 models Epoch has scored. Epoch has not published ECI for the models shown here.")
 
 r = pd.read_csv("results_methods.csv")
 r["date"] = pd.to_datetime(r.release.astype(str), format="%Y-%m")
@@ -61,16 +60,18 @@ ax.set_ylim(min(_plotted) - 4, max(_plotted) + 10)
 # a single x position and the markers are already vertically aligned. A hairline
 # through each one names the release wave without adding a colour or a shape:
 # the date axis keeps the real calendar spacing, and the labels say what the
-# clusters are. Labels alternate between two rows because Qwen3.5 (2026-02) and
-# Qwen3.6 (2026-04) are two months apart and would otherwise collide.
+# clusters are. All labels sit on one line; Qwen3.5 (2026-02) and Qwen3.6
+# (2026-04) are only two months apart, so they are nudged a few points apart --
+# the hairline still marks the exact release date, only the label slides.
+GEN_NUDGE = {"Qwen3.5": -13, "Qwen3.6": 13}
 plotted = {e for es in TRACKS.values() for e in es if e in rr.index}
 gen_date = (r[r.entry.isin(plotted)].groupby("generation").date.min().sort_values())
-for k, (gen, d) in enumerate(gen_date.items()):
+for gen, d in gen_date.items():
     ax.axvline(d, color=GRID, lw=0.8, zorder=1)
     # date2num: annotate's xy goes through the affine transform directly and
     # will not accept a Timestamp
     ax.annotate(gen, xy=(mdates.date2num(d), 1.0), xycoords=ax.get_xaxis_transform(),
-                xytext=(0, 7 + (k % 2) * 12), textcoords="offset points",
+                xytext=(GEN_NUDGE.get(gen, 0), 7), textcoords="offset points",
                 ha="center", va="bottom", fontsize=8, color=INK2, zorder=4)
 
 DIRECT = {"~0.5-0.8B", "~1.5-2B", "~4B", "~30-35B"}
@@ -91,13 +92,15 @@ ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m"))
 ax.set_xlim(pd.Timestamp("2024-01-01"), pd.Timestamp("2026-09-01"))
 ax.set_ylabel(TECI_AXIS, color=INK2, fontsize=10)
 ax.legend(loc="lower right", fontsize=8.5, frameon=False, labelcolor=INK2,
-          title="size track", title_fontsize=8.5)
+          title="size class", title_fontsize=8.5)
 # no "(Qwen1.5 onward)": the generation labels along the top say where it starts
-ax.set_title("Qwen models on the TECI scale, by size track",
-             color=INK, fontsize=13, loc="left", fontweight="bold", pad=34)
-# the disclaimer rides at the foot rather than under the title, so the header
-# stays clean and the claim is still on the chart wherever it gets pasted
-fig.text(0.012, 0.012, TECI_NOTE, color=MUTED, fontsize=7.5, va="bottom")
-fig.tight_layout(rect=(0, 0.062, 1, 1))
+ax.set_title("Qwen model TECI (Tim's ECI) scores, by size class",
+             color=INK, fontsize=13, loc="center", fontweight="bold", pad=34)
+# The disclaimer rides at the foot rather than under the title, so the header
+# stays clean and the claim travels with the image wherever it gets pasted.
+# Placed after tight_layout so it can be aligned to the axes' left edge -- the
+# space it sits in is reserved by the rect below.
+fig.tight_layout(rect=(0, 0.058, 1, 1))
+fig.text(ax.get_position().x0, 0.012, TECI_NOTE, color=MUTED, fontsize=7.5, va="bottom")
 fig.savefig("eci_trajectories_qwen.png", dpi=170, facecolor=SURF)
 print("saved")
