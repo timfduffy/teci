@@ -100,14 +100,29 @@ Stated up front because they bound what the numbers can support.
   [epoch-research/eci-public](https://github.com/epoch-research/eci-public),
   MIT licensed, © 2025 Epoch AI. License included at `eci-upstream/LICENSE`.
   Used unmodified, as the reference for the fitting spec and chance-level table.
-- **Open LLM Leaderboard** — the
+- **Open LLM Leaderboard** (HuggingFace's — not the similarly named
+  [OSQ-Bench](https://github.com/VILA-Lab/Open-LLM-Leaderboard)) — the
   [contents dataset](https://huggingface.co/datasets/open-llm-leaderboard/contents)
-  declares no license, so the raw parquet is not committed here;
-  `scripts/add_oll_models.py` downloads it and `data/raw/OLL_SOURCE.txt` records
-  the URL and sha256.
+  declares no license, and neither do the sibling results datasets, so the raw
+  parquet is not committed here; `scripts/add_oll_models.py` downloads it and
+  `data/raw/OLL_SOURCE.txt` records the URL and sha256. The individual benchmark
+  scores we extract from it are credited per row in the workbook.
 - **Vendor benchmark scores** — from published model cards, blog posts and
   technical reports (Qwen, Google), transcribed into
   `data/qwen_gemma_benchmarks.xlsx` with a source cited per row.
 - **LiveBench** — official leaderboard CSVs from [livebench.ai](https://livebench.ai).
+
+## License
+
+As permissive as the inputs allow:
+
+- **Code** (`scripts/`, and this README) — [MIT](LICENSE).
+- **Data and figures** (`data/`, `charts/`, `docs/`) — [CC BY
+  4.0](https://creativecommons.org/licenses/by/4.0/), matching Epoch AI's terms
+  for the data these are derived from, so attribution travels with them.
+- **`eci-upstream/`** — MIT, © 2025 Epoch AI; see `eci-upstream/LICENSE`.
+
+Attribution-only throughout: no copyleft, no non-commercial clause, no
+share-alike. If you reuse the data, credit Epoch AI as well as this project.
 
 This project is not affiliated with or endorsed by Epoch AI.
