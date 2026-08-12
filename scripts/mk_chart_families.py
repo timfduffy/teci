@@ -162,6 +162,57 @@ fig2.text(0.012, 0.885,
 fig2.tight_layout(rect=(0, 0, 1, 0.86))
 fig2.savefig("eci_tier_gap.png", dpi=170, facecolor=SURF)
 
+# ---------------------------------------------------------------- chart 3
+# Every entry on one panel. Size is the question, so it takes the colour channel
+# (five ordinal steps, validated with --ordinal); family is not encoded at all --
+# with six families no categorical scheme clears the all-pairs gate, and the
+# per-family view already exists as chart 1. Finer banding than the <=2B/2-10B/
+# >10B cut used elsewhere, deliberately: it shows how much the "small models lag"
+# result depends on where the tier boundary is drawn.
+BANDS = ["<1B", "1–2B", "2–5B", "5–15B", "15–35B"]
+BAND_C = dict(zip(BANDS, ["#86b6ef", "#5598e7", "#2a78d6", "#1c5cab", "#104281"]))
+r["band"] = pd.cut(r.params_B, [0, 1, 2.1, 5, 15, 40], labels=BANDS)
+
+fig3, ax = plt.subplots(figsize=(11.5, 6.6), facecolor=SURF)
+ax.set_facecolor(SURF)
+for b in BANDS:
+    s = r[r.band == b]
+    if not len(s):
+        continue
+    ax.plot(s.date, s.eci_A, "o", ms=5, color=BAND_C[b], markeredgecolor=SURF,
+            markeredgewidth=1.1, linestyle="none", zorder=3, label=f"{b}  (n={len(s)})")
+    span = s.yrs.max() - s.yrs.min()
+    if len(s) >= MIN_N and span >= MIN_SPAN_YRS:
+        m, c = np.polyfit(s.yrs, s.eci_A, 1)
+        xs = np.array([s.yrs.min(), s.yrs.max()])
+        ax.plot(pd.Timestamp("2023-01-01") + pd.to_timedelta(xs * 365.25, "D"),
+                c + m * xs, color=BAND_C[b], lw=1.8, zorder=2, alpha=.9)
+        ax.annotate(f"{b}  {m:+.1f}/yr", xy=(s.date.max(), c + m * xs[1]),
+                    xytext=(6, 0), textcoords="offset points", fontsize=8,
+                    color=BAND_C[b], va="center", fontweight="bold", zorder=4)
+ax.set_ylabel(TECI_AXIS, color=INK2, fontsize=10)
+ax.grid(axis="y", color=GRID, lw=0.7)
+ax.set_axisbelow(True)
+ax.tick_params(colors=MUTED, labelsize=8.5)
+for s_ in ("top", "right", "left"):
+    ax.spines[s_].set_visible(False)
+ax.spines["bottom"].set_color(AXIS)
+ax.xaxis.set_major_locator(mdates.MonthLocator(interval=6))
+ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m"))
+ax.set_xlim(pd.Timestamp("2023-05-01"), pd.Timestamp("2026-12-01"))
+ax.legend(loc="upper left", fontsize=8.5, frameon=False, labelcolor=INK2,
+          title="parameters", title_fontsize=8.5)
+fig3.suptitle(f"All {len(r)} entries: TECI against release date, by parameter count",
+              color=INK, fontsize=13, x=0.012, ha="left", fontweight="bold", y=0.975)
+fig3.text(0.012, 0.905,
+          "Six families (Qwen, Gemma, Llama, Phi, SmolLM, OLMo). Under this banding every size "
+          "advances at a similar rate — the\nsize gap reported elsewhere depends on where the tier "
+          "boundary is drawn and on which models sit in each band.",
+          color=INK2, fontsize=8.8, va="top")
+fig3.text(0.012, 0.012, TECI_NOTE, color=MUTED, fontsize=7.5, va="bottom")
+fig3.tight_layout(rect=(0, 0.055, 1, 0.87))
+fig3.savefig("eci_all_models.png", dpi=170, facecolor=SURF)
+
 # ---- table-view twin (relief for the sub-3:1 palette steps, and the numbers) --
 rows = ["# Tier trends (method A)", "", "| family | tier | n | span (yrs) | slope TECI/yr | mean TECI |",
         "|---|---|---:|---:|---:|---:|"]
@@ -177,5 +228,39 @@ for fam in FAMS:
 rows += ["", "## Size-gap estimate under each sample / tier definition", "",
          "| definition | small-tier n | gap (TECI/yr) |", "|---|---:|---:|"]
 rows += [f"| {lbl} | {n} | {v:.2f} |" for lbl, v, n in STEPS]
+
+# Finer bands, and why they disagree with the pooled tiers.
+def fit(g):
+    return np.polyfit(g.yrs, g.eci_A, 1)[0]
+
+
+rows += ["", "## The same models in finer bands", "",
+         "| band | n | slope TECI/yr | mean TECI | mean release |",
+         "|---|---:|---:|---:|---|"]
+for b in BANDS:
+    g = r[r.band == b]
+    if len(g) >= MIN_N and (g.yrs.max() - g.yrs.min()) >= MIN_SPAN_YRS:
+        rows.append(f"| {b} | {len(g)} | {fit(g):+.1f} | {g.eci_A.mean():.1f} | "
+                    f"{g.date.mean():%Y-%m} |")
+lo, hi = r[r.band == "<1B"], r[r.band == "1–2B"]
+pooled = r[r.params_B <= 2.1]
+rows += ["",
+         f"Banded this way there is no consistent size gradient in *rate* — every band sits",
+         f"between {min(fit(r[r.band == b]) for b in BANDS):+.1f} and "
+         f"{max(fit(r[r.band == b]) for b in BANDS):+.1f} TECI/yr. Size sets the level, not the slope.",
+         "",
+         "That contradicts the pooled tier gap above, and the reason is composition inside the",
+         f"small tier. `<1B` fits {fit(lo):+.1f}/yr and `1–2B` fits {fit(hi):+.1f}/yr, but pooled as",
+         f"`≤2B` they fit {fit(pooled):+.1f}/yr — below both. The `<1B` models sit lower "
+         f"(mean {lo.eci_A.mean():.1f} vs {hi.eci_A.mean():.1f})",
+         f"and later (mean release {lo.date.mean():%Y-%m} vs {hi.date.mean():%Y-%m}), so a single line "
+         "through both is dragged",
+         "down at its recent end. The large tier has no such split: `5–15B` and `15–35B` fit",
+         f"{fit(r[r.band == '5–15B']):+.1f} and {fit(r[r.band == '15–35B']):+.1f}, and pooled `>10B` fits "
+         f"{fit(r[r.params_B > 10]):+.1f}.",
+         "",
+         "So a good part of the reported size gap is unequal time-sampling within the small",
+         "tier rather than a difference in how fast small models improve. Treat the pooled",
+         "tier gap as an upper bound."]
 open("../docs/tier_trends.md", "w", encoding="utf-8").write("\n".join(rows) + "\n")
-print("saved eci_families.png, eci_tier_gap.png, docs/tier_trends.md")
+print("saved eci_families.png, eci_tier_gap.png, eci_all_models.png, docs/tier_trends.md")
