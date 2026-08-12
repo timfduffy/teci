@@ -65,7 +65,12 @@ merge("Qwen", [("C-Eval","5-shot"), ("C-Eval","")], "C-Eval",
 merge("Qwen", [("GPQA",""), ("GPQA-Diamond","")], "GPQA(-Diamond)",
       "flag", "Qwen3 report says Diamond; 2507 cards' 'GPQA' column reproduces the "
               "Qwen3 GPQA-Diamond values (e.g. 30B-A3B non-thinking 54.8), so 2507=Diamond "
-              "is confirmed. Qwen2/2.5 'GPQA' unverified -> assume Diamond, verify.")
+              "is confirmed. The Qwen3.5 cards are confirmed too: their comparison columns "
+              "copy earlier published numbers verbatim -- 10 of 11 cross-checkable values "
+              "match to the decimal (Qwen3-1.7B C-Eval 68.1, IFEval 72.5, MMLU-Redux 73.9; "
+              "Qwen3-4B-2507 MMLU-Pro 74.0, SuperGPQA 47.8, PolyMATH 46.2, ...), and their "
+              "'GPQA' column gives Qwen3-1.7B 40.1, exactly the Qwen3 report's GPQA-Diamond. "
+              "Qwen2/2.5 'GPQA' remains unverified -> assume Diamond, verify.")
 merge("Qwen", [("IFEval","prompt strict-acc."), ("IFEval","strict-prompt"), ("IFEval","")],
       "IFEval (strict-prompt)", "flag",
       "Downgraded from 'high'. IFEval is reported four ways (prompt- vs "

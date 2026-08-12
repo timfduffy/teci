@@ -129,6 +129,20 @@ own location and can be run from anywhere.
   The old `edi_frozen.csv` tracked an **earlier Epoch EDI revision** rather
   than being garbled — its two extra benchmarks (GBAEval, "SWE-Bench Verified
   (Bash Only)") are both real Epoch names since renamed or dropped.
+- **Qwen cards copy earlier numbers verbatim, except the multilingual suite.**
+  Cross-checking the Qwen3.5 card's comparison columns against the Qwen3 tech
+  report and the 2507 cards: 10 of 11 values match to the decimal. The two that
+  do not are both multilingual — MMLU-ProX for Qwen3-4B-2507 (card 62.4 vs 2507
+  card 64.2) and MMMLU for Qwen3-1.7B (card 57.0 vs report 59.1). So the
+  multilingual evals appear re-run or differently configured between documents
+  while everything else is copied. If a future pass transcribes a Qwen3-era
+  model's scores *from a Qwen3.5 card*, keep MMMLU/MMLU-ProX source-separated;
+  everything else can be merged safely.
+- **Sub-chance scores are dropped, and this bites the smallest thinking models.**
+  Qwen3.5-0.8B scores 11.9 on GPQA-Diamond and 21.3 on SuperGPQA, both under the
+  25% chance floor, so `prep_obs.py` drops them per Epoch's convention. That is
+  why that entry has *zero* Epoch-mapped observations and rests entirely on
+  `Qwen::*` instruments. Not a transcription error — the values are on the card.
 - Flagged identity assumptions to re-verify before publishing: Qwen2/2.5
   "GPQA" == Diamond (2507 confirmed, 2.5 not); HMMT'25 (2507) vs HMMT Feb'25
   (card shows 57.5 vs 55.5 — keep separate or flag); Qwen3 LiveBench release
