@@ -26,6 +26,11 @@ own location and can be run from anywhere.
    card re-eval, Qwen3.5 thinking rows) were appended by follow-up scripts in
    the original session — the shipped xlsx is the source of truth; do NOT
    regenerate it from build_benchmarks.py alone or those additions are lost.
+1a. `scripts/add_qwen35_card_rows.py` — appends the Qwen3.5 cards' comparison
+   columns (Qwen3-1.7B, Qwen3-4B-2507 — same entry, re-evaluated in the 3.5
+   run) plus the multilingual rows missing for Qwen3.5-4B/9B. Tags MMLU-ProX
+   and MMMLU with `src: Qwen3.5 card` so canon() keeps those two runs apart.
+   Re-runnable; skips rows already present.
 1b. `scripts/add_oll_models.py` — appends the "OLL cross-family" sheet
    (SmolLM/OLMo/Llama/Phi from the Open LLM Leaderboard, official-provider
    uploads ≤35B) to the xlsx. Re-runnable; replaces the sheet in place.
@@ -129,15 +134,18 @@ own location and can be run from anywhere.
   The old `edi_frozen.csv` tracked an **earlier Epoch EDI revision** rather
   than being garbled — its two extra benchmarks (GBAEval, "SWE-Bench Verified
   (Bash Only)") are both real Epoch names since renamed or dropped.
-- **Qwen cards copy earlier numbers verbatim, except the multilingual suite.**
-  Cross-checking the Qwen3.5 card's comparison columns against the Qwen3 tech
-  report and the 2507 cards: 10 of 11 values match to the decimal. The two that
-  do not are both multilingual — MMLU-ProX for Qwen3-4B-2507 (card 62.4 vs 2507
-  card 64.2) and MMMLU for Qwen3-1.7B (card 57.0 vs report 59.1). So the
-  multilingual evals appear re-run or differently configured between documents
-  while everything else is copied. If a future pass transcribes a Qwen3-era
-  model's scores *from a Qwen3.5 card*, keep MMMLU/MMLU-ProX source-separated;
-  everything else can be merged safely.
+- **Qwen cards copy earlier numbers verbatim — except MMLU-ProX and MMMLU.**
+  Cross-checking the Qwen3.5-wave cards' comparison columns against the Qwen3
+  report and the 2507 cards, every non-multilingual value matches to the
+  decimal (dozens of them), and so does INCLUDE, which *is* multilingual. Only
+  these two differ, and by a lot:
+      Qwen3-30B-A3B-Thinking-2507  MMLU-ProX  76.4 (2507 card) vs 69.1 (3.5 card)
+      Qwen3-4B-Thinking-2507       MMLU-ProX  64.2 (2507 card) vs 62.4 (3.5 card)
+      Qwen3-1.7B                   MMMLU      59.1 (Qwen3 report) vs 57.0 (3.5 card)
+  So it is those two benchmarks specifically, not the multilingual suite.
+  `prep_obs.py`'s canon() now splits them on the `src: Qwen3.5 card` tag, which
+  also fixed an existing mis-merge — MMLU-ProX had been pooling both runs.
+  Everything else from a Qwen3.5 card can be merged with earlier sources safely.
 - **Sub-chance scores are dropped, and this bites the smallest thinking models.**
   Qwen3.5-0.8B scores 11.9 on GPQA-Diamond and 21.3 on SuperGPQA, both under the
   25% chance floor, so `prep_obs.py` drops them per Epoch's convention. That is

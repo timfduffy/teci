@@ -9,11 +9,11 @@ what matters for them is the cross-family section at the end.
 ## Qwen
 
 ### Regime: strict
-- entries: 51, usable instruments: 109, connected components: 1
+- entries: 51, usable instruments: 128, connected components: 1
 - main component: 51 entries
 
 ### Regime: curated
-- entries: 51, usable instruments: 93, connected components: 1
+- entries: 51, usable instruments: 112, connected components: 1
 - main component: 51 entries
 
 ### Entries with <4 usable instruments (Epoch's inclusion rule)
@@ -24,8 +24,8 @@ what matters for them is the cross-family section at the end.
 - Qwen1.5 <-> Qwen2: 12 shared -> C-Eval, GSM8K, HumanEval, MATH, MBPP, MMLU, OLLv2: BBH|normalized 0-100, OLLv2: GPQA|normalized 0-100, OLLv2: IFEval|normalized 0-100, OLLv2: MATH Lvl 5|normalized 0-100, OLLv2: MMLU-PRO|normalized 0-100, OLLv2: MUSR|normalized 0-100
 - Qwen2 <-> Qwen2.5: 14 shared -> GPQA(-Diamond), GSM8K, HumanEval, IFEval (strict-prompt), MATH, MBPP, MMLU-Pro, MultiPL-E, OLLv2: BBH|normalized 0-100, OLLv2: GPQA|normalized 0-100, OLLv2: IFEval|normalized 0-100, OLLv2: MATH Lvl 5|normalized 0-100, OLLv2: MMLU-PRO|normalized 0-100, OLLv2: MUSR|normalized 0-100
 - Qwen2.5 <-> Qwen3: 4 shared -> Arena-Hard, GPQA(-Diamond), IFEval (strict-prompt), MMLU-Redux
-- Qwen3 <-> Qwen3-2507: 7 shared -> AIME'25, BFCL v3, GPQA(-Diamond), IFEval (strict-prompt), LiveBench-20241125, MMLU-Redux, Multi-IF
-- Qwen3-2507 <-> Qwen3.5: 10 shared -> GPQA(-Diamond), HMMT Feb'25, IFEval (strict-prompt), INCLUDE, MMLU-Pro, MMLU-ProX, MMLU-Redux, OJBench, PolyMATH, SuperGPQA
+- Qwen3 <-> Qwen3-2507: 19 shared -> AA-LCR|src: Qwen3.5 card, AIME'25, BFCL v3, GPQA(-Diamond), Global PIQA|src: Qwen3.5 card, HMMT Feb'25|src: Qwen3.5 card, HMMT Nov'25|src: Qwen3.5 card, IFBench|src: Qwen3.5 card, IFEval (strict-prompt), LiveBench-20241125, LongBench v2|src: Qwen3.5 card, MAXIFE|src: Qwen3.5 card, MMLU-ProX|src: Qwen3.5 card, MMLU-Redux, MMMLU|src: Qwen3.5 card, Multi-IF, MultiChallenge|src: Qwen3.5 card, NOVA-63|src: Qwen3.5 card, WMT24++|src: Qwen3.5 card
+- Qwen3-2507 <-> Qwen3.5: 15 shared -> GPQA(-Diamond), Global PIQA|src: Qwen3.5 card, HMMT Feb'25, IFEval (strict-prompt), INCLUDE, MAXIFE|src: Qwen3.5 card, MMLU-Pro, MMLU-ProX|src: Qwen3.5 card, MMLU-Redux, MMMLU|src: Qwen3.5 card, NOVA-63|src: Qwen3.5 card, OJBench, PolyMATH, SuperGPQA, WMT24++|src: Qwen3.5 card
 - Qwen3.5 <-> Qwen3.6: 10 shared -> AIME'26, C-Eval, GPQA(-Diamond), HMMT Feb'25, HMMT Nov'25, LCB v6 (window unstated), MMLU-Pro, MMLU-Redux, SWE-bench Verified, SuperGPQA
 
 
@@ -128,12 +128,12 @@ what matters for them is the cross-family section at the end.
 
 ## Cross-family connectivity (all families, curated)
 
-- entries: 123, instruments: 160, connected components: 1
+- entries: 123, instruments: 179, connected components: 1
 - main component: 123 entries
 - entries below Epoch's 4-instrument rule: none
 
 ### Instruments shared between families
-- 14 of 160 instruments are seen by more than one family
+- 14 of 179 instruments are seen by more than one family
 
 - `OLLv2: BBH|normalized 0-100` — 6 families (Gemma, Llama, OLMo, Phi, Qwen, SmolLM), 70 entries
 - `OLLv2: GPQA|normalized 0-100` — 6 families (Gemma, Llama, OLMo, Phi, Qwen, SmolLM), 70 entries

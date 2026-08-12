@@ -164,15 +164,25 @@ for r in res.itertuples():
 # The one entry-level result worth stating outright, since a reader looking at
 # the size-class chart will ask about it.
 a, b = (base.get(w) for w in WATCH)
-lines += ["", "## The Qwen3-0.6B → Qwen3.5-0.8B decline", "",
-          f"Fitted at {a:.1f} and {b:.1f} TECI ({b - a:+.1f}), and the two share only three",
-          "instruments. On two of them Qwen3.5-0.8B is equal or better (C-Eval 50.4→50.5,",
-          "MMLU-Redux 55.6→59.5); the whole decline comes from IFEval (59.2→44.0). Drop that",
-          "single observation and the two entries fit identically. Qwen's own card shows the",
-          "0.8B scoring *lower* in thinking mode than non-thinking on IFEval (44.0 vs 52.1)",
-          "while every larger sibling gains, which is a real and documented failure mode for",
-          "very small reasoning models — but it is one benchmark, not a broad regression, and",
-          "the two entries' confidence intervals overlap almost entirely."]
+lines += ["", "## The Qwen3-0.6B → Qwen3.5-0.8B comparison", "",
+          f"Fitted at {a:.1f} and {b:.1f} TECI ({b - a:+.1f}).",
+          "",
+          "An earlier fit put this at −1.3, a visible dip on the size-class chart, and it was",
+          "worth chasing. The two entries share only three instruments (C-Eval, MMLU-Redux,",
+          "IFEval); on two of them the newer model is equal or better (50.4→50.5, 55.6→59.5)",
+          "and IFEval alone falls 59.2→44.0. Dropping that one observation made the two",
+          "entries fit identically, so nothing else supported the dip.",
+          "",
+          "It resolved without touching the data point. Adding the Qwen3.5 cards' comparison",
+          "columns (`add_qwen35_card_rows.py`) gave the `Qwen::` instruments this entry sits",
+          "on far more anchoring observations, and the estimate moved up on its own. The",
+          "`ifeval-split` variant above, which was the largest mover in this sweep before",
+          "that addition, is now a minor one.",
+          "",
+          "The IFEval drop itself is real, not a transcription error: Qwen's card shows the",
+          "0.8B scoring *lower* in thinking mode than non-thinking (44.0 vs 52.1) while every",
+          "larger sibling gains — a documented failure mode where a very small model's",
+          "reasoning trace crowds out strict format compliance."]
 OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
 print(f"\nbaseline tier gap: {base_gap:.2f} TECI/yr")
 print(f"largest gap shift: {res.gap_delta.abs().max():.2f} TECI/yr ({res.loc[res.gap_delta.abs().idxmax(), 'variant']})")

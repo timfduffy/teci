@@ -935,20 +935,38 @@ Qwen3-1.7B [Non-thinking mode],Qwen::C-Eval,own,0.48,Qwen,Qwen3,1.7,2025-04
 Qwen3-1.7B [Non-thinking mode],Qwen::IFEval,own,0.682,Qwen,Qwen3,1.7,2025-04
 Qwen3-1.7B [Non-thinking mode],Qwen::LCB v5,own,0.11599999999999999,Qwen,Qwen3,1.7,2025-04
 Qwen3-1.7B [Non-thinking mode],Qwen::MATH-500,own,0.73,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Non-thinking mode],Qwen::MMLU-Pro,own,0.3355555555555556,Qwen,Qwen3,1.7,2025-04
 Qwen3-1.7B [Non-thinking mode],Qwen::MMLU-Redux,own,0.5253333333333333,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Non-thinking mode],Qwen::MMMLU (3.5 cards),own,0.467,Qwen,Qwen3,1.7,2025-04
 Qwen3-1.7B [Non-thinking mode],Qwen::Multi-IF,own,0.447,Qwen,Qwen3,1.7,2025-04
 Qwen3-1.7B [Thinking mode],GPQA diamond,epoch,0.20133333333333336,Qwen,Qwen3,1.7,2025-04
 Qwen3-1.7B [Thinking mode],LiveBench-20241125,own,0.511,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::AA-LCR,own,0.067,Qwen,Qwen3,1.7,2025-04
 Qwen3-1.7B [Thinking mode],Qwen::AIME'24,own,0.483,Qwen,Qwen3,1.7,2025-04
 Qwen3-1.7B [Thinking mode],Qwen::AIME'25,own,0.368,Qwen,Qwen3,1.7,2025-04
 Qwen3-1.7B [Thinking mode],Qwen::Arena-Hard,own,0.431,Qwen,Qwen3,1.7,2025-04
 Qwen3-1.7B [Thinking mode],Qwen::BFCL v3,own,0.5660000000000001,Qwen,Qwen3,1.7,2025-04
 Qwen3-1.7B [Thinking mode],Qwen::C-Eval,own,0.5746666666666665,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::Global PIQA,own,0.262,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::HMMT Feb'25,own,0.102,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::HMMT Nov'25,own,0.08900000000000001,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::IFBench,own,0.267,Qwen,Qwen3,1.7,2025-04
 Qwen3-1.7B [Thinking mode],Qwen::IFEval,own,0.725,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::INCLUDE,own,0.35733333333333334,Qwen,Qwen3,1.7,2025-04
 Qwen3-1.7B [Thinking mode],Qwen::LCB v5,own,0.332,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::LongBench v2,own,0.020000000000000018,Qwen,Qwen3,1.7,2025-04
 Qwen3-1.7B [Thinking mode],Qwen::MATH-500,own,0.934,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::MAXIFE,own,0.507,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::MMLU-Pro,own,0.5166666666666666,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::MMLU-ProX (3.5 cards),own,0.494,Qwen,Qwen3,1.7,2025-04
 Qwen3-1.7B [Thinking mode],Qwen::MMLU-Redux,own,0.6520000000000001,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::MMMLU (3.5 cards),own,0.57,Qwen,Qwen3,1.7,2025-04
 Qwen3-1.7B [Thinking mode],Qwen::Multi-IF,own,0.512,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::MultiChallenge,own,0.272,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::NOVA-63,own,0.40299999999999997,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::PolyMATH,own,0.252,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::SuperGPQA,own,0.08266666666666667,Qwen,Qwen3,1.7,2025-04
+Qwen3-1.7B [Thinking mode],Qwen::WMT24++,own,0.39299999999999996,Qwen,Qwen3,1.7,2025-04
 Qwen3-14B [Non-thinking mode],GPQA diamond,epoch,0.39733333333333326,Qwen,Qwen3,14.0,2025-04
 Qwen3-14B [Non-thinking mode],LiveBench-20241125,own,0.596,Qwen,Qwen3,14.0,2025-04
 Qwen3-14B [Non-thinking mode],Qwen::AIME'24,own,0.317,Qwen,Qwen3,14.0,2025-04
@@ -1116,6 +1134,7 @@ Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],LiveBench-20241125,own,0.63,Qwe
 Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::AIME'25,own,0.474,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::Arena-Hard v2,own,0.434,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::BFCL v3,own,0.619,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::C-Eval,own,0.7360000000000001,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::Creative Writing v3,own,0.835,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::HMMT Feb'25,own,0.31,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::IFEval,own,0.8340000000000001,Qwen,Qwen3-2507,4.0,2025-08
@@ -1124,6 +1143,7 @@ Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::LCB v6 (2507),own,0.35100
 Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::MMLU-Pro,own,0.6622222222222222,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::MMLU-ProX,own,0.5733333333333334,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::MMLU-Redux,own,0.7893333333333334,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::MMMLU (3.5 cards),own,0.649,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::Multi-IF,own,0.69,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::MultiPL-E,own,0.768,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::PolyMATH,own,0.311,Qwen,Qwen3-2507,4.0,2025-08
@@ -1137,26 +1157,40 @@ Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::WritingBench,own,0.834000
 Qwen3-4B-Instruct-2507 [Instruct (non-thinking)],Qwen::ZebraLogic,own,0.802,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],GPQA diamond,epoch,0.5439999999999999,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],LiveBench-20241125,own,0.718,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::AA-LCR,own,0.32,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],Qwen::AIME'25,own,0.813,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],Qwen::Arena-Hard v2,own,0.349,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],Qwen::BFCL v3,own,0.7120000000000001,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::BFCL v4,own,0.39899999999999997,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::C-Eval,own,0.7626666666666667,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],Qwen::Creative Writing v3,own,0.7559999999999999,Qwen,Qwen3-2507,4.0,2025-08
-Qwen3-4B-Thinking-2507 [Thinking],Qwen::HMMT Feb'25,own,0.555,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::Global PIQA,own,0.47,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::HMMT Feb'25,own,0.575,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::HMMT Nov'25,own,0.696,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::IFBench,own,0.504,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],Qwen::IFEval,own,0.8740000000000001,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],Qwen::INCLUDE,own,0.5253333333333333,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],Qwen::LCB v6 (2507),own,0.552,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::LongBench v2,own,0.2373333333333333,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::MAXIFE,own,0.721,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],Qwen::MMLU-Pro,own,0.7111111111111111,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],Qwen::MMLU-ProX,own,0.6022222222222222,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::MMLU-ProX (3.5 cards),own,0.624,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],Qwen::MMLU-Redux,own,0.8146666666666667,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::MMMLU (3.5 cards),own,0.708,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],Qwen::Multi-IF,own,0.773,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::MultiChallenge,own,0.41700000000000004,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::NOVA-63,own,0.47100000000000003,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],Qwen::OJBench,own,0.179,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],Qwen::PolyMATH,own,0.462,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],Qwen::SuperGPQA,own,0.304,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],Qwen::TAU1-Airline,own,0.48,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],Qwen::TAU1-Retail,own,0.6609999999999999,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],Qwen::TAU2-Airline,own,0.58,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::TAU2-Bench,own,0.43200000000000005,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],Qwen::TAU2-Retail,own,0.535,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],Qwen::TAU2-Telecom,own,0.272,Qwen,Qwen3-2507,4.0,2025-08
+Qwen3-4B-Thinking-2507 [Thinking],Qwen::WMT24++,own,0.589,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-4B-Thinking-2507 [Thinking],Qwen::WritingBench,own,0.833,Qwen,Qwen3-2507,4.0,2025-08
 Qwen3-8B [Non-thinking mode],GPQA diamond,epoch,0.19066666666666662,Qwen,Qwen3,8.0,2025-04
 Qwen3-8B [Non-thinking mode],LiveBench-20241125,own,0.535,Qwen,Qwen3,8.0,2025-04
@@ -1188,7 +1222,7 @@ Qwen3.5-0.8B [Non-thinking rows],Qwen::C-Eval,own,0.28533333333333327,Qwen,Qwen3
 Qwen3.5-0.8B [Non-thinking rows],Qwen::IFEval,own,0.521,Qwen,Qwen3.5,0.8,2026-02
 Qwen3.5-0.8B [Non-thinking rows],Qwen::MMLU-Pro,own,0.21888888888888886,Qwen,Qwen3.5,0.8,2026-02
 Qwen3.5-0.8B [Non-thinking rows],Qwen::MMLU-Redux,own,0.3133333333333333,Qwen,Qwen3.5,0.8,2026-02
-Qwen3.5-0.8B [Non-thinking rows],Qwen::MMMLU,own,0.12133333333333336,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Non-thinking rows],Qwen::MMMLU (3.5 cards),own,0.341,Qwen,Qwen3.5,0.8,2026-02
 Qwen3.5-0.8B [Thinking (default)],Qwen::AA-LCR,own,0.047,Qwen,Qwen3.5,0.8,2026-02
 Qwen3.5-0.8B [Thinking (default)],Qwen::BFCL v4,own,0.253,Qwen,Qwen3.5,0.8,2026-02
 Qwen3.5-0.8B [Thinking (default)],Qwen::C-Eval,own,0.34,Qwen,Qwen3.5,0.8,2026-02
@@ -1199,9 +1233,9 @@ Qwen3.5-0.8B [Thinking (default)],Qwen::INCLUDE,own,0.20800000000000005,Qwen,Qwe
 Qwen3.5-0.8B [Thinking (default)],Qwen::LongBench v2,own,0.01466666666666668,Qwen,Qwen3.5,0.8,2026-02
 Qwen3.5-0.8B [Thinking (default)],Qwen::MAXIFE,own,0.392,Qwen,Qwen3.5,0.8,2026-02
 Qwen3.5-0.8B [Thinking (default)],Qwen::MMLU-Pro,own,0.3588888888888888,Qwen,Qwen3.5,0.8,2026-02
-Qwen3.5-0.8B [Thinking (default)],Qwen::MMLU-ProX,own,0.2733333333333334,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Thinking (default)],Qwen::MMLU-ProX (3.5 cards),own,0.34600000000000003,Qwen,Qwen3.5,0.8,2026-02
 Qwen3.5-0.8B [Thinking (default)],Qwen::MMLU-Redux,own,0.45999999999999996,Qwen,Qwen3.5,0.8,2026-02
-Qwen3.5-0.8B [Thinking (default)],Qwen::MMMLU,own,0.25733333333333325,Qwen,Qwen3.5,0.8,2026-02
+Qwen3.5-0.8B [Thinking (default)],Qwen::MMMLU (3.5 cards),own,0.44299999999999995,Qwen,Qwen3.5,0.8,2026-02
 Qwen3.5-0.8B [Thinking (default)],Qwen::MultiChallenge,own,0.18899999999999997,Qwen,Qwen3.5,0.8,2026-02
 Qwen3.5-0.8B [Thinking (default)],Qwen::NOVA-63,own,0.424,Qwen,Qwen3.5,0.8,2026-02
 Qwen3.5-0.8B [Thinking (default)],Qwen::PolyMATH,own,0.08199999999999999,Qwen,Qwen3.5,0.8,2026-02
@@ -1226,7 +1260,7 @@ Qwen3.5-2B [Non-thinking rows],Qwen::C-Eval,own,0.536,Qwen,Qwen3.5,2.0,2026-02
 Qwen3.5-2B [Non-thinking rows],Qwen::IFEval,own,0.612,Qwen,Qwen3.5,2.0,2026-02
 Qwen3.5-2B [Non-thinking rows],Qwen::MMLU-Pro,own,0.5033333333333333,Qwen,Qwen3.5,2.0,2026-02
 Qwen3.5-2B [Non-thinking rows],Qwen::MMLU-Redux,own,0.5893333333333334,Qwen,Qwen3.5,2.0,2026-02
-Qwen3.5-2B [Non-thinking rows],Qwen::MMMLU,own,0.4253333333333333,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Non-thinking rows],Qwen::MMMLU (3.5 cards),own,0.569,Qwen,Qwen3.5,2.0,2026-02
 Qwen3.5-2B [Non-thinking rows],Qwen::SuperGPQA,own,0.072,Qwen,Qwen3.5,2.0,2026-02
 Qwen3.5-2B [Thinking (default)],GPQA diamond,epoch,0.3546666666666667,Qwen,Qwen3.5,2.0,2026-02
 Qwen3.5-2B [Thinking (default)],Qwen::AA-LCR,own,0.256,Qwen,Qwen3.5,2.0,2026-02
@@ -1241,9 +1275,9 @@ Qwen3.5-2B [Thinking (default)],Qwen::INCLUDE,own,0.40533333333333327,Qwen,Qwen3
 Qwen3.5-2B [Thinking (default)],Qwen::LongBench v2,own,0.18266666666666667,Qwen,Qwen3.5,2.0,2026-02
 Qwen3.5-2B [Thinking (default)],Qwen::MAXIFE,own,0.606,Qwen,Qwen3.5,2.0,2026-02
 Qwen3.5-2B [Thinking (default)],Qwen::MMLU-Pro,own,0.6277777777777779,Qwen,Qwen3.5,2.0,2026-02
-Qwen3.5-2B [Thinking (default)],Qwen::MMLU-ProX,own,0.47000000000000003,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::MMLU-ProX (3.5 cards),own,0.523,Qwen,Qwen3.5,2.0,2026-02
 Qwen3.5-2B [Thinking (default)],Qwen::MMLU-Redux,own,0.7279999999999999,Qwen,Qwen3.5,2.0,2026-02
-Qwen3.5-2B [Thinking (default)],Qwen::MMMLU,own,0.508,Qwen,Qwen3.5,2.0,2026-02
+Qwen3.5-2B [Thinking (default)],Qwen::MMMLU (3.5 cards),own,0.631,Qwen,Qwen3.5,2.0,2026-02
 Qwen3.5-2B [Thinking (default)],Qwen::MultiChallenge,own,0.337,Qwen,Qwen3.5,2.0,2026-02
 Qwen3.5-2B [Thinking (default)],Qwen::NOVA-63,own,0.46399999999999997,Qwen,Qwen3.5,2.0,2026-02
 Qwen3.5-2B [Thinking (default)],Qwen::PolyMATH,own,0.261,Qwen,Qwen3.5,2.0,2026-02
@@ -1265,6 +1299,7 @@ Qwen3.5-4B [Thinking (default)],GPQA diamond,epoch,0.6826666666666666,Qwen,Qwen3
 Qwen3.5-4B [Thinking (default)],Qwen::AA-LCR,own,0.57,Qwen,Qwen3.5,4.0,2026-02
 Qwen3.5-4B [Thinking (default)],Qwen::BFCL v4,own,0.503,Qwen,Qwen3.5,4.0,2026-02
 Qwen3.5-4B [Thinking (default)],Qwen::C-Eval,own,0.8013333333333333,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::Global PIQA,own,0.5780000000000001,Qwen,Qwen3.5,4.0,2026-02
 Qwen3.5-4B [Thinking (default)],Qwen::HMMT Feb'25,own,0.74,Qwen,Qwen3.5,4.0,2026-02
 Qwen3.5-4B [Thinking (default)],Qwen::HMMT Nov'25,own,0.768,Qwen,Qwen3.5,4.0,2026-02
 Qwen3.5-4B [Thinking (default)],Qwen::IFBench,own,0.5920000000000001,Qwen,Qwen3.5,4.0,2026-02
@@ -1272,18 +1307,23 @@ Qwen3.5-4B [Thinking (default)],Qwen::IFEval,own,0.898,Qwen,Qwen3.5,4.0,2026-02
 Qwen3.5-4B [Thinking (default)],Qwen::INCLUDE,own,0.6133333333333333,Qwen,Qwen3.5,4.0,2026-02
 Qwen3.5-4B [Thinking (default)],Qwen::LCB v6 (late),own,0.5579999999999999,Qwen,Qwen3.5,4.0,2026-02
 Qwen3.5-4B [Thinking (default)],Qwen::LongBench v2,own,0.3333333333333333,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::MAXIFE,own,0.78,Qwen,Qwen3.5,4.0,2026-02
 Qwen3.5-4B [Thinking (default)],Qwen::MMLU-Pro,own,0.7677777777777777,Qwen,Qwen3.5,4.0,2026-02
-Qwen3.5-4B [Thinking (default)],Qwen::MMLU-ProX,own,0.6833333333333333,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::MMLU-ProX (3.5 cards),own,0.715,Qwen,Qwen3.5,4.0,2026-02
 Qwen3.5-4B [Thinking (default)],Qwen::MMLU-Redux,own,0.8506666666666667,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::MMMLU (3.5 cards),own,0.7609999999999999,Qwen,Qwen3.5,4.0,2026-02
 Qwen3.5-4B [Thinking (default)],Qwen::MultiChallenge,own,0.49,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::NOVA-63,own,0.5429999999999999,Qwen,Qwen3.5,4.0,2026-02
 Qwen3.5-4B [Thinking (default)],Qwen::OJBench,own,0.24100000000000002,Qwen,Qwen3.5,4.0,2026-02
 Qwen3.5-4B [Thinking (default)],Qwen::PolyMATH,own,0.511,Qwen,Qwen3.5,4.0,2026-02
 Qwen3.5-4B [Thinking (default)],Qwen::SuperGPQA,own,0.37200000000000005,Qwen,Qwen3.5,4.0,2026-02
 Qwen3.5-4B [Thinking (default)],Qwen::TAU2-Bench,own,0.799,Qwen,Qwen3.5,4.0,2026-02
+Qwen3.5-4B [Thinking (default)],Qwen::WMT24++,own,0.6659999999999999,Qwen,Qwen3.5,4.0,2026-02
 Qwen3.5-9B [Thinking (default)],GPQA diamond,epoch,0.7560000000000001,Qwen,Qwen3.5,9.0,2026-02
 Qwen3.5-9B [Thinking (default)],Qwen::AA-LCR,own,0.63,Qwen,Qwen3.5,9.0,2026-02
 Qwen3.5-9B [Thinking (default)],Qwen::BFCL v4,own,0.6609999999999999,Qwen,Qwen3.5,9.0,2026-02
 Qwen3.5-9B [Thinking (default)],Qwen::C-Eval,own,0.8426666666666667,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::Global PIQA,own,0.6640000000000001,Qwen,Qwen3.5,9.0,2026-02
 Qwen3.5-9B [Thinking (default)],Qwen::HMMT Feb'25,own,0.8320000000000001,Qwen,Qwen3.5,9.0,2026-02
 Qwen3.5-9B [Thinking (default)],Qwen::HMMT Nov'25,own,0.8290000000000001,Qwen,Qwen3.5,9.0,2026-02
 Qwen3.5-9B [Thinking (default)],Qwen::IFBench,own,0.645,Qwen,Qwen3.5,9.0,2026-02
@@ -1291,14 +1331,18 @@ Qwen3.5-9B [Thinking (default)],Qwen::IFEval,own,0.915,Qwen,Qwen3.5,9.0,2026-02
 Qwen3.5-9B [Thinking (default)],Qwen::INCLUDE,own,0.6746666666666665,Qwen,Qwen3.5,9.0,2026-02
 Qwen3.5-9B [Thinking (default)],Qwen::LCB v6 (late),own,0.6559999999999999,Qwen,Qwen3.5,9.0,2026-02
 Qwen3.5-9B [Thinking (default)],Qwen::LongBench v2,own,0.40266666666666673,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::MAXIFE,own,0.8340000000000001,Qwen,Qwen3.5,9.0,2026-02
 Qwen3.5-9B [Thinking (default)],Qwen::MMLU-Pro,own,0.8055555555555555,Qwen,Qwen3.5,9.0,2026-02
-Qwen3.5-9B [Thinking (default)],Qwen::MMLU-ProX,own,0.7366666666666667,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::MMLU-ProX (3.5 cards),own,0.763,Qwen,Qwen3.5,9.0,2026-02
 Qwen3.5-9B [Thinking (default)],Qwen::MMLU-Redux,own,0.8813333333333332,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::MMMLU (3.5 cards),own,0.812,Qwen,Qwen3.5,9.0,2026-02
 Qwen3.5-9B [Thinking (default)],Qwen::MultiChallenge,own,0.545,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::NOVA-63,own,0.5589999999999999,Qwen,Qwen3.5,9.0,2026-02
 Qwen3.5-9B [Thinking (default)],Qwen::OJBench,own,0.292,Qwen,Qwen3.5,9.0,2026-02
 Qwen3.5-9B [Thinking (default)],Qwen::PolyMATH,own,0.573,Qwen,Qwen3.5,9.0,2026-02
 Qwen3.5-9B [Thinking (default)],Qwen::SuperGPQA,own,0.44266666666666676,Qwen,Qwen3.5,9.0,2026-02
 Qwen3.5-9B [Thinking (default)],Qwen::TAU2-Bench,own,0.7909999999999999,Qwen,Qwen3.5,9.0,2026-02
+Qwen3.5-9B [Thinking (default)],Qwen::WMT24++,own,0.726,Qwen,Qwen3.5,9.0,2026-02
 Qwen3.6-27B [Thinking (default)],GPQA diamond,epoch,0.8373333333333334,Qwen,Qwen3.6,27.0,2026-04
 Qwen3.6-27B [Thinking (default)],HLE,epoch,0.24,Qwen,Qwen3.6,27.0,2026-04
 Qwen3.6-27B [Thinking (default)],LiveBench-20260108,own,0.6556000000000001,Qwen,Qwen3.6,27.0,2026-04

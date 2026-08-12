@@ -32,6 +32,13 @@ df = df[~df["Eval config / notes"].str.contains("ANOMALY")]
 def canon(row):
     f, b, c = row.Family, row.Benchmark, row["Eval config / notes"]
     if f == "Qwen":
+        # MMLU-ProX and MMMLU are reported differently by the Qwen3.5-wave cards
+        # than by the Qwen3 report / 2507 cards -- up to 7.3 pts apart on the
+        # same model, while every non-multilingual value matches to the decimal
+        # (INCLUDE, also multilingual, matches exactly). Keep the two runs apart.
+        # See add_qwen35_card_rows.py for the cross-check.
+        if b in ("MMLU-ProX", "MMMLU"):
+            return b + (" (3.5 cards)" if "Qwen3.5 card" in c else "")
         if b in ("MMLU", "MATH", "GSM8K", "HumanEval", "MBPP", "C-Eval"): return b
         if b in ("GPQA", "GPQA-Diamond"): return "GPQA-Diamond"
         if b == "IFEval": return "IFEval"
