@@ -5,7 +5,6 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
-from matplotlib import transforms
 
 SURF, INK, INK2, GRID = "#fcfcfb", "#0b0b0b", "#52514e", "#e5e4e0"
 C = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"]
@@ -42,8 +41,12 @@ TRACKS_G = {
     "~27-31B": ["Gemma 2 27B IT [Instruction-tuned (IT)]", "Gemma 3 27B IT [Instruction-tuned (IT)]",
                 "Gemma 4 31B [IT, Thinking mode]"],
 }
-REFS = [("GPT-4 (Mar '23)", 125.7), ("Claude 3.5 Sonnet (Jun '24)", 130.0), ("GPT-5 (Aug '25)", 150.0)]
-YLIM = (82, 156)
+# Derived from the data, not hardcoded: the Epoch refresh pushed the smallest
+# entries down (Qwen1.5-0.5B-Chat to 74.7) and a fixed floor silently clipped
+# them off the bottom of the plot.
+_plotted = [float(rr.loc[e, "eci_A"]) for t in (TRACKS_Q, TRACKS_G)
+            for es in t.values() for e in es if e in rr.index]
+YLIM = (min(_plotted) - 4, max(_plotted) + 10)
 
 fig, axes = plt.subplots(1, 2, figsize=(13, 6.4), facecolor=SURF)
 DIRECT_Q = {"~0.5-0.8B", "~4B", "~7-9B", "~30-35B"}
@@ -51,10 +54,6 @@ for ax, tracks, title, direct in ((axes[0], TRACKS_Q, "Qwen", DIRECT_Q),
                                   (axes[1], TRACKS_G, "Gemma (IT)", set(TRACKS_G))):
     ax.set_facecolor(SURF)
     ax.set_ylim(*YLIM)
-    blend = transforms.blended_transform_factory(ax.transAxes, ax.transData)
-    for lbl, y in REFS:
-        ax.axhline(y, color="#cfcec9", lw=1.1, ls=(0, (4, 3)), zorder=1)
-        ax.text(0.012, y + 0.8, lbl, transform=blend, fontsize=7.5, color=INK2, zorder=2)
     for i, (name, entries) in enumerate(tracks.items()):
         pts = sorted((rr.loc[e, "date"], float(rr.loc[e, "eci_A"])) for e in entries if e in rr.index)
         xs, ys = zip(*pts)
@@ -76,7 +75,7 @@ for ax, tracks, title, direct in ((axes[0], TRACKS_Q, "Qwen", DIRECT_Q),
 axes[0].set_ylabel("ECI (Epoch Capabilities Index scale)", color=INK2, fontsize=9.5)
 fig.suptitle("Small Qwen & Gemma models on the ECI scale (method A: joint refit with Epoch data)",
              color=INK, fontsize=13, x=0.02, ha="left", fontweight="bold", y=0.99)
-fig.text(0.02, 0.925, "Instruct/thinking entries; dashed refs = published ECI of frontier models",
+fig.text(0.02, 0.925, "Instruct/thinking entries",
          color=INK2, fontsize=9)
 fig.tight_layout(rect=(0, 0, 1, 0.91))
 fig.savefig("eci_trajectories.png", dpi=170, facecolor=SURF)

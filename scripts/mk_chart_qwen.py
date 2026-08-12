@@ -5,7 +5,6 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
-from matplotlib import transforms
 
 SURF, INK, INK2, GRID = "#fcfcfb", "#0b0b0b", "#52514e", "#e5e4e0"
 C = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"]
@@ -33,15 +32,13 @@ TRACKS = {
                 "Qwen3-32B [Thinking mode]", "Qwen3-30B-A3B-Thinking-2507 [Thinking]",
                 "Qwen3.5-35B-A3B [Thinking (default)]", "Qwen3.6-35B-A3B [Thinking (default)]"],
 }
-REFS = [("GPT-4 (Mar '23)", 125.7), ("Claude 3.5 Sonnet (Jun '24)", 130.0), ("GPT-5 (Aug '25)", 150.0)]
 
 fig, ax = plt.subplots(figsize=(9.5, 6.6), facecolor=SURF)
 ax.set_facecolor(SURF)
-ax.set_ylim(82, 156)
-blend = transforms.blended_transform_factory(ax.transAxes, ax.transData)
-for lbl, y in REFS:
-    ax.axhline(y, color="#cfcec9", lw=1.1, ls=(0, (4, 3)), zorder=1)
-    ax.text(0.012, y + 0.8, lbl, transform=blend, fontsize=8, color=INK2, zorder=2)
+# derived from the data: a hardcoded floor clipped the smallest entries off the
+# bottom once the Epoch refresh pushed them down
+_plotted = [float(rr.loc[e, "eci_A"]) for es in TRACKS.values() for e in es if e in rr.index]
+ax.set_ylim(min(_plotted) - 4, max(_plotted) + 10)
 DIRECT = {"~0.5-0.8B", "~1.5-2B", "~4B", "~30-35B"}
 for i, (name, entries) in enumerate(TRACKS.items()):
     pts = sorted((rr.loc[e, "date"], float(rr.loc[e, "eci_A"])) for e in entries if e in rr.index)
@@ -63,9 +60,8 @@ ax.legend(loc="lower right", fontsize=8.5, frameon=False, labelcolor=INK2,
           title="size track", title_fontsize=8.5)
 ax.set_title("Qwen models on the ECI scale, by size track (Qwen1.5 onward)",
              color=INK, fontsize=13, loc="left", fontweight="bold", pad=28)
-ax.text(0, 1.035, "Instruct/thinking entries, method A (joint refit with Epoch data); "
-        "dashed refs = published ECI of frontier models", transform=ax.transAxes,
-        color=INK2, fontsize=9)
+ax.text(0, 1.035, "Instruct/thinking entries, method A (joint refit with Epoch data)",
+        transform=ax.transAxes, color=INK2, fontsize=9)
 fig.tight_layout()
 fig.savefig("eci_trajectories_qwen.png", dpi=170, facecolor=SURF)
 print("saved")
