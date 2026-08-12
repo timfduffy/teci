@@ -1,8 +1,8 @@
 # Sensitivity pass — flagged instrument-identity assumptions
 
 Method A refit with each flagged merge from `docs/connectivity_audit.md`
-reversed. `mean|d|` / `max|d|` are shifts in fitted ECI across our entries;
-`tier gap` is the headline quantity — how many ECI/yr faster the >10B tier
+reversed. `mean|d|` / `max|d|` are shifts in fitted TECI across our entries;
+`tier gap` is the headline quantity — how many TECI/yr faster the >10B tier
 improves than the <=2B tier (baseline **1.26**). A variant that barely
 moves the gap is an assumption the conclusion does not rest on.
 

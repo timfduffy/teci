@@ -8,7 +8,7 @@
                           each family's time coverage impossible to miss --
                           SmolLM's twelve entries all land in one quarter, which
                           is why it moves the pooled slope so much.
-(2) eci_tier_gap.png    — how the headline number (how many ECI/yr faster the
+(2) eci_tier_gap.png    — how the headline number (how many TECI/yr faster the
                           >10B tier improves than the small tier) moves as the
                           sample and the tier definition change.
 
@@ -33,10 +33,10 @@ MUTED, GRID, AXIS = "#898781", "#e1e0d9", "#c3c2b7"
 
 # Our estimates in the units of Epoch's ECI scale; Epoch has not scored these
 # models, so the axis must not say "ECI". See mk_chart_qwen.py for the rationale.
-TECI_AXIS = "TECI (Tim's ECI-scale estimate)"
-TECI_NOTE = ("TECI: an independent re-fit onto Epoch AI's ECI scale, anchored at "
-             "Claude 3.5 Sonnet = 130 and GPT-5 = 150.\n"
-             "Not Epoch's published ECI — Epoch has not scored these models.")
+TECI_AXIS = "Tim's ECI (TECI)"
+TECI_NOTE = ("Tim's ECI: an independent fit of public vendor and leaderboard scores, calibrated to\n"
+             "Epoch AI's ECI scale via the 204 models Epoch has scored. Epoch has not published\n"
+             "ECI for the models shown here.")
 # ordinal ramp, light -> dark = small -> large
 TIER_C = {"≤2B": "#86b6ef", "2–10B": "#2a78d6", ">10B": "#104281"}
 TIERS = list(TIER_C)
@@ -162,7 +162,7 @@ fig2.tight_layout(rect=(0, 0, 1, 0.86))
 fig2.savefig("eci_tier_gap.png", dpi=170, facecolor=SURF)
 
 # ---- table-view twin (relief for the sub-3:1 palette steps, and the numbers) --
-rows = ["# Tier trends (method A)", "", "| family | tier | n | span (yrs) | slope ECI/yr | mean ECI |",
+rows = ["# Tier trends (method A)", "", "| family | tier | n | span (yrs) | slope TECI/yr | mean TECI |",
         "|---|---|---:|---:|---:|---:|"]
 for fam in FAMS:
     for tier in TIERS:
@@ -174,7 +174,7 @@ for fam in FAMS:
               if len(s) >= MIN_N and span >= MIN_SPAN_YRS else "—")
         rows.append(f"| {fam} | {tier} | {len(s)} | {span:.2f} | {sl} | {s.eci_A.mean():.1f} |")
 rows += ["", "## Size-gap estimate under each sample / tier definition", "",
-         "| definition | small-tier n | gap (ECI/yr) |", "|---|---:|---:|"]
+         "| definition | small-tier n | gap (TECI/yr) |", "|---|---:|---:|"]
 rows += [f"| {lbl} | {n} | {v:.2f} |" for lbl, v, n in STEPS]
 open("../docs/tier_trends.md", "w", encoding="utf-8").write("\n".join(rows) + "\n")
 print("saved eci_families.png, eci_tier_gap.png, docs/tier_trends.md")

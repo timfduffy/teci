@@ -10,15 +10,20 @@ SURF, INK, INK2, GRID = "#fcfcfb", "#0b0b0b", "#52514e", "#e5e4e0"
 MUTED = "#898781"
 C = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"]
 
-# These are OUR estimates, expressed in the units of Epoch's ECI scale -- Epoch
-# has not scored any of these models. Labelling the axis "ECI" would credit them
-# with numbers they did not publish, so every chart says TECI and carries the
-# footnote. Deliberately expanded as "ECI-scale estimate" rather than as an
-# Epoch-branded index: the scale is theirs, the estimates are not.
-TECI_AXIS = "TECI (Tim's ECI-scale estimate)"
-TECI_NOTE = ("TECI: an independent re-fit onto Epoch AI's ECI scale, anchored at "
-             "Claude 3.5 Sonnet = 130 and GPT-5 = 150.\nNot Epoch's published ECI — "
-             "Epoch has not scored these models.")
+# Naming follows Anthropic's convention for their own variant ("Anthropic ECI"):
+# owner's name in front of the metric, which reads as "our version of ECI" and
+# implies no endorsement by Epoch.
+#
+# The caveat differs from theirs, though. Anthropic's is powered by internal
+# benchmarks and so is NOT comparable to Epoch's published ECI. Ours is
+# calibrated onto Epoch's scale through the 204 models they have scored
+# (r=0.9998) -- comparability is the point. What differs is coverage: Epoch has
+# not scored the small models we care about, so these values are our estimates.
+# Saying "not directly comparable" here would disclaim the wrong thing.
+TECI_AXIS = "Tim's ECI (TECI)"
+TECI_NOTE = ("Tim's ECI: an independent fit of public vendor and leaderboard scores, calibrated to\n"
+             "Epoch AI's ECI scale via the 204 models Epoch has scored. Epoch has not published\n"
+             "ECI for the models shown here.")
 
 r = pd.read_csv("results_methods.csv")
 r["date"] = pd.to_datetime(r.release.astype(str), format="%Y-%m")
@@ -87,7 +92,8 @@ ax.set_xlim(pd.Timestamp("2024-01-01"), pd.Timestamp("2026-09-01"))
 ax.set_ylabel(TECI_AXIS, color=INK2, fontsize=10)
 ax.legend(loc="lower right", fontsize=8.5, frameon=False, labelcolor=INK2,
           title="size track", title_fontsize=8.5)
-ax.set_title("Qwen models on the TECI scale, by size track (Qwen1.5 onward)",
+# no "(Qwen1.5 onward)": the generation labels along the top say where it starts
+ax.set_title("Qwen models on the TECI scale, by size track",
              color=INK, fontsize=13, loc="left", fontweight="bold", pad=34)
 # the disclaimer rides at the foot rather than under the title, so the header
 # stays clean and the claim is still on the chart wherever it gets pasted

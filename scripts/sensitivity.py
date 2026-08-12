@@ -100,7 +100,7 @@ meta["yrs"] = (meta.rel - pd.Timestamp("2023-01-01")).dt.days / 365.25
 
 
 def tier_gap(eci):
-    """ECI/yr advantage of the >10B tier over the <=2B tier."""
+    """TECI/yr advantage of the >10B tier over the <=2B tier."""
     d = meta.dropna(subset=["rel"]).copy()
     d["eci"] = pd.Series(eci)
     d = d.dropna(subset=["eci", "params"])
@@ -112,7 +112,7 @@ def tier_gap(eci):
 
 base = run_method_a(ours)
 base_gap = tier_gap(base)
-print(f"baseline: {len(base)} entries, tier gap {base_gap:.2f} ECI/yr\n")
+print(f"baseline: {len(base)} entries, tier gap {base_gap:.2f} TECI/yr\n")
 
 rows = []
 for name, desc, fn in VARIANTS:
@@ -139,8 +139,8 @@ lines = [
     "# Sensitivity pass — flagged instrument-identity assumptions",
     "",
     "Method A refit with each flagged merge from `docs/connectivity_audit.md`",
-    "reversed. `mean|d|` / `max|d|` are shifts in fitted ECI across our entries;",
-    "`tier gap` is the headline quantity — how many ECI/yr faster the >10B tier",
+    "reversed. `mean|d|` / `max|d|` are shifts in fitted TECI across our entries;",
+    "`tier gap` is the headline quantity — how many TECI/yr faster the >10B tier",
     f"improves than the <=2B tier (baseline **{base_gap:.2f}**). A variant that barely",
     "moves the gap is an assumption the conclusion does not rest on.",
     "",
@@ -154,6 +154,6 @@ lines += ["", "## What each variant tests", ""]
 for r in res.itertuples():
     lines.append(f"- **`{r.variant}`** — {r.what}")
 OUT.write_text("\n".join(lines) + "\n", encoding="utf-8")
-print(f"\nbaseline tier gap: {base_gap:.2f} ECI/yr")
-print(f"largest gap shift: {res.gap_delta.abs().max():.2f} ECI/yr ({res.loc[res.gap_delta.abs().idxmax(), 'variant']})")
+print(f"\nbaseline tier gap: {base_gap:.2f} TECI/yr")
+print(f"largest gap shift: {res.gap_delta.abs().max():.2f} TECI/yr ({res.loc[res.gap_delta.abs().idxmax(), 'variant']})")
 print(f"wrote {OUT}")

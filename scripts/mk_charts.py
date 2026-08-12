@@ -12,10 +12,10 @@ C = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"]
 
 # Our estimates in the units of Epoch's ECI scale; Epoch has not scored these
 # models, so the axis must not say "ECI". See mk_chart_qwen.py for the rationale.
-TECI_AXIS = "TECI (Tim's ECI-scale estimate)"
-TECI_NOTE = ("TECI: an independent re-fit onto Epoch AI's ECI scale, anchored at "
-             "Claude 3.5 Sonnet = 130 and GPT-5 = 150.\n"
-             "Not Epoch's published ECI — Epoch has not scored these models.")
+TECI_AXIS = "Tim's ECI (TECI)"
+TECI_NOTE = ("Tim's ECI: an independent fit of public vendor and leaderboard scores, calibrated to\n"
+             "Epoch AI's ECI scale via the 204 models Epoch has scored. Epoch has not published\n"
+             "ECI for the models shown here.")
 
 r = pd.read_csv("results_methods.csv")
 r["date"] = pd.to_datetime(r.release.astype(str), format="%Y-%m")

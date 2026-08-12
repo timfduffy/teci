@@ -1,6 +1,6 @@
 # Tier trends (method A)
 
-| family | tier | n | span (yrs) | slope ECI/yr | mean ECI |
+| family | tier | n | span (yrs) | slope TECI/yr | mean TECI |
 |---|---|---:|---:|---:|---:|
 | Qwen | ≤2B | 16 | 2.25 | +12.87 | 107.9 |
 | Qwen | 2–10B | 16 | 2.51 | +18.65 | 122.5 |
@@ -20,7 +20,7 @@
 
 ## Size-gap estimate under each sample / tier definition
 
-| definition | small-tier n | gap (ECI/yr) |
+| definition | small-tier n | gap (TECI/yr) |
 |---|---:|---:|
 | Qwen/Gemma only, previous fit | 25 | 3.30 |
 | same entries, recalibrated instruments | 25 | 2.81 |
