@@ -16,13 +16,15 @@
                           elsewhere, deliberately: the slopes come out near
                           parallel, which is the point.
 (4) eci_small_models.png — the <=2B tier alone, every entry named, against
-                          release date. No trend line. Where a model has both a
-                          thinking and a non-thinking entry only the thinking one
-                          is plotted, so no label needs a "(think)" suffix.
-                          Labels are placed by rectangle-overlap search rather
-                          than per-release-month nudging: a label is wider than
-                          the gap between neighbouring releases, so grouping by
-                          month cannot see the collisions that actually happen.
+                          release date. No trend line. One entry per model,
+                          preferring what a user would reach for: thinking over
+                          non-thinking, instruct over base. That takes 42 rows to
+                          26 and lets every label lose its mode suffix, which is
+                          most of what makes the chart legible. Labels are then
+                          placed by rectangle-overlap search rather than
+                          per-release-month nudging: a label is wider than the
+                          gap between neighbouring releases, so grouping by month
+                          cannot see the collisions that actually happen.
 
 Palette: reference dataviz palette. Size tier is an ORDERED category, so it uses
 the ordinal blue ramp (steps 250/450/650), not categorical hues -- validated with
@@ -260,15 +262,27 @@ def stack(vals, gap):
 sm = r[r.params_B <= 2.1].copy()
 sm["band"] = pd.cut(sm.params_B, [0, 0.5, 1.0, 2.1], labels=SMALL_BANDS)
 
-# Where a model has both a thinking and a non-thinking entry, keep only the
-# thinking one. Four models qualify (Qwen3-0.6B/1.7B, Qwen3.5-0.8B/2B), so this
-# drops four points -- and, more usefully, lets every label lose its "(think)"
-# suffix, which is what actually buys horizontal room.
+# One entry per model, preferring what a user would actually reach for: thinking
+# over non-thinking, instruct over base. 42 entries become 26, which is most of
+# what makes this chart legible.
 sm["model"] = sm.entry.str.partition(" [")[0]
 variant = sm.entry.str.partition(" [")[2].str.rstrip("]")
+
+# thinking beats non-thinking for the same weights (4 models: Qwen3-0.6B/1.7B,
+# Qwen3.5-0.8B/2B). Dropping the suffix this allows is what buys label room.
 is_think = variant.str.contains("Thinking") & ~variant.str.contains("Non-thinking")
 is_nonthink = variant.str.contains("Non-thinking")
 sm = sm[~(is_nonthink & sm.model.isin(set(sm[is_think].model)))]
+
+# instruct beats base. Pair them by name prefix -- the instruct release is the
+# base name plus a suffix (" IT", "-Chat", "-Instruct"), so 12 pairs match.
+# phi-1, phi-1_5 and OLMo-1B-hf have no instruct release and stay as they are.
+variant = sm.entry.str.partition(" [")[2].str.rstrip("]")
+is_base = variant.str.startswith("Pretrained") | variant.str.startswith("Base (")
+inst_models = list(sm[variant.str.startswith("Instruct")].model)
+paired = {m for m in sm[is_base].model
+          if any(i != m and i.startswith(m) for i in inst_models)}
+sm = sm[~(is_base & sm.model.isin(paired))]
 
 # Back on a date axis, at a larger canvas. Labels sit beside their point,
 # de-collided vertically within each release month, and the side alternates
@@ -318,8 +332,8 @@ ax.legend(loc="upper left", fontsize=9.5, frameon=False, labelcolor=INK2,
 fig4.suptitle(f"Every model at or below 2B ({len(sm)} entries)",
               color=INK, fontsize=14, x=0.008, ha="left", fontweight="bold", y=0.982)
 fig4.text(0.008, 0.952,
-          "Where a model has both a thinking and a non-thinking entry only the thinking one is "
-          "shown. \"(base)\" marks a pretrained-only entry.",
+          "One entry per model: thinking preferred over non-thinking, instruct over base. "
+          "phi-1, phi-1_5 and OLMo-1B have no instruct release.",
           color=INK2, fontsize=9.5, va="top")
 fig4.text(0.008, 0.008, TECI_NOTE, color=MUTED, fontsize=8, va="bottom")
 fig4.tight_layout(rect=(0, 0.035, 1, 0.938))
