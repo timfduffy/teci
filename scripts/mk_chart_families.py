@@ -40,6 +40,8 @@ the ordinal blue ramp (steps 250/450/650), not categorical hues -- validated wit
 Run from data/ (writes PNGs to the working directory, like the other chart
 scripts):  cd data && python ../scripts/mk_chart_families.py
 """
+import re
+
 import matplotlib
 import numpy as np
 import pandas as pd
@@ -65,6 +67,11 @@ TIERS = list(TIER_C)
 # A slope needs enough spread in time to mean anything. SmolLM spans four
 # months; fitting a per-year rate to that would be noise dressed as a finding.
 MIN_N, MIN_SPAN_YRS = 4, 1.0
+
+# Gemma 3n and Gemma 4 E-series: the workbook records effective, not raw,
+# parameters for these, so they sit lower on a size axis than their weight
+# count warrants. Flagged on the chart rather than dropped.
+SELECTIVE = re.compile(r"E[24]B")
 
 
 def one_per_model(df):
@@ -291,10 +298,19 @@ def short(entry):
     No "(think)" suffix: where a model has both modes only the thinking entry is
     plotted, so the distinction never needs spelling out. "(base)" stays --
     Qwen1.5-1.8B and Qwen1.5-1.8B-Chat are both on the chart.
+
+    A "*" marks a selective-activation model, whose Params (B) in the workbook is
+    the EFFECTIVE count, not the raw one. Gemma 3n E2B is recorded at 2.0B on
+    that basis but holds far more weights than a 2B dense model -- the workbook
+    spells the gap out for its Gemma 4 successor, 2.3B effective against 5.1B
+    including embeddings. It qualifies for a "<=2B" chart by memory footprint,
+    not by parameter count, and that is worth flagging on the face of it.
     """
     name, _, variant = entry.partition(" [")
     name = name.replace("-Instruct", "-Inst")
-    return name + " (base)" if variant.startswith("Base (") else name
+    if variant.startswith("Base ("):
+        name += " (base)"
+    return name + " *" if SELECTIVE.search(name) else name
 
 
 def stack(vals, gap):
@@ -365,7 +381,9 @@ fig4.suptitle(f"Every model at or below 2B ({len(sm)} entries)",
               color=INK, fontsize=14, x=0.008, ha="left", fontweight="bold", y=0.982)
 fig4.text(0.008, 0.952,
           "One entry per model: thinking preferred over non-thinking, instruct over base. "
-          "phi-1, phi-1_5 and OLMo-1B have no instruct release.",
+          "phi-1, phi-1_5 and OLMo-1B have no instruct release.\n"
+          "* selective activation — 2B is its effective parameter count; it holds far more "
+          "weights than a 2B dense model.",
           color=INK2, fontsize=9.5, va="top")
 fig4.text(0.008, 0.008, TECI_NOTE, color=MUTED, fontsize=8, va="bottom")
 fig4.tight_layout(rect=(0, 0.035, 1, 0.938))
