@@ -132,6 +132,20 @@ print("saved")
 # published ECIs, the way eci-public does, so that component is gone from the
 # marginal intervals too. Differencing then only adds the reference's own noise.
 # The gain is interpretive, not statistical.
+#
+# Bars are percentile intervals and are NOT centred on the plotted point, which
+# is the central fit. Where the two disagree the whisker looks lopsided, and that
+# lopsidedness is a property of the estimator rather than of the model. Take
+# Qwen3.5-0.8B against the 32B: the bar reads 8.4 down against 2.5 up, but the
+# bootstrap distribution is nearly symmetric about its own median (6.0 / 4.9) --
+# the median simply sits 2.4 below the central fit. Resampling drops about 37% of
+# an entry's distinct observations per draw, and where an entry's position rests
+# on particular instruments, losing them pulls the fit down toward the ridge
+# prior. Qwen3.5-0.8B is exposed to that because none of its 18 observations is
+# Epoch-mapped (its GPQA-Diamond and SuperGPQA were both sub-chance and dropped),
+# so it hangs entirely on Qwen:: instruments. This is not simply a count effect:
+# the correlation between observation count and the down/up ratio is -0.06, and
+# SmolLM2-1.7B has six observations skewed the other way (1.9 down, 8.3 up).
 draws = pd.read_csv("boot_draws_A.csv").pivot(index="draw", columns="entry", values="eci")
 
 
