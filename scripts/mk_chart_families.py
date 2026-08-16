@@ -15,6 +15,12 @@
                           in five bands. Finer banding than the tiers used
                           elsewhere, deliberately: the slopes come out near
                           parallel, which is the point.
+(3b) eci_all_models_one_per_model.png — the same chart with one entry per model
+                          (thinking over non-thinking, instruct over base), 87
+                          of 123. Kept alongside rather than replacing (3): the
+                          filter is defensible but it reverses the band ordering,
+                          and the pair is the honest way to show how much the
+                          rate comparison depends on which entries you count.
 (4) eci_small_models.png — the <=2B tier alone, every entry named, against
                           release date. No trend line. One entry per model,
                           preferring what a user would reach for: thinking over
@@ -59,6 +65,29 @@ TIERS = list(TIER_C)
 # A slope needs enough spread in time to mean anything. SmolLM spans four
 # months; fitting a per-year rate to that would be noise dressed as a finding.
 MIN_N, MIN_SPAN_YRS = 4, 1.0
+
+
+def one_per_model(df):
+    """Keep the entry a user would reach for: thinking over non-thinking,
+    instruct over base. Our entry convention deliberately splits those, which is
+    right for fitting but double-counts a model when you plot or fit a trend.
+
+    Instruct/base pairs are matched by name prefix, an instruct release being the
+    base name plus a suffix (" IT", "-Chat", "-Instruct"). Models with no
+    instruct release (phi-1, phi-1_5, OLMo-1B-hf) are kept as they are.
+    """
+    df = df.copy()
+    df["model"] = df.entry.str.partition(" [")[0]
+    v = df.entry.str.partition(" [")[2].str.rstrip("]")
+    think = v.str.contains("Thinking") & ~v.str.contains("Non-thinking")
+    nonthink = v.str.contains("Non-thinking")
+    df = df[~(nonthink & df.model.isin(set(df[think].model)))]
+
+    v = df.entry.str.partition(" [")[2].str.rstrip("]")
+    base = v.str.startswith("Pretrained") | v.str.startswith("Base (")
+    inst = list(df[v.str.startswith("Instruct")].model)
+    paired = {m for m in df[base].model if any(i != m and i.startswith(m) for i in inst)}
+    return df[~(base & df.model.isin(paired))]
 
 r = pd.read_csv("results_methods.csv")
 r["date"] = pd.to_datetime(r.release.astype(str), format="%Y-%m", errors="coerce")
@@ -187,45 +216,66 @@ BANDS = ["<1B", "1–2B", "2–5B", "5–15B", "15–35B"]
 BAND_C = dict(zip(BANDS, ["#86b6ef", "#5598e7", "#2a78d6", "#1c5cab", "#104281"]))
 r["band"] = pd.cut(r.params_B, [0, 1, 2.1, 5, 15, 40], labels=BANDS)
 
-fig3, ax = plt.subplots(figsize=(11.5, 6.6), facecolor=SURF)
-ax.set_facecolor(SURF)
-for b in BANDS:
-    s = r[r.band == b]
-    if not len(s):
-        continue
-    ax.plot(s.date, s.eci_A, "o", ms=5, color=BAND_C[b], markeredgecolor=SURF,
-            markeredgewidth=1.1, linestyle="none", zorder=3, label=f"{b}  (n={len(s)})")
-    span = s.yrs.max() - s.yrs.min()
-    if len(s) >= MIN_N and span >= MIN_SPAN_YRS:
-        m, c = np.polyfit(s.yrs, s.eci_A, 1)
-        xs = np.array([s.yrs.min(), s.yrs.max()])
-        ax.plot(pd.Timestamp("2023-01-01") + pd.to_timedelta(xs * 365.25, "D"),
-                c + m * xs, color=BAND_C[b], lw=1.8, zorder=2, alpha=.9)
-        ax.annotate(f"{b}  {m:+.1f}/yr", xy=(s.date.max(), c + m * xs[1]),
-                    xytext=(6, 0), textcoords="offset points", fontsize=8,
-                    color=BAND_C[b], va="center", fontweight="bold", zorder=4)
-ax.set_ylabel(TECI_AXIS, color=INK2, fontsize=10)
-ax.grid(axis="y", color=GRID, lw=0.7)
-ax.set_axisbelow(True)
-ax.tick_params(colors=MUTED, labelsize=8.5)
-for s_ in ("top", "right", "left"):
-    ax.spines[s_].set_visible(False)
-ax.spines["bottom"].set_color(AXIS)
-ax.xaxis.set_major_locator(mdates.MonthLocator(interval=6))
-ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m"))
-ax.set_xlim(pd.Timestamp("2023-05-01"), pd.Timestamp("2026-12-01"))
-ax.legend(loc="upper left", fontsize=8.5, frameon=False, labelcolor=INK2,
-          title="parameters", title_fontsize=8.5)
-fig3.suptitle(f"All {len(r)} entries: TECI against release date, by parameter count",
-              color=INK, fontsize=13, x=0.012, ha="left", fontweight="bold", y=0.975)
-fig3.text(0.012, 0.905,
-          "Six families (Qwen, Gemma, Llama, Phi, SmolLM, OLMo). Under this banding every size "
-          "advances at a similar rate — the\nsize gap reported elsewhere depends on where the tier "
-          "boundary is drawn and on which models sit in each band.",
-          color=INK2, fontsize=8.8, va="top")
-fig3.text(0.012, 0.012, TECI_NOTE, color=MUTED, fontsize=7.5, va="bottom")
-fig3.tight_layout(rect=(0, 0.055, 1, 0.87))
-fig3.savefig("eci_all_models.png", dpi=170, facecolor=SURF)
+
+def all_models_chart(data, fname, headline, note):
+    fig3, ax = plt.subplots(figsize=(11.5, 6.6), facecolor=SURF)
+    ax.set_facecolor(SURF)
+    for b in BANDS:
+        s = data[data.band == b]
+        if not len(s):
+            continue
+        ax.plot(s.date, s.eci_A, "o", ms=5, color=BAND_C[b], markeredgecolor=SURF,
+                markeredgewidth=1.1, linestyle="none", zorder=3, label=f"{b}  (n={len(s)})")
+        span = s.yrs.max() - s.yrs.min()
+        if len(s) >= MIN_N and span >= MIN_SPAN_YRS:
+            m, c = np.polyfit(s.yrs, s.eci_A, 1)
+            xs = np.array([s.yrs.min(), s.yrs.max()])
+            ax.plot(pd.Timestamp("2023-01-01") + pd.to_timedelta(xs * 365.25, "D"),
+                    c + m * xs, color=BAND_C[b], lw=1.8, zorder=2, alpha=.9)
+            # the two largest bands finish close together and their labels
+            # overlap; nudge them apart vertically
+            ax.annotate(f"{b}  {m:+.1f}/yr", xy=(s.date.max(), c + m * xs[1]),
+                        xytext=(6, {"5–15B": -9, "15–35B": 9}.get(b, 0)),
+                        textcoords="offset points", fontsize=8,
+                        color=BAND_C[b], va="center", fontweight="bold", zorder=4)
+    ax.set_ylabel(TECI_AXIS, color=INK2, fontsize=10)
+    ax.grid(axis="y", color=GRID, lw=0.7)
+    ax.set_axisbelow(True)
+    ax.tick_params(colors=MUTED, labelsize=8.5)
+    for s_ in ("top", "right", "left"):
+        ax.spines[s_].set_visible(False)
+    ax.spines["bottom"].set_color(AXIS)
+    ax.xaxis.set_major_locator(mdates.MonthLocator(interval=6))
+    ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m"))
+    ax.set_xlim(pd.Timestamp("2023-05-01"), pd.Timestamp("2026-12-01"))
+    ax.set_ylim(r.eci_A.min() - 4, r.eci_A.max() + 4)
+    ax.legend(loc="upper left", fontsize=8.5, frameon=False, labelcolor=INK2,
+              title="parameters", title_fontsize=8.5)
+    fig3.suptitle(headline, color=INK, fontsize=13, x=0.012, ha="left",
+                  fontweight="bold", y=0.975)
+    fig3.text(0.012, 0.905, note, color=INK2, fontsize=8.8, va="top")
+    fig3.text(0.012, 0.012, TECI_NOTE, color=MUTED, fontsize=7.5, va="bottom")
+    fig3.tight_layout(rect=(0, 0.055, 1, 0.87))
+    fig3.savefig(fname, dpi=170, facecolor=SURF)
+
+
+all_models_chart(
+    r, "eci_all_models.png",
+    f"All {len(r)} entries: TECI against release date, by parameter count",
+    "Six families (Qwen, Gemma, Llama, Phi, SmolLM, OLMo). Every entry, so a model with base, "
+    "instruct and thinking\nreleases appears three times. Under this banding every size advances "
+    "at a similar rate.")
+
+# Same chart, one entry per model. Worth having both: the filter is defensible
+# but it moves the slopes a lot, and the two side by side are the honest way to
+# show how much the rate comparison depends on which entries you count.
+rd = one_per_model(r)
+all_models_chart(
+    rd, "eci_all_models_one_per_model.png",
+    f"One entry per model ({len(rd)} of {len(r)} entries): TECI against release date",
+    "Thinking preferred over non-thinking, instruct over base. Removing the duplicates reverses "
+    "the ordering:\nthe two smallest bands become the fastest and 15–35B the slowest — compare "
+    "eci_all_models.png.")
 
 # ---------------------------------------------------------------- chart 4
 # The <=2B tier alone, every entry named. No trend line: with 42 points across
@@ -262,27 +312,9 @@ def stack(vals, gap):
 sm = r[r.params_B <= 2.1].copy()
 sm["band"] = pd.cut(sm.params_B, [0, 0.5, 1.0, 2.1], labels=SMALL_BANDS)
 
-# One entry per model, preferring what a user would actually reach for: thinking
-# over non-thinking, instruct over base. 42 entries become 26, which is most of
-# what makes this chart legible.
-sm["model"] = sm.entry.str.partition(" [")[0]
-variant = sm.entry.str.partition(" [")[2].str.rstrip("]")
-
-# thinking beats non-thinking for the same weights (4 models: Qwen3-0.6B/1.7B,
-# Qwen3.5-0.8B/2B). Dropping the suffix this allows is what buys label room.
-is_think = variant.str.contains("Thinking") & ~variant.str.contains("Non-thinking")
-is_nonthink = variant.str.contains("Non-thinking")
-sm = sm[~(is_nonthink & sm.model.isin(set(sm[is_think].model)))]
-
-# instruct beats base. Pair them by name prefix -- the instruct release is the
-# base name plus a suffix (" IT", "-Chat", "-Instruct"), so 12 pairs match.
-# phi-1, phi-1_5 and OLMo-1B-hf have no instruct release and stay as they are.
-variant = sm.entry.str.partition(" [")[2].str.rstrip("]")
-is_base = variant.str.startswith("Pretrained") | variant.str.startswith("Base (")
-inst_models = list(sm[variant.str.startswith("Instruct")].model)
-paired = {m for m in sm[is_base].model
-          if any(i != m and i.startswith(m) for i in inst_models)}
-sm = sm[~(is_base & sm.model.isin(paired))]
+# One entry per model: 42 rows become 26, which is most of what makes the labels
+# fit. See one_per_model() for the rule.
+sm = one_per_model(sm)
 
 # Back on a date axis, at a larger canvas. Labels sit beside their point,
 # de-collided vertically within each release month, and the side alternates
