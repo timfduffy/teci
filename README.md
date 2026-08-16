@@ -23,14 +23,14 @@ follows the convention Anthropic uses for their own internal variant, the
 "Anthropic ECI". They are calibrated onto
 Epoch's scale via 204 models Epoch has scored (r=0.9998), so they are meant to be
 read against published ECI. What differs is coverage: Epoch has not scored most
-of the small models here, and where it *has* (18 of our 123 entries, which act as
+of the small models here, and where it *has* (18 of our 124 entries, which act as
 calibration anchors) we still plot our own fitted value rather than theirs.
 
 ## What's here
 
 | | |
 |---|---|
-| `data/results_methods.csv` | 123 entries scored three ways, with bootstrap CIs |
+| `data/results_methods.csv` | 124 entries scored three ways, with bootstrap CIs |
 | `charts/` | rendered figures |
 | `docs/connectivity_audit.md` | does the model × benchmark graph hang together, and on what assumptions |
 | `docs/sensitivity.md` | how far the answer moves when each flagged assumption is reversed |

@@ -21,7 +21,7 @@ C = ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#008300"]
 # the wrong thing.
 #
 # The note claims the values are ours, NOT that Epoch has never scored these
-# models -- 18 of our 123 entries do have a published ECI (the bridge nodes that
+# models -- 18 of our 124 entries do have a published ECI (the bridge nodes that
 # calibrate the fit), though since the dense-only change none of them land on
 # this particular chart. Even where they do, the plotted number is our fitted
 # value, so "our (Tim and Claude's) own estimates, not Epoch's published ECI"
@@ -54,11 +54,11 @@ TRACKS = {
     # ~constant while compute per token fell by roughly 10x, and the apparent
     # slowdown at the top was partly Qwen moving compute out of this slot rather
     # than progress stalling. The dense 27B models keep the track comparable and
-    # run to the same date; they also score higher (Qwen3.6-27B 148.5 vs
+    # run to the same date; they also score higher (Qwen3.6-27B 147.8 vs
     # 35B-A3B 145.8).
     "~27-32B": ["Qwen1.5-32B-Chat [Instruct/chat]", "Qwen2.5-32B-Instruct [Instruct/chat]",
                 "Qwen3-32B [Thinking mode]", "Qwen3.5-27B [Thinking (default)]",
-                "Qwen3.6-27B [Thinking (default)]"],
+                "Qwen3.6-27B [Thinking (default)]", "Qwen3.8-27B [Thinking (default)]"],
 }
 
 fig, ax = plt.subplots(figsize=(9.5, 6.6), facecolor=SURF)
@@ -102,7 +102,7 @@ for s in ("top", "right", "left"): ax.spines[s].set_visible(False)
 ax.spines["bottom"].set_color(GRID)
 ax.xaxis.set_major_locator(mdates.MonthLocator(interval=4))
 ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m"))
-ax.set_xlim(pd.Timestamp("2024-01-01"), pd.Timestamp("2026-09-01"))
+ax.set_xlim(pd.Timestamp("2024-01-01"), pd.Timestamp("2026-12-01"))
 ax.set_ylabel(TECI_AXIS, color=INK2, fontsize=10)
 ax.legend(loc="lower right", fontsize=8.5, frameon=False, labelcolor=INK2,
           title="size class", title_fontsize=8.5)
@@ -194,7 +194,7 @@ def ci_figure(refs, fname, headline, note, refline=None):
     ax2.spines["bottom"].set_color(GRID)
     ax2.xaxis.set_major_locator(mdates.MonthLocator(interval=4))
     ax2.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m"))
-    ax2.set_xlim(pd.Timestamp("2024-01-01"), pd.Timestamp("2026-09-01"))
+    ax2.set_xlim(pd.Timestamp("2024-01-01"), pd.Timestamp("2026-12-01"))
     ax2.set_ylabel(TECI_AXIS, color=INK2, fontsize=10)
     ax2.legend(loc="lower right", fontsize=8.5, frameon=False, labelcolor=INK2,
                title="size class", title_fontsize=8.5)

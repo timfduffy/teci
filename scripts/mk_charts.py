@@ -42,7 +42,7 @@ TRACKS_Q = {
     # token and made the top track look like it was stalling.
     "~27-32B": ["Qwen1.5-32B-Chat [Instruct/chat]", "Qwen2.5-32B-Instruct [Instruct/chat]",
                 "Qwen3-32B [Thinking mode]", "Qwen3.5-27B [Thinking (default)]",
-                "Qwen3.6-27B [Thinking (default)]"],
+                "Qwen3.6-27B [Thinking (default)]", "Qwen3.8-27B [Thinking (default)]"],
 }
 TRACKS_G = {
     "~1-2B (E2B)": ["Gemma 2B IT [Instruction-tuned (IT)]", "Gemma 2 2B IT [Instruction-tuned (IT)]",

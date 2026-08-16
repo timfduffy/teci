@@ -16,8 +16,8 @@
                           elsewhere, deliberately: the slopes come out near
                           parallel, which is the point.
 (3b) eci_all_models_one_per_model.png — the same chart with one entry per model
-                          (thinking over non-thinking, instruct over base), 87
-                          of 123. Kept alongside rather than replacing (3): the
+                          (thinking over non-thinking, instruct over base), 88
+                          of 124. Kept alongside rather than replacing (3): the
                           filter is defensible but it reverses the band ordering,
                           and the pair is the honest way to show how much the
                           rate comparison depends on which entries you count.
@@ -56,7 +56,7 @@ SURF, INK, INK2 = "#fcfcfb", "#0b0b0b", "#52514e"
 MUTED, GRID, AXIS = "#898781", "#e1e0d9", "#c3c2b7"
 
 # Our estimates in the units of Epoch's ECI scale, so the axis must not say
-# plain "ECI". Note Epoch HAS scored 18 of these 123 entries (the bridge nodes);
+# plain "ECI". Note Epoch HAS scored 18 of these 124 entries (the bridge nodes);
 # the true claim is that the plotted number is ours, not theirs. Rationale and
 # naming convention in mk_chart_qwen.py.
 TECI_AXIS = "Tim's ECI (TECI)"

@@ -185,7 +185,8 @@ def components(edges):
     return [sorted(n[1] for n in c if n[0] == "E") for c in comps.values()]
 
 GEN_ORDER = {
-    "Qwen": ["Qwen (v1)", "Qwen1.5", "Qwen2", "Qwen2.5", "Qwen3", "Qwen3-2507", "Qwen3.5", "Qwen3.6"],
+    "Qwen": ["Qwen (v1)", "Qwen1.5", "Qwen2", "Qwen2.5", "Qwen3", "Qwen3-2507", "Qwen3.5",
+             "Qwen3.6", "Qwen3.8"],
     "Gemma": ["Gemma 1", "Gemma 2", "Gemma 3", "Gemma 3n", "Gemma 4"],
     # families added from the Open LLM Leaderboard by add_oll_models.py
     "Llama": ["Llama 2", "Llama 3", "Llama 3.1", "Llama 3.2"],

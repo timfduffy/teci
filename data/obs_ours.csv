@@ -1347,18 +1347,41 @@ Qwen3.6-27B [Thinking (default)],GPQA diamond,epoch,0.8373333333333334,Qwen,Qwen
 Qwen3.6-27B [Thinking (default)],HLE,epoch,0.24,Qwen,Qwen3.6,27.0,2026-04
 Qwen3.6-27B [Thinking (default)],LiveBench-20260108,own,0.6556000000000001,Qwen,Qwen3.6,27.0,2026-04
 Qwen3.6-27B [Thinking (default)],Qwen::AIME'26,own,0.941,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::Agents' Last Exam (Pass@1),own,0.106,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::Agents' Last Exam (Score),own,0.273,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::AndroidWorld,own,0.703,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::BabyVision (no CI),own,0.289,Qwen,Qwen3.6,27.0,2026-04
 Qwen3.6-27B [Thinking (default)],Qwen::C-Eval,own,0.8853333333333334,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::CharXiv (no CI),own,0.784,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::ClawEval-MM (Average),own,0.426,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::ClawEval-MM (Pass@3),own,0.569,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::CoWorkBench,own,0.61,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::DeepSWE 1.1,own,0.133,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::ERQA,own,0.625,Qwen,Qwen3.6,27.0,2026-04
 Qwen3.6-27B [Thinking (default)],Qwen::HMMT Feb'25,own,0.938,Qwen,Qwen3.6,27.0,2026-04
 Qwen3.6-27B [Thinking (default)],Qwen::HMMT Feb'26,own,0.843,Qwen,Qwen3.6,27.0,2026-04
 Qwen3.6-27B [Thinking (default)],Qwen::HMMT Nov'25,own,0.907,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::IFBench,own,0.691,Qwen,Qwen3.6,27.0,2026-04
 Qwen3.6-27B [Thinking (default)],Qwen::IMOAnswerBench,own,0.8079999999999999,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::JobBench,own,0.218,Qwen,Qwen3.6,27.0,2026-04
 Qwen3.6-27B [Thinking (default)],Qwen::LCB v6 (late),own,0.8390000000000001,Qwen,Qwen3.6,27.0,2026-04
 Qwen3.6-27B [Thinking (default)],Qwen::MMLU-Pro,own,0.8466666666666667,Qwen,Qwen3.6,27.0,2026-04
 Qwen3.6-27B [Thinking (default)],Qwen::MMLU-Redux,own,0.9133333333333334,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::MathVision (no CI),own,0.851,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::MathVision (with CI),own,0.9,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::NL2Repo-Bench,own,0.36200000000000004,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::OSWorld-Verified,own,0.639,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::QwenSWEBench,own,0.493,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::RealWorldQA,own,0.841,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::RecreationBench,own,0.298,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::SWE-MM,own,0.257,Qwen,Qwen3.6,27.0,2026-04
 Qwen3.6-27B [Thinking (default)],Qwen::SWE-bench Pro,own,0.535,Qwen,Qwen3.6,27.0,2026-04
 Qwen3.6-27B [Thinking (default)],Qwen::SWE-bench Verified,own,0.772,Qwen,Qwen3.6,27.0,2026-04
 Qwen3.6-27B [Thinking (default)],Qwen::SuperGPQA,own,0.5466666666666667,Qwen,Qwen3.6,27.0,2026-04
 Qwen3.6-27B [Thinking (default)],Qwen::Terminal-Bench 2.0,own,0.593,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::Terminal-Bench 2.1,own,0.634,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::Vision2Web,own,0.45,Qwen,Qwen3.6,27.0,2026-04
+Qwen3.6-27B [Thinking (default)],Qwen::WebArena-Verified,own,0.488,Qwen,Qwen3.6,27.0,2026-04
 Qwen3.6-35B-A3B [Thinking (default)],GPQA diamond,epoch,0.8133333333333334,Qwen,Qwen3.6,35.0,2026-04
 Qwen3.6-35B-A3B [Thinking (default)],HLE,epoch,0.214,Qwen,Qwen3.6,35.0,2026-04
 Qwen3.6-35B-A3B [Thinking (default)],Qwen::AIME'26,own,0.927,Qwen,Qwen3.6,35.0,2026-04
@@ -1373,6 +1396,35 @@ Qwen3.6-35B-A3B [Thinking (default)],Qwen::MMLU-Redux,own,0.9106666666666666,Qwe
 Qwen3.6-35B-A3B [Thinking (default)],Qwen::SWE-bench Verified,own,0.7340000000000001,Qwen,Qwen3.6,35.0,2026-04
 Qwen3.6-35B-A3B [Thinking (default)],Qwen::SuperGPQA,own,0.5293333333333333,Qwen,Qwen3.6,35.0,2026-04
 Qwen3.6-35B-A3B [Thinking (default)],Qwen::Terminal-Bench 2.0,own,0.515,Qwen,Qwen3.6,35.0,2026-04
+Qwen3.8-27B [Thinking (default)],GPQA diamond,epoch,0.856,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],HLE,epoch,0.308,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::Agents' Last Exam (Pass@1),own,0.204,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::Agents' Last Exam (Score),own,0.429,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::AndroidWorld,own,0.8190000000000001,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::BabyVision (no CI),own,0.657,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::BabyVision (with CI),own,0.856,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::CharXiv (no CI),own,0.8370000000000001,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::CharXiv (with CI),own,0.902,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::ClawEval-MM (Average),own,0.504,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::ClawEval-MM (Pass@3),own,0.574,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::CoWorkBench,own,0.7070000000000001,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::DeepSWE 1.1,own,0.42200000000000004,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::ERQA,own,0.655,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::IFBench,own,0.795,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::JobBench,own,0.33399999999999996,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::LCB v6 (late),own,0.903,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::MathVision (no CI),own,0.9,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::MathVision (with CI),own,0.946,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::NL2Repo-Bench,own,0.423,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::OSWorld-Verified,own,0.843,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::QwenSWEBench,own,0.79,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::RealWorldQA,own,0.8590000000000001,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::RecreationBench,own,0.47100000000000003,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::SWE-MM,own,0.386,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::SWE-bench Pro,own,0.617,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::Terminal-Bench 2.1,own,0.73,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::Vision2Web,own,0.629,Qwen,Qwen3.8,27.0,2026-08
+Qwen3.8-27B [Thinking (default)],Qwen::WebArena-Verified,own,0.648,Qwen,Qwen3.8,27.0,2026-08
 SmolLM-1.7B [Pretrained (PT)],MATH level 5,epoch,0.01661631419939577,SmolLM,SmolLM,1.71,2024-07
 SmolLM-1.7B [Pretrained (PT)],OLLv2: BBH,own,0.044111278515492014,SmolLM,SmolLM,1.71,2024-07
 SmolLM-1.7B [Pretrained (PT)],OLLv2: GPQA,own,0.0,SmolLM,SmolLM,1.71,2024-07

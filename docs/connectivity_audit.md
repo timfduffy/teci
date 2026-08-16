@@ -9,12 +9,12 @@ what matters for them is the cross-family section at the end.
 ## Qwen
 
 ### Regime: strict
-- entries: 51, usable instruments: 128, connected components: 1
-- main component: 51 entries
+- entries: 52, usable instruments: 153, connected components: 1
+- main component: 52 entries
 
 ### Regime: curated
-- entries: 51, usable instruments: 112, connected components: 1
-- main component: 51 entries
+- entries: 52, usable instruments: 137, connected components: 1
+- main component: 52 entries
 
 ### Entries with <4 usable instruments (Epoch's inclusion rule)
 - none
@@ -26,7 +26,8 @@ what matters for them is the cross-family section at the end.
 - Qwen2.5 <-> Qwen3: 4 shared -> Arena-Hard, GPQA(-Diamond), IFEval (strict-prompt), MMLU-Redux
 - Qwen3 <-> Qwen3-2507: 19 shared -> AA-LCR|src: Qwen3.5 card, AIME'25, BFCL v3, GPQA(-Diamond), Global PIQA|src: Qwen3.5 card, HMMT Feb'25|src: Qwen3.5 card, HMMT Nov'25|src: Qwen3.5 card, IFBench|src: Qwen3.5 card, IFEval (strict-prompt), LiveBench-20241125, LongBench v2|src: Qwen3.5 card, MAXIFE|src: Qwen3.5 card, MMLU-ProX|src: Qwen3.5 card, MMLU-Redux, MMMLU|src: Qwen3.5 card, Multi-IF, MultiChallenge|src: Qwen3.5 card, NOVA-63|src: Qwen3.5 card, WMT24++|src: Qwen3.5 card
 - Qwen3-2507 <-> Qwen3.5: 15 shared -> GPQA(-Diamond), Global PIQA|src: Qwen3.5 card, HMMT Feb'25, IFEval (strict-prompt), INCLUDE, MAXIFE|src: Qwen3.5 card, MMLU-Pro, MMLU-ProX|src: Qwen3.5 card, MMLU-Redux, MMMLU|src: Qwen3.5 card, NOVA-63|src: Qwen3.5 card, OJBench, PolyMATH, SuperGPQA, WMT24++|src: Qwen3.5 card
-- Qwen3.5 <-> Qwen3.6: 10 shared -> AIME'26, C-Eval, GPQA(-Diamond), HMMT Feb'25, HMMT Nov'25, LCB v6 (window unstated), MMLU-Pro, MMLU-Redux, SWE-bench Verified, SuperGPQA
+- Qwen3.5 <-> Qwen3.6: 11 shared -> AIME'26, C-Eval, GPQA(-Diamond), HMMT Feb'25, HMMT Nov'25, IFBench, LCB v6 (window unstated), MMLU-Pro, MMLU-Redux, SWE-bench Verified, SuperGPQA
+- Qwen3.6 <-> Qwen3.8: 26 shared -> Agents' Last Exam (Pass@1), Agents' Last Exam (Score), AndroidWorld, BabyVision (no CI)|vision, CharXiv (no CI)|vision, ClawEval-MM (Average), ClawEval-MM (Pass@3), CoWorkBench|avg@3, 8h timeout, DeepSWE 1.1|Claude Code harness, ERQA|vision, GPQA(-Diamond), HLE|no tools, IFBench, JobBench, LCB v6 (window unstated), MathVision (no CI)|vision, MathVision (with CI)|vision, CI, NL2Repo-Bench, OSWorld-Verified, QwenSWEBench|Claude Code harness, RealWorldQA|vision, RecreationBench, SWE-MM, Terminal-Bench 2.1|Terminus scaffold, Vision2Web, WebArena-Verified
 
 
 ## Gemma
@@ -128,12 +129,12 @@ what matters for them is the cross-family section at the end.
 
 ## Cross-family connectivity (all families, curated)
 
-- entries: 123, instruments: 179, connected components: 1
-- main component: 123 entries
+- entries: 124, instruments: 204, connected components: 1
+- main component: 124 entries
 - entries below Epoch's 4-instrument rule: none
 
 ### Instruments shared between families
-- 14 of 179 instruments are seen by more than one family
+- 14 of 204 instruments are seen by more than one family
 
 - `OLLv2: BBH|normalized 0-100` — 6 families (Gemma, Llama, OLMo, Phi, Qwen, SmolLM), 70 entries
 - `OLLv2: GPQA|normalized 0-100` — 6 families (Gemma, Llama, OLMo, Phi, Qwen, SmolLM), 70 entries
@@ -193,5 +194,5 @@ what matters for them is the cross-family section at the end.
 
 ## Scale-class inventory
 
-- transform: Gemma:OmniDocBench 1.5, Gemma:CoVoST, Gemma:FLEURS
+- transform: Qwen:OmniDocBench 1.5, Gemma:OmniDocBench 1.5, Gemma:CoVoST, Gemma:FLEURS
 - exclude: Qwen:MT-Bench, Qwen:AlignBench, Qwen:AlignBench v1.1, Qwen:CodeForces rating, Qwen:CFEval, Gemma:Average (official table), Gemma:LMSYS Chatbot Arena Elo, Gemma:LMArena Elo, Gemma:CodeForces Elo

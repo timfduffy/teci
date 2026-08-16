@@ -4,7 +4,7 @@ Tim's project tracking whether benchmark progress differs across model sizes
 (core question: is the 0.5–2B tier plateauing relative to ~30B?), by placing
 small models on the Epoch Capabilities Index (ECI) scale. Our resulting numbers
 are called TECI, not ECI — see Conventions. Qwen and Gemma are
-the backbone (80 entries, full vendor benchmark suites); SmolLM, OLMo, Llama
+the backbone (81 entries, full vendor benchmark suites); SmolLM, OLMo, Llama
 and Phi were added later from the Open LLM Leaderboard (43 entries) to keep the
 low end from being calibrated by Qwen and Gemma alone.
 Intended for eventual publication (at least a Twitter post).
@@ -34,6 +34,9 @@ own location and can be run from anywhere.
 1b. `scripts/add_oll_models.py` — appends the "OLL cross-family" sheet
    (SmolLM/OLMo/Llama/Phi from the Open LLM Leaderboard, official-provider
    uploads ≤35B) to the xlsx. Re-runnable; replaces the sheet in place.
+1c. `scripts/add_qwen38_rows.py` — appends Qwen3.8-27B (2026-08, dense, thinking
+   by default) plus the card's Qwen3.6-27B comparison column, which attaches to
+   the existing Qwen3.6 entry. Re-runnable; skips rows already present.
 2. `scripts/audit_connectivity.py` — model×benchmark connectivity audit
    (components, generation bridges, merge assumptions). Output: docs/connectivity_audit.md.
    Covers all six families, plus a cross-family section: which instruments are
@@ -68,7 +71,7 @@ own location and can be run from anywhere.
 - **Our numbers are TECI ("Tim's ECI"), never plain "ECI".** Our values are
   estimates calibrated onto Epoch's scale via 204 models they have scored
   (method A's rescale, r=0.9998). Note that Epoch *has* published ECI for 18 of
-  our 123 entries — the bridge nodes — so "Epoch has not scored these models" is
+  our 124 entries — the bridge nodes — so "Epoch has not scored these models" is
   false and must not be used as the caveat. What is true of every plotted point
   is that the number shown is our fitted value, not Epoch's published one (e.g.
   Qwen3.5-35B-A3B: ours 144.6, Epoch's 143.9).
@@ -93,7 +96,7 @@ own location and can be run from anywhere.
 - **A (headline): joint refit** of our obs + `data/eci_benchmarks.csv`
   (Epoch's full 222-model matrix; 18 bridge nodes merged), rescaled via the
   remaining 204 pure-Epoch models against `data/eci_published.csv`, r=0.9998.
-  327 nodes × 176 instruments, 3,652 observations. Every difficulty and slope
+  328 nodes × 201 instruments, 3,748 observations. Every difficulty and slope
   is re-estimated — nothing of Epoch's published EDI/slope is held fixed; their
   role is the observation matrix plus the final affine rescale.
 - **B: frozen graft** — `data/edi_frozen.csv` (Epoch's published EDI/slope, ECI
@@ -146,6 +149,27 @@ own location and can be run from anywhere.
   `prep_obs.py`'s canon() now splits them on the `src: Qwen3.5 card` tag, which
   also fixed an existing mis-merge — MMLU-ProX had been pooling both runs.
   Everything else from a Qwen3.5 card can be merged with earlier sources safely.
+- **Qwen3.8-27B is thinly connected, and that is a property of its card, not a
+  bug.** The 2026-08 card dropped every mid-difficulty knowledge benchmark
+  (no MMLU-Pro/Redux, SuperGPQA, C-Eval, AIME, HMMT) in favour of agentic and
+  vision evals that are new to the project. Of its 29 observations, only **four**
+  instruments link it to any entry other than Qwen3.6-27B: GPQA-Diamond (near
+  ceiling at 89.2 raw), HLE, IFBench and LCB v6. That is exactly Epoch's
+  4-instrument inclusion floor. The other 25 instruments are observed on the
+  27B pair alone and, carrying their own free difficulty and slope, constrain
+  the pair's *gap* barely at all. All three methods agree (A 154.6, B 155.6,
+  C 152.5), which is the reassuring part; the caveat is that agreement rests on
+  a narrow base. Note 154.6 also sits above the GPT-5=150 scale anchor.
+- **The Qwen3.8 card's comparison column is a re-run that reproduces the Qwen3.6
+  card exactly** on all four overlapping benchmarks (GPQA-D 87.8, HLE 24.0,
+  LCB v6 83.9, SWE-bench Pro 53.5), so no split tag was needed — unlike
+  MMLU-ProX/MMMLU in the Qwen3.5 wave. The one benchmark that *does* disagree is
+  the check that proves the rule: Qwen3.6-27B scores 59.3 on Terminal-Bench 2.0
+  and 63.4 on 2.1, confirming the version windows are genuinely different
+  instruments.
+- **QwenSWEBench is vendor-authored and moves 49.3 → 79.0** across one
+  generation, by far the largest jump on the card. Transcribed as published and
+  fitted like any other `Qwen::` instrument; flagged here rather than excluded.
 - **Sub-chance scores are dropped, and this bites the smallest thinking models.**
   Qwen3.5-0.8B scores 11.9 on GPQA-Diamond and 21.3 on SuperGPQA, both under the
   25% chance floor, so `prep_obs.py` drops them per Epoch's convention. That is
@@ -178,7 +202,7 @@ own location and can be run from anywhere.
   below ~3.8B, and Epoch's low-end coverage is all 2018–2022 instruments.
   State this as a known limitation when publishing.
 - Extend `audit_connectivity.py` past Qwen/Gemma so the cross-family entries
-  appear in the audit (connectivity itself is verified: 1 component, 123
+  appear in the audit (connectivity itself is verified: 1 component, 124
   entries, none below 4 instruments).
 - Liquid AI's LFM2/LFM2.5 (230M–8B) sit right in the tier of interest but have
   no shared-harness coverage at all — absent from OLL, Epoch and LiveBench.
