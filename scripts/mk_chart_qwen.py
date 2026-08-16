@@ -119,66 +119,99 @@ fig.savefig("eci_trajectories_qwen.png", dpi=170, facecolor=SURF)
 print("saved")
 
 # ---------------------------------------------------------------------------
-# Second figure: the same chart with uncertainty, measured against a reference
-# model rather than in absolute terms.
-#
-# Why relative. A marginal interval says where a model sits on the scale; it
-# cannot say whether two models are distinguishable. These bars answer the
-# second question: for each bootstrap draw take the gap between a model and the
-# reference, then plot the 5-95% range of that gap over the reference's own
-# fitted score. The reference is a point with no bar, and a bar that clears the
-# reference line means the model is separated from it in ~90% of draws.
+# Uncertainty figures. A marginal interval says where a model sits on the scale;
+# it cannot say whether two models are distinguishable. These say the second
+# thing: for each bootstrap draw take the gap between a model and a reference,
+# then plot the 5-95% range of that gap over the reference's own fitted score.
+# A reference is a point with no bar, and a bar clearing its line means the
+# model is separated from it in ~90% of draws.
 #
 # Note these are NOT narrower than the marginal intervals -- roughly the same,
 # often a touch wider. The intuition that shared scale uncertainty would cancel
-# was already spent: fit_methods.py now re-anchors every bootstrap draw on the
-# published ECIs, the way eci-public does, so that shared component is gone from
-# the marginal intervals too. Differencing then only adds the reference's own
-# noise. The gain here is interpretive, not statistical.
-REF = "Qwen3-32B [Thinking mode]"
+# was already spent: fit_methods.py re-anchors every bootstrap draw on the
+# published ECIs, the way eci-public does, so that component is gone from the
+# marginal intervals too. Differencing then only adds the reference's own noise.
+# The gain is interpretive, not statistical.
 draws = pd.read_csv("boot_draws_A.csv").pivot(index="draw", columns="entry", values="eci")
-ref_c = float(rr.loc[REF, "eci_A"])
 
-fig2, ax2 = plt.subplots(figsize=(9.5, 6.6), facecolor=SURF)
-ax2.set_facecolor(SURF)
-ax2.axhline(ref_c, color=GRID, lw=1.0, zorder=1)
-ax2.annotate(f"{REF.split(' [')[0]} (reference)", xy=(0.012, ref_c), xycoords=("axes fraction", "data"),
-             xytext=(0, -12), textcoords="offset points", fontsize=8, color=MUTED, zorder=4)
-for i, (name, entries) in enumerate(TRACKS.items()):
-    pts = sorted((rr.loc[e, "date"], float(rr.loc[e, "eci_A"]), e)
-                 for e in entries if e in rr.index)
-    xs = [p[0] for p in pts]
-    ys = [p[1] for p in pts]
-    lo, hi = [], []
-    for _, y, e in pts:
-        d = draws[e] - draws[REF]
-        lo.append(y - (ref_c + d.quantile(.05)))
-        hi.append((ref_c + d.quantile(.95)) - y)
-    ax2.errorbar(xs, ys, yerr=[lo, hi], color=C[i], lw=2, marker="o", ms=5, zorder=3,
-                 label=name, markerfacecolor=C[i], markeredgecolor=SURF, markeredgewidth=1,
-                 elinewidth=1.1, capsize=2.5, ecolor=C[i])
-    if name in DIRECT:
-        ax2.annotate(name, xy=(xs[-1], ys[-1]), xytext=(9, 0), textcoords="offset points",
-                     fontsize=8.5, color=INK, va="center", fontweight="bold", zorder=4)
-ax2.grid(axis="y", color=GRID, lw=0.7)
-ax2.set_axisbelow(True)
-ax2.tick_params(colors=INK2, labelsize=9)
-for s in ("top", "right", "left"): ax2.spines[s].set_visible(False)
-ax2.spines["bottom"].set_color(GRID)
-ax2.xaxis.set_major_locator(mdates.MonthLocator(interval=4))
-ax2.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m"))
-ax2.set_xlim(pd.Timestamp("2024-01-01"), pd.Timestamp("2026-09-01"))
-ax2.set_ylabel(TECI_AXIS, color=INK2, fontsize=10)
-ax2.legend(loc="lower right", fontsize=8.5, frameon=False, labelcolor=INK2,
-           title="size class", title_fontsize=8.5)
-ax2.set_title(f"Qwen model TECI, with uncertainty relative to {REF.split(' [')[0]}",
-              color=INK, fontsize=13, loc="center", fontweight="bold", pad=34)
-fig2.tight_layout(rect=(0, 0.125, 1, 1))
-fig2.text(ax2.get_position().x0, 0.062,
+
+def ci_figure(refs, fname, headline, note, refline=None):
+    """refs: track name -> the entry that track is measured against."""
+    fig2, ax2 = plt.subplots(figsize=(9.5, 6.6), facecolor=SURF)
+    ax2.set_facecolor(SURF)
+    if refline is not None:
+        ax2.axhline(refline[1], color=GRID, lw=1.0, zorder=1)
+        ax2.annotate(refline[0], xy=(0.012, refline[1]), xycoords=("axes fraction", "data"),
+                     xytext=(0, -12), textcoords="offset points", fontsize=8,
+                     color=MUTED, zorder=4)
+    else:
+        # every per-track reference is a Qwen3 model, and the whole generation
+        # shipped in one month, so one vertical rule marks all six of them
+        d0 = rr.loc[next(iter(refs.values())), "date"]
+        ax2.axvline(d0, color=GRID, lw=1.0, zorder=1)
+        ax2.annotate("Qwen3 — reference for each size class",
+                     xy=(mdates.date2num(d0), 1.0), xycoords=ax2.get_xaxis_transform(),
+                     xytext=(6, -12), textcoords="offset points", fontsize=8,
+                     color=MUTED, zorder=4)
+    for i, (name, entries) in enumerate(TRACKS.items()):
+        ref = refs[name]
+        ref_c = float(rr.loc[ref, "eci_A"])
+        pts = sorted((rr.loc[e, "date"], float(rr.loc[e, "eci_A"]), e)
+                     for e in entries if e in rr.index)
+        xs = [q[0] for q in pts]
+        ys = [q[1] for q in pts]
+        lo, hi = [], []
+        for _, y, e in pts:
+            g = draws[e] - draws[ref]
+            lo.append(y - (ref_c + g.quantile(.05)))
+            hi.append((ref_c + g.quantile(.95)) - y)
+        ax2.errorbar(xs, ys, yerr=[lo, hi], color=C[i], lw=2, marker="o", ms=5, zorder=3,
+                     label=name, markerfacecolor=C[i], markeredgecolor=SURF,
+                     markeredgewidth=1, elinewidth=1.1, capsize=2.5, ecolor=C[i])
+        if name in DIRECT:
+            ax2.annotate(name, xy=(xs[-1], ys[-1]), xytext=(9, 0),
+                         textcoords="offset points", fontsize=8.5, color=INK,
+                         va="center", fontweight="bold", zorder=4)
+    ax2.grid(axis="y", color=GRID, lw=0.7)
+    ax2.set_axisbelow(True)
+    ax2.tick_params(colors=INK2, labelsize=9)
+    for s in ("top", "right", "left"):
+        ax2.spines[s].set_visible(False)
+    ax2.spines["bottom"].set_color(GRID)
+    ax2.xaxis.set_major_locator(mdates.MonthLocator(interval=4))
+    ax2.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m"))
+    ax2.set_xlim(pd.Timestamp("2024-01-01"), pd.Timestamp("2026-09-01"))
+    ax2.set_ylabel(TECI_AXIS, color=INK2, fontsize=10)
+    ax2.legend(loc="lower right", fontsize=8.5, frameon=False, labelcolor=INK2,
+               title="size class", title_fontsize=8.5)
+    ax2.set_title(headline, color=INK, fontsize=13, loc="center",
+                  fontweight="bold", pad=34)
+    fig2.tight_layout(rect=(0, 0.125, 1, 1))
+    fig2.text(ax2.get_position().x0, 0.062, note, color=INK2, fontsize=8, va="bottom")
+    fig2.text(ax2.get_position().x0, 0.008, TECI_NOTE, color=MUTED, fontsize=7.5, va="bottom")
+    fig2.savefig(fname, dpi=170, facecolor=SURF)
+
+
+GREF = "Qwen3-32B [Thinking mode]"
+ci_figure({t: GREF for t in TRACKS}, "eci_trajectories_qwen_ci.png",
+          f"Qwen model TECI, with uncertainty relative to {GREF.split(' [')[0]}",
           "Bars are the 5–95% bootstrap range of each model's gap to the reference, drawn over the "
           "reference's own score.\nA bar clearing the reference line means the model is separated "
           "from it in about 90% of draws.",
-          color=INK2, fontsize=8, va="bottom")
-fig2.text(ax2.get_position().x0, 0.008, TECI_NOTE, color=MUTED, fontsize=7.5, va="bottom")
-fig2.savefig("eci_trajectories_qwen_ci.png", dpi=170, facecolor=SURF)
+          refline=(f"{GREF.split(' [')[0]} (reference)", float(rr.loc[GREF, "eci_A"])))
+
+# Same thing, but each size class measured against its OWN Qwen3 model. This
+# answers "how much did this size class move either side of Qwen3" rather than
+# "how does everything compare to one large model". It costs precision where the
+# reference is itself poorly determined: Qwen3-0.6B rests on few observations, so
+# the ~0.5-0.8B bars come out WIDER here than against the well-measured 32B
+# (Qwen2.5-0.5B-Instruct: 11.8 TECI against its own class reference, 6.5 against
+# the 32B). Both are honest; they answer different questions.
+BY_SIZE = {t: next(e for e in ents if rr.loc[e, "generation"] == "Qwen3")
+           for t, ents in TRACKS.items()}
+ci_figure(BY_SIZE, "eci_trajectories_qwen_ci_bysize.png",
+          "Qwen model TECI, each size class measured against its own Qwen3 model",
+          "Bars are the 5–95% bootstrap range of each model's gap to the Qwen3 model of the same "
+          "size class,\ndrawn over that reference's score. Each class's Qwen3 entry is therefore a "
+          "point with no bar.")
 print("saved (with CI)")
