@@ -169,7 +169,23 @@ own location and can be run from anywhere.
   and so are NOT the same entry as our Chat/Instruct rows under the
   entry convention — they cannot be merged as bridges without breaking it.
 - Sensitivity pass on flagged merges (fit with/without GPQA + HMMT merges).
-- Weighted index variants (knowledge-heavy vs instruction-following-heavy).
+- Weighted index variants (knowledge-heavy vs reasoning-heavy). **Scoped
+  2026-08-12: a hard split into two separate fits does not work.** Classifying
+  the pool gives 32 knowledge / 41 reasoning / 60 other instruments (ours), with
+  observations splitting 36/36/27, and both subgraphs stay connected — but only
+  39 of 123 entries clear Epoch's ≥4-instrument rule in *both* buckets. The
+  binding constraint is not model size (knowledge coverage is flat across tiers
+  at 40/33/45%; only reasoning is size-graded, 40/50/79%) but evaluation breadth
+  per entry, and it bites by family: every one of the 43 cross-family entries has
+  the identical profile of 2 knowledge / 3 reasoning / 1 other from its six OLLv2
+  instruments, so no threshold above 2 admits any of them. A split index would
+  therefore revert to a Qwen/Gemma-only picture, undoing the cross-family
+  de-biasing. Viable alternatives: (a) one fit, then knowledge- vs
+  reasoning-weighted summaries, no per-bucket threshold; (b) per-entry *residuals*
+  from the existing fit, averaged within each bucket — says whether a model
+  over- or under-performs its own level on each, works for nearly every entry,
+  but needs fit_methods.py to save the fitted difficulty/slope per instrument;
+  (c) a scoped supplementary analysis on the 39 well-covered entries only.
 - ~~Add cross-family small models (SmolLM, Llama 3.2 1B/3B, Phi-mini, OLMo)~~ —
   done via `add_oll_models.py` (43 entries, 17 sub-2B). **Partial fix only:**
   OLL froze 2025-03-13, so this de-biases the 2023–2024 span of the trend, not
