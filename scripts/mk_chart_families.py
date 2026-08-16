@@ -25,8 +25,11 @@
                           release date. No trend line. One entry per model,
                           preferring what a user would reach for: thinking over
                           non-thinking, instruct over base. That takes 42 rows to
-                          26 and lets every label lose its mode suffix, which is
-                          most of what makes the chart legible. Labels are then
+                          25 and lets every label lose its mode suffix, which is
+                          most of what makes the chart legible. Gemma 3n E2B is
+                          excluded too: Params (B) is its EFFECTIVE count, so it
+                          is <=2B by memory footprint, not by weight count.
+                          Labels are then
                           placed by rectangle-overlap search rather than
                           per-release-month nudging: a label is wider than the
                           gap between neighbouring releases, so grouping by month
@@ -40,7 +43,6 @@ the ordinal blue ramp (steps 250/450/650), not categorical hues -- validated wit
 Run from data/ (writes PNGs to the working directory, like the other chart
 scripts):  cd data && python ../scripts/mk_chart_families.py
 """
-import re
 
 import matplotlib
 import numpy as np
@@ -68,10 +70,13 @@ TIERS = list(TIER_C)
 # months; fitting a per-year rate to that would be noise dressed as a finding.
 MIN_N, MIN_SPAN_YRS = 4, 1.0
 
-# Gemma 3n and Gemma 4 E-series: the workbook records effective, not raw,
-# parameters for these, so they sit lower on a size axis than their weight
-# count warrants. Flagged on the chart rather than dropped.
-SELECTIVE = re.compile(r"E[24]B")
+# Gemma 3n and Gemma 4 E-series. The workbook's Params (B) is the EFFECTIVE
+# count for these, not the raw one -- it spells the gap out for Gemma 4 E2B,
+# 2.3B effective against 5.1B including embeddings. They belong in a size band
+# by memory footprint but not by weight count, so the <=2B chart excludes them.
+# Plain substrings, not a regex: an escape here got mangled into literal
+# backspace characters once already, and the pattern then silently never matched.
+SELECTIVE = ("E2B", "E4B")
 
 
 def one_per_model(df):
@@ -299,18 +304,10 @@ def short(entry):
     plotted, so the distinction never needs spelling out. "(base)" stays --
     Qwen1.5-1.8B and Qwen1.5-1.8B-Chat are both on the chart.
 
-    A "*" marks a selective-activation model, whose Params (B) in the workbook is
-    the EFFECTIVE count, not the raw one. Gemma 3n E2B is recorded at 2.0B on
-    that basis but holds far more weights than a 2B dense model -- the workbook
-    spells the gap out for its Gemma 4 successor, 2.3B effective against 5.1B
-    including embeddings. It qualifies for a "<=2B" chart by memory footprint,
-    not by parameter count, and that is worth flagging on the face of it.
     """
     name, _, variant = entry.partition(" [")
     name = name.replace("-Instruct", "-Inst")
-    if variant.startswith("Base ("):
-        name += " (base)"
-    return name + " *" if SELECTIVE.search(name) else name
+    return name + " (base)" if variant.startswith("Base (") else name
 
 
 def stack(vals, gap):
@@ -328,9 +325,12 @@ def stack(vals, gap):
 sm = r[r.params_B <= 2.1].copy()
 sm["band"] = pd.cut(sm.params_B, [0, 0.5, 1.0, 2.1], labels=SMALL_BANDS)
 
-# One entry per model: 42 rows become 26, which is most of what makes the labels
-# fit. See one_per_model() for the rule.
+# One entry per model: see one_per_model() for the rule. Then drop the
+# selective-activation models, which are only <=2B on an effective-parameter
+# basis. Gemma 3n E2B is the one this removes; Gemma 4 E2B is 2.3B and already
+# falls outside the cut.
 sm = one_per_model(sm)
+sm = sm[~sm.entry.str.contains("|".join(SELECTIVE))]
 
 # Back on a date axis, at a larger canvas. Labels sit beside their point,
 # de-collided vertically within each release month, and the side alternates
@@ -382,8 +382,7 @@ fig4.suptitle(f"Every model at or below 2B ({len(sm)} entries)",
 fig4.text(0.008, 0.952,
           "One entry per model: thinking preferred over non-thinking, instruct over base. "
           "phi-1, phi-1_5 and OLMo-1B have no instruct release.\n"
-          "* selective activation — 2B is its effective parameter count; it holds far more "
-          "weights than a 2B dense model.",
+          "Gemma 3n E2B is excluded: its 2B is an effective parameter count, not a weight count.",
           color=INK2, fontsize=9.5, va="top")
 fig4.text(0.008, 0.008, TECI_NOTE, color=MUTED, fontsize=8, va="bottom")
 fig4.tight_layout(rect=(0, 0.035, 1, 0.938))
