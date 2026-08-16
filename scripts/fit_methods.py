@@ -43,8 +43,35 @@ pure = [m for m in join.entry.unique() if m.startswith("EPOCH::") and m[7:] in p
 a_a, b_a, r_a = affine_from_pairs(caps_a, {("EPOCH::" + k): v for k, v in pub.items()}, pure)
 eci_a = {m: a_a + b_a * c for m, c in caps_a.items()}
 bs_a = bootstrap_caps(join, "Winogrande", xhat_a, n=100)
-ci_a = {m: (a_a + b_a * np.quantile(v, .05), a_a + b_a * np.quantile(v, .95)) if len(v) > 10 else (np.nan, np.nan)
-        for m, v in bs_a.items()}
+
+# Rescale each bootstrap draw with the affine map derived from THAT draw, the way
+# eci-public does it ("Every fit - the central one and each bootstrap refit - is
+# mapped with the (a, b) derived from its own anchor capabilities"). Applying the
+# central map to every draw instead, as this did before, leaves the rescale
+# uncertainty out of the interval entirely.
+#
+# This NARROWS the intervals (mean width 10.0 -> 8.9, median 6.6 -> 5.5) rather
+# than widening them, which is the opposite of what you might expect from
+# "propagating more uncertainty". The latent capability scale is only identified
+# up to location and scale, so resampling slides it about; mapping every draw
+# through the central (a, b) let that arbitrary drift into the interval as if it
+# were real. Re-anchoring each draw on the published ECIs removes it.
+#
+# The per-draw ECIs are also written out: a marginal interval cannot answer
+# "is A above B", which needs the draws themselves.
+n_draws = min(len(v) for v in bs_a.values()) if bs_a else 0
+draw_eci = []  # draw_eci[k][entry] = ECI of that entry in draw k
+for k in range(n_draws):
+    caps_k = {m: v[k] for m, v in bs_a.items()}
+    a_k, b_k, _ = affine_from_pairs(caps_k, {("EPOCH::" + x): y for x, y in pub.items()}, pure)
+    draw_eci.append({m: a_k + b_k * c for m, c in caps_k.items()})
+ci_a = {m: (np.quantile([d[m] for d in draw_eci], .05),
+            np.quantile([d[m] for d in draw_eci], .95)) if n_draws > 10 else (np.nan, np.nan)
+        for m in bs_a}
+if n_draws:
+    pd.DataFrame([{"draw": k, "entry": m, "eci": d[m]}
+                  for k, d in enumerate(draw_eci) for m in d if not m.startswith("EPOCH::")]
+                 ).to_csv("boot_draws_A.csv", index=False)
 print(f"[A] joint fit: {join.entry.nunique()} nodes, {join.benchmark.nunique()} instruments, "
       f"{len(join)} obs; rescale on {len(pure)} pure-Epoch models, r={r_a:.4f}")
 
